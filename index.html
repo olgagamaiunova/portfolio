@@ -23,14 +23,14 @@
    grid:   12 columns, the same gutter and gap everywhere
    ========================================================================= */
 :root,:root[data-theme="dark"]{
-  --paper:#131116; --ink:#ECE8E0; --muted:#9A948B; --line:#2E2A31; --accent:#F08A55; --hi:#1D1A21; --card:#1C1A21; color-scheme:dark;
+  --paper:#131116; --ink:#ECE8E0; --muted:#9A948B; --line:#2E2A31; --accent:#FF7DBB; --hi:#1D1A21; --card:#1C1A21; color-scheme:dark;
   --f-text:"Golos Text","Helvetica Neue",Arial,system-ui,sans-serif;
   --f-mono:"Martian Mono",ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;
   --t1:11px; --t2:14px; --t3:17px; --t4:clamp(20px,1.8vw,26px); --t5:clamp(36px,5vw,72px); --th:clamp(26px,3.2vw,52px);
   --s1:8px; --s2:16px; --s3:24px; --s4:clamp(32px,3.4vw,48px); --s5:clamp(48px,5.6vw,80px); --s6:clamp(72px,8.4vw,120px); --s7:clamp(104px,12.2vw,176px);
-  --gut:clamp(16px,1.7vw,24px); --gap:clamp(10px,1vw,14px); --cp:clamp(14px,1.25vw,18px); --bar:56px;
+  --gut:max(clamp(16px,4vw,48px),calc((100vw - 1200px) / 2)); --gap:clamp(10px,1vw,14px); --cp:clamp(14px,1.25vw,18px); --bar:56px;
 }
-:root[data-theme="light"]{ --paper:#FFFFFF; --ink:#120F17; --muted:#6B6A70; --line:#E4E4E2; --accent:#E0703A; --hi:#ECECEA; --card:#F5F5F3; color-scheme:light; }
+:root[data-theme="light"]{ --paper:#FFFFFF; --ink:#120F17; --muted:#6B6A70; --line:#E4E4E2; --accent:#EF4FA0; --hi:#ECECEA; --card:#F5F5F3; color-scheme:light; }
 
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%;scroll-padding-top:calc(var(--bar) + var(--s2))}
@@ -91,7 +91,7 @@ ol,ul{padding:0;list-style:none}
 .stage-cta{order:3;position:relative;z-index:3;display:flex;gap:6px}
 .hb-2{order:4;color:var(--muted)}
 .hb-0{order:0}
-.dot{display:inline-block;width:6px;height:6px;margin-right:var(--s1);border-radius:50%;background:#3FA36B;vertical-align:2px;animation:blink 2.4s ease-in-out infinite}
+.dot{display:inline-block;width:6px;height:6px;margin-right:var(--s1);border-radius:50%;background:#3DBB4A;vertical-align:2px;animation:blink 2.4s ease-in-out infinite}
 @keyframes blink{50%{opacity:.3}}
 
 /* sections */
@@ -119,16 +119,12 @@ button.card,a.card{cursor:pointer;font:inherit}
 /* cases: one large case and two result widgets, then three cases */
 /* every case is its own card: cover, title, and its main number in the corner.
    Wide and narrow cards swap places from row to row */
-.w-a{grid-column:span 7}.w-b{grid-column:span 5}
-.ccase .cover img{position:static;height:auto}
-.cfoot{display:flex;justify-content:space-between;align-items:flex-end;gap:var(--s3);margin-top:auto}
-.cfoot .cbot{margin-top:0}
-.stat{display:flex;flex-direction:column;align-items:flex-end;gap:6px;flex:none;max-width:18ch;text-align:right}
-.stat b{font:500 var(--t4)/1 var(--f-text);letter-spacing:-.02em;font-variant-numeric:tabular-nums}
-.stat span{color:var(--muted)}
+.ccase{grid-column:span 6}
+.ccase .cover{aspect-ratio:3/2}
 
 /* side projects: two widgets, the second screen shows on hover */
 .w-proj{grid-column:span 6;display:flex;flex-direction:column;gap:var(--s3)}
+.w-proj .cover,.w-proj .cbot{width:min(100%,460px);margin-inline:auto}
 .w-proj .cover{aspect-ratio:800/829}
 .shot{background:#fff}
 .shot img{object-position:top center;transition:opacity .35s,transform .6s cubic-bezier(.2,.7,.2,1)}
@@ -171,25 +167,13 @@ button.card,a.card{cursor:pointer;font:inherit}
 .clock{font-variant-numeric:tabular-nums}
 .mtop{display:flex;flex-direction:column;gap:6px}
 
-/* soft skills live in the footer, above the meadow: flowers standing on the paper, no cards */
-.soft .sec-head{margin-bottom:var(--s3)}
-.flowers{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--s4) var(--gap)}
-.flower{display:flex;flex-direction:column;gap:var(--s1);min-width:0}
-.flower .fl{position:relative;aspect-ratio:4/5;width:min(62%,240px);margin:0 0 var(--s2)}
-.flower .fl canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
-.flower p{max-width:40ch}
-.flower .lbl{color:var(--muted)}
 
-/* footer: a field of ASCII flowers with little garden signs */
+/* footer: a field of ASCII flowers */
 .site-foot{margin-top:var(--s6)}
 .site-foot .meadow{margin-top:var(--s4)}
-.meadow{position:relative;height:clamp(520px,46vw,680px);cursor:crosshair;overflow:hidden;touch-action:pan-y}
+.meadow{position:relative;height:clamp(420px,38vw,560px);cursor:crosshair;overflow:hidden;touch-action:pan-y}
 .meadow canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
-.takes{margin:0;padding:0;list-style:none}
-.take.sk{max-width:min(32ch,44vw);text-align:center}
-.take.sk b{display:block;margin-bottom:4px;font:500 var(--t2)/1.45 var(--f-text);text-transform:uppercase;letter-spacing:.06em}
-.take.sk span{display:block;color:var(--muted)}
-.take{position:absolute;z-index:1;width:max-content;max-width:min(24ch,40vw);padding:0;background:none;transform:translateX(-50%);font-size:var(--t2);line-height:1.35;text-wrap:balance}
+.meadow .takes{display:none}
 .foot{padding:var(--s2) 0 var(--s3);row-gap:var(--s1);align-items:center;color:var(--muted)}
 .foot .f1{grid-column:1/7}.foot .f2{grid-column:7/10}.foot .f3{grid-column:10/13;text-align:right}
 .site-foot .foot{padding-left:var(--gut);padding-right:var(--gut);background:var(--paper)}
@@ -268,7 +252,6 @@ button.card,a.card{cursor:pointer;font:inherit}
 
 /* responsive */
 @media (max-width:1100px){
-  .w-a,.w-b{grid-column:span 6}
   .w-bio,.w-seek{grid-column:1/13}
   .w-xp{grid-column:1/13;grid-row:auto}
   .w-lang,.w-edu,.w-sk{grid-column:span 4}
@@ -289,11 +272,7 @@ button.card,a.card{cursor:pointer;font:inherit}
   .bento>*{grid-column:1/-1 !important;grid-row:auto !important}
   .xpl li{grid-template-columns:1fr}
   .xpl .d{grid-column:1}
-  .flowers{grid-template-columns:1fr}
-  .flower .fl{width:min(56%,220px)}
-  .cfoot{flex-wrap:wrap}
-  .stat{align-items:flex-start;text-align:left}
-  .meadow{height:760px}
+  .meadow{height:520px}
   .foot .f1,.foot .f2,.foot .f3{grid-column:1/13;text-align:left}
   .case-top .back{grid-column:1/13}.case-top .crumb{display:none}
   .case-head .k,.case-head h1,.case-head .sub,.case-head .intro{grid-column:1/13}
@@ -2549,7 +2528,7 @@ void main(){
     function step(now) {
       raf = 0;
       const dt = prev ? Math.min(0.05, (now - prev) / 1000) : 0.016, t = (now - t0) / 1000; prev = now;
-      g.setTransform(dpr, 0, 0, dpr, 0, 0); g.clearRect(0, 0, W, H); g.fillStyle = isDark() ? "#F09A78" : "#E0795A";
+      g.setTransform(dpr, 0, 0, dpr, 0, 0); g.clearRect(0, 0, W, H); g.fillStyle = isDark() ? "#FF8A5C" : "#F0642E";
       parts = parts.filter((p) => { p.life -= dt; if (p.life <= 0) return false;
         p.vx += (Math.sin(t * 0.8 + p.y * 0.01) * 6 - p.vx * 0.5) * dt; p.vy += (-4 - p.vy * 0.5 + Math.cos(t * 0.7 + p.x * 0.01) * 5) * dt;
         if (p.amb && last) { const dx = last.x - p.x, dy = last.y - p.y, r2 = dx * dx + dy * dy; if (r2 < 200 * 200 && r2 > 100) { p.vx += dx * 0.5 * dt; p.vy += dy * 0.5 * dt; } }
@@ -2611,15 +2590,12 @@ void main(){
   function renderWork() {
     const u = U(), cs = CASES();
     $("#work").innerHTML = head(u.nav.work) + `
-      <div class="bento cases">${cs.map((c, i) => { const st = c.stats && c.stats[0]; return `
-        <button class="card ccase ${[0, 3].includes(i % 4) ? "w-a" : "w-b"}" data-case="${i}" aria-label="${esc(u.openCase)}: ${esc(plain(c.title))}">
+      <div class="bento cases">${cs.map((c, i) => `
+        <button class="card ccase" data-case="${i}" aria-label="${esc(u.openCase)}: ${esc(plain(c.title))}">
           ${wh(t(c.year))}
           <span class="cover${c.fit === "contain" ? " contain" : ""}" style="--tint:${esc(c.tint)}">${src(c.cover) ? `<img src="${esc(src(c.cover))}" alt="" loading="lazy">` : ""}</span>
-          <span class="cfoot">
-            <span class="cbot"><span class="pt">${esc(plain(c.title))}</span></span>
-            ${st ? `<span class="stat"><b>${esc(st.v)}</b><span class="lbl">${t(st.l)}</span></span>` : ""}
-          </span>
-        </button>`; }).join("")}
+          <span class="cbot"><span class="pt">${esc(plain(c.title))}</span><span class="t2 muted">${esc(plain(c.summary))}</span></span>
+        </button>`).join("")}
       </div>`;
     watchScr($("#work"));
   }
@@ -2745,7 +2721,7 @@ void main(){
       g.strokeStyle = gray(v * 0.35, 0.8); g.lineWidth = 1.1; g.beginPath(); g.moveTo(2, 0); g.quadraticCurveTo(len * 0.5, -bow - wid * 0.4, len * 0.96, -bow * 0.2); g.stroke();
       g.restore();
     },
-    stem(g, p, w) { g.save(); g.lineCap = "round"; g.strokeStyle = gray(0.72); g.lineWidth = w; g.beginPath(); g.moveTo(p[0][0], p[0][1]); g.bezierCurveTo(p[1][0], p[1][1], p[2][0], p[2][1], p[3][0], p[3][1]); g.stroke(); g.restore(); },
+    stem(g, p, w) { g.save(); g.lineCap = "round"; g.strokeStyle = gray(0.85); g.lineWidth = w * 1.9; g.beginPath(); g.moveTo(p[0][0], p[0][1]); g.bezierCurveTo(p[1][0], p[1][1], p[2][0], p[2][1], p[3][0], p[3][1]); g.stroke(); g.restore(); },
     lily(g) {
       const r = rngOf(41), cx = 214, cy = 150, S = [[200, 500], [196, 400], [226, 270], [cx, cy + 10]];
       this.stem(g, S, 6.5);
@@ -2818,11 +2794,73 @@ void main(){
         this.blade(g, x, y, ang - 1.05, L, 7 + L * 0.07, -L * 0.1, 0.88); this.blade(g, x, y, ang + 1.05, L, 7 + L * 0.07, L * 0.1, 0.84); }
     }
   });
+
+  Object.assign(MPAINT, {
+    petal(g, hx, hy, ang, L, W, v) {
+      g.save(); g.translate(hx, hy); g.rotate(ang);
+      const gr = g.createLinearGradient(0, 0, L, 0); gr.addColorStop(0, gray(v * 0.55)); gr.addColorStop(0.45, gray(v)); gr.addColorStop(1, gray(v * 0.82));
+      g.fillStyle = gr; g.beginPath(); g.moveTo(0, 0); g.bezierCurveTo(L * 0.25, -W, L * 0.8, -W * 0.8, L, 0); g.bezierCurveTo(L * 0.8, W * 0.8, L * 0.25, W, 0, 0); g.fill();
+      g.strokeStyle = gray(v * 0.3, 0.85); g.lineWidth = 1.3; g.stroke();
+      g.strokeStyle = gray(v * 0.4, 0.6); g.lineWidth = 1; g.beginPath(); g.moveTo(L * 0.1, 0); g.lineTo(L * 0.85, 0); g.stroke();
+      g.restore();
+    },
+    tulip(g) {
+      const hx = 214, hy = 190;
+      this.stem(g, [[200, 500], [196, 410], [222, 300], [hx, hy + 46]], 6.5);
+      this.blade(g, 200, 490, -2.0, 260, 24, -50, 0.85); this.blade(g, 202, 470, -1.2, 230, 22, 40, 0.8);
+      this.petal(g, hx, hy + 52, -Math.PI / 2 - 0.5, 104, 38, 0.72);
+      this.petal(g, hx, hy + 52, -Math.PI / 2 + 0.5, 104, 38, 0.72);
+      this.petal(g, hx, hy + 54, -Math.PI / 2, 124, 44, 1);
+      g.strokeStyle = gray(0.3, 0.9); g.lineWidth = 1.5; g.beginPath(); g.moveTo(hx - 34, hy + 40); g.quadraticCurveTo(hx, hy + 70, hx + 34, hy + 40); g.stroke();
+    },
+    spike(g) {
+      const S = [[200, 500], [192, 400], [212, 300], [206, 170]];
+      this.stem(g, S, 5); this.blade(g, 199, 490, -2.1, 190, 20, -40, 0.82); this.blade(g, 201, 470, -1.1, 160, 18, 34, 0.78);
+      for (let k = 0; k < 24; k++) {
+        const t = k / 23, y = 330 - k * 11.5, x = 207 + (k % 2 ? 1 : -1) * (13 - t * 7), r = 17 - t * 9.5;
+        g.strokeStyle = gray(0.7); g.lineWidth = 2; g.beginPath(); g.moveTo(207, y + 5); g.lineTo(x, y); g.stroke();
+        for (let i = 0; i < 5; i++) { const a = (i / 5) * 6.28 + k; g.fillStyle = gray(i % 2 ? 0.8 : 1); g.beginPath(); g.ellipse(x + Math.cos(a) * r * 0.52, y + Math.sin(a) * r * 0.52, r * 0.52, r * 0.4, a, 0, 6.28); g.fill(); }
+        g.fillStyle = gray(0.35); g.beginPath(); g.arc(x, y, r * 0.22, 0, 7); g.fill();
+      }
+    },
+    poppy(g) {
+      const hx = 212, hy = 180;
+      this.stem(g, [[200, 500], [190, 400], [222, 290], [hx, hy + 20]], 5);
+      this.blade(g, 199, 480, -2.15, 180, 16, -34, 0.78); this.blade(g, 201, 440, -1.05, 150, 14, 30, 0.74);
+      this.petal(g, hx - 6, hy + 10, -2.5, 74, 52, 0.72); this.petal(g, hx + 6, hy + 10, -0.65, 74, 52, 0.72);
+      this.petal(g, hx - 8, hy + 14, 2.7, 70, 50, 0.9); this.petal(g, hx + 8, hy + 14, 0.45, 70, 50, 0.9);
+      g.fillStyle = gray(0.28); g.beginPath(); g.arc(hx, hy + 6, 15, 0, 7); g.fill();
+      g.fillStyle = gray(0.9); for (let k = 0; k < 14; k++) { const a = k * 0.45; g.beginPath(); g.arc(hx + Math.cos(a) * 22, hy + 6 + Math.sin(a) * 18, 2.1, 0, 7); g.fill(); }
+    },
+    cosmos(g) {
+      const hx = 214, hy = 170;
+      this.stem(g, [[200, 500], [192, 400], [224, 280], [hx, hy + 16]], 4);
+      for (let k = 0; k < 5; k++) { g.strokeStyle = gray(0.7); g.lineWidth = 1.5; g.beginPath(); g.moveTo(200, 480 - k * 40); g.lineTo(200 + (k % 2 ? 46 : -46), 450 - k * 50); g.stroke(); }
+      for (let i = 0; i < 8; i++) { const a = (i / 8) * 6.28 + 0.2; g.save(); g.translate(hx, hy); g.scale(1, 0.8); this.petal(g, 0, 0, a, 76, 29, i % 2 ? 0.88 : 1); g.restore(); }
+      g.fillStyle = gray(0.5); g.beginPath(); g.arc(hx, hy, 13, 0, 7); g.fill();
+      g.fillStyle = gray(0.95); for (let k = 0; k < 10; k++) { const a = k * 2.4, rr = 2 + (k % 3) * 3; g.beginPath(); g.arc(hx + Math.cos(a) * rr, hy + Math.sin(a) * rr * 0.8, 1.7, 0, 7); g.fill(); }
+    },
+    bell(g) {
+      this.stem(g, [[200, 500], [190, 400], [230, 290], [270, 200]], 4.5);
+      this.blade(g, 199, 485, -2.2, 160, 16, -30, 0.8); this.blade(g, 201, 450, -1.0, 130, 14, 26, 0.76);
+      for (let k = 0; k < 5; k++) {
+        const t = 0.35 + k * 0.16, u = 1 - t, x = u * u * u * 200 + 3 * u * u * t * 190 + 3 * u * t * t * 230 + t * t * t * 270, y = u * u * u * 500 + 3 * u * u * t * 400 + 3 * u * t * t * 290 + t * t * t * 200;
+        const s = 1.15 - k * 0.12, side = k % 2 ? 1 : -1;
+        g.strokeStyle = gray(0.7); g.lineWidth = 2.5; g.beginPath(); g.moveTo(x, y); g.quadraticCurveTo(x + side * 18, y + 6, x + side * 24, y + 22 * s); g.stroke();
+        g.save(); g.translate(x + side * 24, y + 22 * s); g.scale(s, s);
+        const gr = g.createLinearGradient(-22, 0, 22, 0); gr.addColorStop(0, gray(0.6)); gr.addColorStop(0.5, gray(1)); gr.addColorStop(1, gray(0.7));
+        g.fillStyle = gr; g.beginPath(); g.moveTo(-6, 0); g.bezierCurveTo(-12, 20, -26, 40, -30, 58); for (let q = 0; q < 4; q++) g.quadraticCurveTo(-30 + q * 15 + 7.5, 70, -30 + q * 15 + 15, 58); g.bezierCurveTo(26, 40, 12, 20, 6, 0); g.closePath(); g.fill();
+        g.strokeStyle = gray(0.3, 0.85); g.lineWidth = 1.3; g.stroke();
+        g.strokeStyle = gray(0.4, 0.6); g.beginPath(); g.moveTo(0, 6); g.lineTo(0, 60); g.moveTo(-14, 8); g.lineTo(-18, 58); g.moveTo(14, 8); g.lineTo(18, 58); g.stroke();
+        g.restore();
+      }
+    }
+  });
   const MEAD_PAL = (() => {
-    const L = { blue: "#2A47C7", lilac: "#8A7BD8", coral: "#E0795A", sage: "#6F9C7F", ochre: "#C9A24A", rose: "#D98BA3", sky: "#5F7FE0" };
-    const D = { blue: "#7F9CF0", lilac: "#B7A6F0", coral: "#F09A78", sage: "#86C2A0", ochre: "#E6C879", rose: "#EDA9BF", sky: "#9DB6F5", cream: "#F3E9D2" };
-    const mk = (c) => ({ lily: [c.blue, c.blue, c.lilac, c.rose], daisy: [c.lilac, c.blue, c.ochre], wheat: [c.ochre, c.sage], puff: [c.lilac, c.sky], fern: [c.sage, c.sage], blades: [c.sky, c.sage, c.sky], bud: [c.coral, c.coral, c.rose] });
-    return { light: mk(L), dark: Object.assign(mk(D), { lily: [D.cream, D.cream, D.lilac, D.rose], daisy: [D.cream, D.lilac, D.ochre] }) };
+    const L = { blue: "#3347E8", lilac: "#9B86F0", coral: "#F0642E", sage: "#13A58F", ochre: "#F5A524", rose: "#EF4FA0", sky: "#4D7CFF", lime: "#7ED321" };
+    const D = { blue: "#7C8CFF", lilac: "#B9A6FF", coral: "#FF8A5C", sage: "#2FD1B5", ochre: "#FFC24D", rose: "#FF7DBB", sky: "#8DB0FF", lime: "#A6F04D", cream: "#F3E9D2" };
+    const mk = (c) => ({ tulip: [c.rose, c.coral, c.ochre, c.rose], spike: [c.blue, c.lilac, c.sky, c.lilac], poppy: [c.coral, c.rose, c.coral], cosmos: [c.rose, c.lilac, c.ochre], bell: [c.lilac, c.blue, c.sky], daisy: [c.rose, c.ochre, c.coral], wheat: [c.ochre, c.lime], fern: [c.sage, c.lime], blades: [c.lime, c.sage, c.sky] });
+    return { light: mk(L), dark: Object.assign(mk(D), { daisy: [D.cream, D.ochre, D.coral], cosmos: [D.rose, D.cream, D.ochre] }) };
   })();
   const SCENE_COL = { light: { sky: "#1E3FD8", sun: "#E0703A", hill: "#3F62EA" }, dark: { sky: "#6F97FF", sun: "#F3E9D2", hill: "#6F97FF" } };
   const hash2 = (x, y) => { const v = Math.sin(x * 12.9898 + y * 78.233) * 43758.5453; return v - Math.floor(v); };
@@ -2833,9 +2871,9 @@ void main(){
     const bgx = bg.getContext("2d"), g = cv.getContext("2d"), list = $(".takes", host);
     const samp = document.createElement("canvas"), sg = samp.getContext("2d", { willReadFrequently: true });
     const art = {}, tinted = {};
-    let W = 0, H = 0, d = 1, pitch = 4, cols = 0, rows = 0, flowers = [], signs = [], parts = [], ptr = null, raf = 0, prev = 0, lastDraw = 0, vis = true, horizon = 0, planted = 0;
+    let W = 0, H = 0, d = 1, pitch = 4, chh = 10, cols = 0, rows = 0, flowers = [], signs = [], parts = [], ptr = null, raf = 0, prev = 0, lastDraw = 0, vis = true, horizon = 0, planted = 0;
     const LAY = [{ a: 0.55, sc: 0.36, amp: 0.6 }, { a: 0.8, sc: 0.62, amp: 0.85 }, { a: 1, sc: 0.92, amp: 1 }];
-    for (const k of ["lily", "bud", "blades", "daisy", "wheat", "puff", "fern"]) { const c = document.createElement("canvas"); c.width = FW; c.height = FH; MPAINT[k](c.getContext("2d")); art[k] = c; }
+    for (const k of ["tulip", "spike", "poppy", "cosmos", "bell", "blades", "daisy", "wheat", "fern"]) { const c = document.createElement("canvas"); c.width = FW; c.height = FH; MPAINT[k](c.getContext("2d")); art[k] = c; }
     function tint() {
       const pal = MEAD_PAL[isDark() ? "dark" : "light"];
       for (const k in art) { tinted[k] = pal[k].map((hex) => { const sc = document.createElement("canvas"); sc.width = FW; sc.height = FH; const x = sc.getContext("2d", { willReadFrequently: true });
@@ -2843,7 +2881,7 @@ void main(){
         for (let i = 0; i < p.length; i += 4) { const a = (p[i + 3] / 255) * Math.pow(p[i] / 255, 1.1); p[i] = r; p[i + 1] = gg; p[i + 2] = b; p[i + 3] = Math.round(a * 255); }
         x.putImageData(im, 0, 0); return sc; }); }
     }
-    const kindH = { lily: 1, bud: 0.85, blades: 0.6, daisy: 0.82, wheat: 0.95, puff: 0.85, fern: 0.62 }, kindW = { lily: 150, bud: 70, blades: 120, daisy: 100, wheat: 60, puff: 90, fern: 150 };
+    const kindH = { tulip: 0.9, spike: 1.05, poppy: 0.8, cosmos: 0.85, bell: 0.9, blades: 0.6, daisy: 0.82, wheat: 0.95, fern: 0.62 }, kindW = { tulip: 90, spike: 80, poppy: 110, cosmos: 130, bell: 110, blades: 120, daisy: 100, wheat: 60, fern: 150 };
     function mk(x, by, kind, layer, want, grown) {
       return { x, by, kind, layer, s: want / 500, a0: (Math.random() - 0.5) * 0.12, a: 0, v: 0, flip: Math.random() < 0.5 ? -1 : 1, ph: Math.random() * 6.28, g: grown ? 1 : 0, ci: Math.floor(Math.random() * 99), w: 0.85 + Math.random() * 0.35 };
     }
@@ -2868,7 +2906,7 @@ void main(){
     function layout() {
       W = host.clientWidth; H = host.clientHeight; d = Math.min(devicePixelRatio || 1, 2); if (!W || !H) return false;
       cv.width = bg.width = Math.round(W * d); cv.height = bg.height = Math.round(H * d);
-      pitch = W < 700 ? 3.2 : 3.5; cols = Math.floor(W / pitch); rows = Math.floor(H / (pitch * 0.87)); samp.width = cols; samp.height = rows;
+      pitch = W < 700 ? 4.6 : 5.2; chh = pitch * 1.9; cols = Math.floor(W / pitch); rows = Math.floor(H / chh); samp.width = cols; samp.height = rows;
       horizon = H * (W < 700 ? 0.66 : 0.6);
       const TOPS = [0.06, 0.16, 0.06], narrow = W < 700, m = takes.length;
       list.innerHTML = takes.map((tx) => `<li class="take sk">${tx}</li>`).join("");
@@ -2878,15 +2916,15 @@ void main(){
       if (narrow) signs.forEach((s, i) => { if (i) { const y = signs[i - 1].b + 14; s.b += y - s.y; s.y = y; els[i].style.top = y + "px"; } });
       signs.forEach((s, i) => { const half = s.w / 2 + 8, x = Math.min(W - half, Math.max(half, s.x)); s.x = x; els[i].style.left = x + "px"; });
       const keep = flowers.filter((f) => f.own);
-      const rf = rngOf(23), KS = narrow ? ["lily", "daisy", "wheat", "fern", "puff", "bud", "blades"] : ["lily", "daisy", "blades", "wheat", "bud", "puff", "fern", "lily", "daisy", "bud", "wheat", "blades", "puff"];
+      const rf = rngOf(23), KS = narrow ? ["tulip", "spike", "cosmos", "poppy", "bell", "fern", "daisy"] : ["tulip", "spike", "cosmos", "blades", "poppy", "bell", "tulip", "fern", "spike", "daisy", "poppy", "cosmos", "bell", "blades"];
       flowers = [];
-      const rows3 = [{ by: H * 0.74, n: W / (narrow ? 60 : 110), L: 0 }, { by: H * 0.87, n: W / (narrow ? 80 : 150), L: 1 }, { by: H + 4, n: W / (narrow ? 100 : 230), L: 2 }];
+      const rows3 = [{ by: H * 0.74, n: W / (narrow ? 85 : 150), L: 0 }, { by: H * 0.87, n: W / (narrow ? 110 : 190), L: 1 }, { by: H + 4, n: W / (narrow ? 140 : 260), L: 2 }];
       rows3.forEach((rw, ri) => {
         const cnt = Math.max(3, Math.round(rw.n));
         for (let q = 0; q < cnt; q++) {
           const kind = KS[(q + ri * 2) % KS.length], x = W * (q + 0.5 + (ri % 2 ? 0.25 : 0)) / cnt + (rf() - 0.5) * 30, hw = kindW[kind] * 0.35;
           const top = Math.max(0, ...signs.filter((sg) => Math.abs(sg.x - x) < sg.w / 2 + hw).map((sg) => sg.b));
-          let want = H * 0.66 * LAY[rw.L].sc * kindH[kind] * (0.8 + rf() * 0.3); if (narrow) want = Math.min(want, 250 * LAY[rw.L].sc + 30);
+          let want = H * 0.92 * LAY[rw.L].sc * kindH[kind] * (0.8 + rf() * 0.3); if (narrow) want = Math.min(want, 250 * LAY[rw.L].sc + 30);
           want = Math.min(want, (rw.by - top - 12) * 1.04);
           if (want < 40) continue;
           flowers.push(mk(Math.min(W - hw, Math.max(hw, x)), rw.by, kind, rw.L, want, true));
@@ -2916,14 +2954,14 @@ void main(){
       let px; try { px = sg.getImageData(0, 0, cols, rows).data; } catch (e) { return; }
       g.setTransform(1, 0, 0, 1, 0, 0); g.clearRect(0, 0, cv.width, cv.height);
       const sx = (W / cols) * d, sy = (H / rows) * d; let last = "";
+      g.font = `700 ${chh * 0.92 * d}px ui-monospace, "SF Mono", Menlo, Consolas, monospace`; g.textAlign = "center"; g.textBaseline = "middle";
       for (let y = 0; y < rows; y++) for (let x = 0; x < cols; x++) {
-        const i = (y * cols + x) * 4, A = px[i + 3] / 255; if (A < 0.1) continue;
+        const i = (y * cols + x) * 4, A = px[i + 3] / 255; if (A < 0.12) continue;
         const key = px[i] + "," + px[i + 1] + "," + px[i + 2]; if (key !== last) { g.fillStyle = `rgb(${key})`; last = key; }
-        const rad = Math.min(0.62, 0.16 + 0.5 * Math.sqrt(A)) * pitch * d;
-        g.beginPath(); g.arc((x + 0.5 + (y % 2 ? 0.5 : 0)) * sx, (y + 0.5) * sy, rad, 0, 6.2832); g.fill();
+        g.fillText(A < 0.28 ? "." : A < 0.42 ? ":" : A < 0.56 ? "*" : A < 0.7 ? "%" : A < 0.84 ? "#" : "@", (x + 0.5) * sx, (y + 0.55) * sy);
       }
       /* pollen and a couple of butterflies */
-      const pc = MEAD_PAL[isDark() ? "dark" : "light"].bud[0]; g.setTransform(d, 0, 0, d, 0, 0); g.fillStyle = pc;
+      const pc = MEAD_PAL[isDark() ? "dark" : "light"].tulip[0]; g.setTransform(d, 0, 0, d, 0, 0); g.fillStyle = pc;
       while (parts.length < (calm ? 0 : 16)) parts.push({ x: Math.random() * W, y: H * (0.3 + Math.random() * 0.6), vx: 0, vy: 0, life: 99, amb: true });
       parts = parts.filter((p) => { p.life -= dt; if (p.life <= 0) return false;
         p.vx += (Math.sin(t * 0.8 + p.y * 0.01) * 6 - p.vx * 0.5) * dt; p.vy += (-4 - p.vy * 0.5 + Math.cos(t * 0.7 + p.x * 0.01) * 5) * dt;
@@ -2942,7 +2980,7 @@ void main(){
     host.addEventListener("pointerleave", () => { ptr = null; kick(); });
     host.addEventListener("pointerdown", (e) => {
       const r = host.getBoundingClientRect(), x = e.clientX - r.left, y = e.clientY - r.top; if (y < Math.max(horizon + 10, ...signs.map((sg) => sg.b + 80)) || e.target.closest("a,button")) return;
-      const kind = ["lily", "daisy", "bud", "puff", "wheat", "lily", "fern", "daisy"][planted++ % 8], L = y > H * 0.8 ? 2 : 1, own = flowers.filter((f) => f.own);
+      const kind = ["tulip", "cosmos", "poppy", "spike", "bell", "daisy", "tulip", "cosmos"][planted++ % 8], L = y > H * 0.8 ? 2 : 1, own = flowers.filter((f) => f.own);
       if (own.length >= 24) flowers.splice(flowers.indexOf(own[0]), 1);
       const top = Math.max(0, ...signs.filter((sg) => Math.abs(sg.x - x) < sg.w / 2 + kindW[kind] * 0.35).map((sg) => sg.b)), f = mk(x, y, kind, L, Math.min(y - top - 14, H * (0.28 + Math.random() * 0.14)) * kindH[kind], false); f.own = true; flowers.push(f); flowers.sort((p, q2) => p.by - q2.by || p.layer - q2.layer);
       for (let i = 0; i < 8; i++) parts.push({ x, y: y - 10, vx: (Math.random() - 0.5) * 14, vy: -Math.random() * 10, life: 1 + Math.random() });
