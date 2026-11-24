@@ -1,0 +1,3157 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ольга Гамаюнова, портфолио</title>
+<meta name="description" content="Продуктовый UX/UI-дизайнер: сложные B2B-системы, CRM, PIM, OMS, BI и дизайн-системы. Белград, Сербия.">
+<meta property="og:title" content="Ольга Гамаюнова, портфолио">
+<meta property="og:description" content="Превращаю сложную B2B-логику в понятные интерфейсы.">
+<meta name="theme-color" content="#131116">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23131116'/%3E%3Ctext x='16' y='23' font-family='monospace' font-size='22' font-weight='700' text-anchor='middle' fill='%23ECE8E0'%3E@%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500&family=Martian+Mono:wght@400&display=swap">
+<script>try{var s=localStorage.getItem("pf2-theme");if(s==="dark"||s==="light")document.documentElement.setAttribute("data-theme",s);var l=localStorage.getItem("pf2-lang");if(l==="en"||l==="ru")document.documentElement.lang=l;}catch(e){}</script>
+<style>
+/* =========================================================================
+   SYSTEM
+   type:   5 sizes, 2 weights (400, 500), 2 families
+           t1 11px mono uppercase (labels, buttons)   t2 14px   t3 17px
+           t4 20–26px (headings, leads)               t5 36–72px (titles)
+   space:  one 8-based scale, s1…s7
+   grid:   12 columns, the same gutter and gap everywhere
+   ========================================================================= */
+:root,:root[data-theme="dark"]{
+  --paper:#131116; --ink:#ECE8E0; --muted:#9A948B; --line:#2E2A31; --accent:#F08A55; --hi:#1D1A21; --card:#1C1A21; color-scheme:dark;
+  --f-text:"Golos Text","Helvetica Neue",Arial,system-ui,sans-serif;
+  --f-mono:"Martian Mono",ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;
+  --t1:11px; --t2:14px; --t3:17px; --t4:clamp(20px,1.8vw,26px); --t5:clamp(36px,5vw,72px); --th:clamp(26px,3.2vw,52px);
+  --s1:8px; --s2:16px; --s3:24px; --s4:clamp(32px,3.4vw,48px); --s5:clamp(48px,5.6vw,80px); --s6:clamp(72px,8.4vw,120px); --s7:clamp(104px,12.2vw,176px);
+  --gut:clamp(16px,1.7vw,24px); --gap:clamp(10px,1vw,14px); --cp:clamp(14px,1.25vw,18px); --bar:56px;
+}
+:root[data-theme="light"]{ --paper:#FFFFFF; --ink:#120F17; --muted:#6B6A70; --line:#E4E4E2; --accent:#E0703A; --hi:#ECECEA; --card:#F5F5F3; color-scheme:light; }
+
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:calc(var(--bar) + var(--s2))}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 var(--t3)/1.5 var(--f-text);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+button{font:inherit;color:inherit}
+h1,h2,h3,h4,p,ol,ul,dl,dd,figure,blockquote{margin:0;font-weight:inherit;font-size:inherit}
+ol,ul{padding:0;list-style:none}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+::selection{background:var(--ink);color:var(--paper)}
+
+/* the five styles */
+.lbl{font:400 var(--t1)/1.6 var(--f-mono);text-transform:uppercase;letter-spacing:.02em}
+.t2{font-size:var(--t2);line-height:1.5}
+.t4{font:500 var(--t4)/1.2 var(--f-text);letter-spacing:-.015em}
+.t5{font:500 var(--t5)/1 var(--f-text);letter-spacing:-.035em;text-wrap:balance}
+/* poster text: the one style for titles across the site, like the blocks on the first screen */
+.pt,.hb-2{font:500 var(--t2)/1.45 var(--f-text);text-transform:uppercase;letter-spacing:.06em}
+.muted{color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gap)}
+.wrap{padding-left:var(--gut);padding-right:var(--gut)}
+.ph{background:color-mix(in srgb,var(--accent) 18%,transparent)}
+
+/* buttons: one system, sharp, 44px */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:44px;padding:0 18px;border:1px solid var(--ink);border-radius:0;background:var(--ink);color:var(--paper);font:400 var(--t1)/1 var(--f-mono);text-transform:uppercase;letter-spacing:.04em;text-decoration:none;cursor:pointer;white-space:nowrap;transition:background .15s,color .15s}
+.btn:hover{background:var(--paper);color:var(--ink)}
+.btn.ghost{background:transparent;color:var(--ink)}
+.stage-cta .btn.ghost{background:var(--paper)}
+.stage-cta .btn.ghost:hover{background:var(--ink)}
+.btn.ghost:hover{background:var(--ink);color:var(--paper)}
+.btn svg{width:14px;height:14px;flex:none}
+.tbtn{display:inline-flex;align-items:center;min-height:44px;padding:0 var(--s1);border:0;background:none;color:var(--muted);font:400 var(--t1)/1 var(--f-mono);text-transform:uppercase;letter-spacing:.02em;cursor:pointer;text-decoration:none}
+.tbtn:hover,.tbtn[aria-pressed="true"],.tbtn.on{color:var(--ink)}
+.tbtn[aria-pressed="true"]::before,.tbtn.on::before{content:"→";margin-right:6px}
+
+/* top bar */
+.bar{position:fixed;inset:0 0 auto;z-index:40;height:var(--bar);display:flex;align-items:center;justify-content:space-between;gap:var(--s2);padding:0 calc(var(--gut) - var(--s1));background:color-mix(in srgb,var(--paper) 88%,transparent);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
+.bar .home{color:var(--ink)}
+.bar nav{display:flex;align-items:center;gap:var(--s1)}
+.bar .ctl{display:flex;align-items:center}
+.bar .ctl .sep{color:var(--line);font:400 var(--t1)/1 var(--f-mono)}
+.ibtn{width:44px;height:44px;display:grid;place-items:center;border:0;background:none;color:var(--ink);cursor:pointer}
+.ibtn svg{width:18px;height:18px}
+.burger{display:none}
+.menu{position:fixed;top:var(--bar);right:var(--gut);z-index:45;min-width:220px;padding:var(--s1) 0;background:var(--paper);border:1px solid var(--ink)}
+.menu[hidden]{display:none}
+.menu a{display:flex;min-height:44px;align-items:center;padding:0 var(--s2);font:400 var(--t1)/1 var(--f-mono);text-transform:uppercase;text-decoration:none}
+.menu a:hover{background:var(--ink);color:var(--paper)}
+
+/* hero: one centred column, headline, portrait, two buttons, status */
+.hero{--sz:min(400px,calc(100svh - var(--bar) - 330px),40vw);position:relative;min-height:100svh;padding:calc(var(--bar) + var(--s3)) var(--gut) var(--s5);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:var(--s3);text-align:center}
+.field{position:absolute;inset:0;width:100%;height:100%;display:block;pointer-events:none;z-index:0}
+.hb{position:relative;z-index:2}
+.hb-1{order:1;max-width:18em;font:500 var(--th)/1.08 var(--f-text);text-transform:uppercase;letter-spacing:.02em}
+.stage{order:2;position:relative;z-index:1;width:var(--sz);aspect-ratio:1;touch-action:pan-y;cursor:crosshair;user-select:none;-webkit-user-select:none}
+.stage canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
+.stage-cta{order:3;position:relative;z-index:3;display:flex;gap:6px}
+.hb-2{order:4;color:var(--muted)}
+.hb-0{order:0}
+.dot{display:inline-block;width:6px;height:6px;margin-right:var(--s1);border-radius:50%;background:#3FA36B;vertical-align:2px;animation:blink 2.4s ease-in-out infinite}
+@keyframes blink{50%{opacity:.3}}
+
+/* sections */
+.sec{padding-top:var(--s6)}
+.sec-head{margin-bottom:var(--s3)}
+.sec-head h2{grid-column:1/7}
+
+/* WIDGETS: every block is a card on the dotted paper. Sharp corners like the buttons,
+   no borders, no shadows. A card starts with a small mono header row (.wh) */
+.bento{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:var(--gap)}
+.card{position:relative;display:flex;flex-direction:column;gap:var(--s2);min-width:0;padding:var(--cp);background:var(--card);color:var(--ink);border:0;border-radius:0;text-align:left;text-decoration:none}
+button.card,a.card{cursor:pointer;font:inherit}
+.wh{display:flex;justify-content:space-between;align-items:baseline;gap:var(--s2);color:var(--muted)}
+.wh>span:last-child{text-align:right}
+.card .grow{flex:1}
+.card .num{display:block;font-variant-numeric:tabular-nums}
+.cover{position:relative;display:block;overflow:hidden;background:var(--tint,var(--hi))}
+.cover img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.cover.contain img{object-fit:contain}
+.cbot{display:flex;flex-direction:column;gap:6px;margin-top:auto}
+.go{display:inline-block;transition:transform .25s}
+.card:hover .go,.card:focus-visible .go{transform:translate(2px,-2px)}
+.ccase:hover .cover img,.ccase:focus-visible .cover img{transform:scale(1.025)}
+
+/* cases: one large case and two result widgets, then three cases */
+/* every case is its own card: cover, title, and its main number in the corner.
+   Wide and narrow cards swap places from row to row */
+.w-a{grid-column:span 7}.w-b{grid-column:span 5}
+.ccase .cover img{position:static;height:auto}
+.cfoot{display:flex;justify-content:space-between;align-items:flex-end;gap:var(--s3);margin-top:auto}
+.cfoot .cbot{margin-top:0}
+.stat{display:flex;flex-direction:column;align-items:flex-end;gap:6px;flex:none;max-width:18ch;text-align:right}
+.stat b{font:500 var(--t4)/1 var(--f-text);letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.stat span{color:var(--muted)}
+
+/* side projects: two widgets, the second screen shows on hover */
+.w-proj{grid-column:span 6;display:flex;flex-direction:column;gap:var(--s3)}
+.w-proj .cover{aspect-ratio:800/829}
+.shot{background:#fff}
+.shot img{object-position:top center;transition:opacity .35s,transform .6s cubic-bezier(.2,.7,.2,1)}
+.shot img+img{opacity:0}
+.shot.vid{aspect-ratio:4/5!important}
+.shot video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .3s}
+.shot video.on{opacity:1}
+.sim.on .wb{opacity:1}
+.sim.on .cd{opacity:1}
+
+/* about */
+.w-bio{grid-column:1/9;justify-content:space-between}
+.w-bio .t4{font-weight:400;letter-spacing:-.01em;max-width:34em}
+.w-seek{grid-column:9/13}
+.w-xp{grid-column:1/9;grid-row:span 3}
+.w-lang,.w-edu,.w-sk{grid-column:9/13}
+.w-tools,.w-ai{grid-column:span 6}
+.xpl{display:flex;flex-direction:column;gap:var(--s3)}
+.xpl li{display:grid;grid-template-columns:minmax(9em,1fr) 3fr;column-gap:var(--gap);row-gap:4px;align-items:baseline}
+.xpl .y{color:var(--muted);font-variant-numeric:tabular-nums}
+.xpl .r{font-weight:500}
+.xpl .r span{font-weight:400;color:var(--muted)}
+.xpl .d{grid-column:2;color:var(--muted);max-width:62ch}
+.edl{display:flex;flex-direction:column;gap:var(--s2)}
+.edl li{display:flex;justify-content:space-between;gap:var(--s2);align-items:baseline}
+.edl .r span{display:block;color:var(--muted)}
+.langs{display:flex;flex-direction:column;gap:10px}
+.langs li{display:grid;grid-template-columns:1fr auto;column-gap:var(--s2);row-gap:2px;align-items:baseline}
+.langs .lv{color:var(--muted)}
+.tags{display:flex;flex-wrap:wrap;gap:6px 18px}
+
+/* contact */
+.w-mail{grid-column:1/9}
+.w-clock{grid-column:9/13}
+.mail{display:block;width:100%;margin:0;padding:0;border:0;background:none;text-align:left;cursor:pointer;color:var(--ink);overflow-wrap:anywhere;font-size:var(--th)}
+.mail:hover{color:var(--accent)}
+.w-mail .cta{color:var(--muted);max-width:46ch}
+.acts{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto}
+.w-clock .num{font:500 var(--t5)/1 var(--f-text);letter-spacing:-.035em}
+.clock{font-variant-numeric:tabular-nums}
+.mtop{display:flex;flex-direction:column;gap:6px}
+
+/* soft skills live in the footer, above the meadow: flowers standing on the paper, no cards */
+.soft .sec-head{margin-bottom:var(--s3)}
+.flowers{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--s4) var(--gap)}
+.flower{display:flex;flex-direction:column;gap:var(--s1);min-width:0}
+.flower .fl{position:relative;aspect-ratio:4/5;width:min(62%,240px);margin:0 0 var(--s2)}
+.flower .fl canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
+.flower p{max-width:40ch}
+.flower .lbl{color:var(--muted)}
+
+/* footer: a field of ASCII flowers with little garden signs */
+.site-foot{margin-top:var(--s6)}
+.site-foot .meadow{margin-top:var(--s4)}
+.meadow{position:relative;height:clamp(520px,46vw,680px);cursor:crosshair;overflow:hidden;touch-action:pan-y}
+.meadow canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
+.takes{margin:0;padding:0;list-style:none}
+.take.sk{max-width:min(32ch,44vw);text-align:center}
+.take.sk b{display:block;margin-bottom:4px;font:500 var(--t2)/1.45 var(--f-text);text-transform:uppercase;letter-spacing:.06em}
+.take.sk span{display:block;color:var(--muted)}
+.take{position:absolute;z-index:1;width:max-content;max-width:min(24ch,40vw);padding:0;background:none;transform:translateX(-50%);font-size:var(--t2);line-height:1.35;text-wrap:balance}
+.foot{padding:var(--s2) 0 var(--s3);row-gap:var(--s1);align-items:center;color:var(--muted)}
+.foot .f1{grid-column:1/7}.foot .f2{grid-column:7/10}.foot .f3{grid-column:10/13;text-align:right}
+.site-foot .foot{padding-left:var(--gut);padding-right:var(--gut);background:var(--paper)}
+
+/* case page: a left rail (cols 1–2), content from col 3 */
+.case{padding-top:calc(var(--bar) + var(--s2))}
+.case[hidden],.home[hidden]{display:none}
+.case-top{align-items:center}
+.case-top .back{grid-column:1/5;justify-self:start}
+.case-top .crumb{grid-column:5/13;text-align:right;color:var(--muted)}
+.case-head{margin-top:var(--s6);row-gap:var(--s2)}
+.case-head .k{grid-column:1/3;color:var(--muted)}
+.case-head h1{grid-column:3/13;outline:none}
+.case-head .sub{grid-column:3/10;font-weight:400;color:var(--muted);text-wrap:balance}
+.case-head .intro{grid-column:3/10;max-width:62ch}
+.brief{margin-top:var(--s5)}
+.brief,.case-meta,.case-stats{row-gap:var(--gap)}
+.case-meta,.case-stats{margin-top:var(--gap)}
+.brief>div,.case-meta>div,.case-stats>div{display:flex;flex-direction:column;gap:var(--s1);padding:var(--cp);background:var(--card)}
+.brief>div:first-child{grid-column:3/7}.brief>div:nth-child(2){grid-column:7/10}.brief>div:nth-child(3){grid-column:10/13}
+.brief dt,.case-meta dt{color:var(--muted)}
+.case-meta>div{grid-column:span 2}
+.case-meta>div:first-child{grid-column:3/5}
+.case-stats>div:first-child{grid-column:3/7}.case-stats>div:nth-child(2){grid-column:7/10}.case-stats>div:nth-child(3){grid-column:10/13}
+.case-stats b{display:block;font-variant-numeric:tabular-nums}
+.case-stats span{display:block;color:var(--muted);max-width:26ch}
+.case-cover{margin-top:var(--gap);aspect-ratio:16/9}
+.case-body{margin-top:var(--s6);align-items:start}
+.toc{grid-column:1/3;position:sticky;top:calc(var(--bar) + var(--s3));display:flex;flex-direction:column;margin-left:calc(-1 * var(--s1))}
+.toc .tbtn{min-height:32px}
+.flow{grid-column:3/13;display:flex;flex-direction:column;gap:var(--s6)}
+.cs{display:flex;flex-direction:column;gap:var(--s3);scroll-margin-top:calc(var(--bar) + var(--s3))}
+.cs h2{margin-bottom:var(--s1)}
+.cs p,.cs li{max-width:66ch}
+.dash li{position:relative;padding:6px 0 6px 22px}
+.dash li::before{content:"";position:absolute;left:2px;top:.95em;width:8px;height:1px;background:var(--ink)}
+.fig{display:flex;flex-direction:column;gap:var(--s1);max-width:none}
+.fig img{width:100%;height:auto;background:var(--hi)}
+.fig figcaption{color:var(--muted)}
+.quote{padding:var(--cp);background:var(--card);display:flex;flex-direction:column;gap:var(--s2)}
+.quote p{font-weight:400;max-width:40ch}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:var(--gap)}
+.two h4{margin-bottom:var(--s1)}
+.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--gap)}
+.steps li,.tri li{display:flex;flex-direction:column;gap:var(--s1);padding:var(--cp);background:var(--card)}
+.steps .lbl,.tri .lbl{color:var(--muted)}
+.decision{display:flex;flex-direction:column;gap:var(--s2)}
+.decision h3,.res h4,.lessons h4{font-weight:500}
+.note{max-width:66ch}
+.note .lbl{margin-right:var(--s1);color:var(--muted)}
+.tri{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--gap)}
+.state{align-self:flex-start;padding:5px var(--s1);border:1px solid var(--ink)}
+.res{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--s3) var(--gap)}
+.res li{display:flex;flex-direction:column;gap:var(--s1);padding:var(--cp);background:var(--card)}
+.res p,.lessons p{color:var(--muted)}
+.lessons{display:flex;flex-direction:column;gap:var(--s3)}
+.lessons li{display:flex;flex-direction:column;gap:4px}
+.files{display:flex;flex-wrap:wrap;gap:6px}
+.next{display:block;width:100%;margin-top:var(--s6);padding:var(--cp);border:0;background:var(--card);text-align:left;cursor:pointer;color:inherit}
+.next .t5{display:block;margin-top:var(--s4)}
+.next:hover .t5{color:var(--accent)}
+
+/* overlays */
+.fx{position:fixed;inset:0;z-index:70;pointer-events:none;width:100%;height:100%}
+.ring{position:fixed;inset:0;z-index:75;pointer-events:none;width:100vw;height:100vh;view-transition-name:ring}
+@property --vr{syntax:"<length>";inherits:false;initial-value:0px}
+::view-transition-group(root),::view-transition-old(root),::view-transition-new(root),
+::view-transition-group(ring),::view-transition-old(ring),::view-transition-new(ring){animation:none}
+::view-transition-old(ring){display:none}
+::view-transition-new(root){-webkit-mask-image:radial-gradient(circle at var(--vx,50%) var(--vy,50%),#000 calc(var(--vr) - var(--vw,120px)),transparent var(--vr));mask-image:radial-gradient(circle at var(--vx,50%) var(--vy,50%),#000 calc(var(--vr) - var(--vw,120px)),transparent var(--vr))}
+.tag{position:fixed;left:0;top:0;z-index:80;pointer-events:none;padding:7px 9px;background:var(--ink);color:var(--paper);opacity:0;transform:translate(-100px,-100px);transition:opacity .15s}
+.tag.show{opacity:1}
+.toast{position:fixed;left:50%;bottom:var(--s3);z-index:90;transform:translate(-50%,20px);padding:12px var(--s2);background:var(--ink);color:var(--paper);opacity:0;pointer-events:none;transition:opacity .2s,transform .2s}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* responsive */
+@media (max-width:1100px){
+  .w-a,.w-b{grid-column:span 6}
+  .w-bio,.w-seek{grid-column:1/13}
+  .w-xp{grid-column:1/13;grid-row:auto}
+  .w-lang,.w-edu,.w-sk{grid-column:span 4}
+  .w-mail{grid-column:1/13}.w-clock{grid-column:1/13}
+  .steps{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .brief>div:first-child,.brief>div:nth-child(2),.brief>div:nth-child(3){grid-column:span 4}
+}
+@media (max-width:760px){
+  :root{--bar:52px}
+  .bar nav,.bar .cv,.bar .sep{display:none}
+  .burger{display:grid}
+  .hero{--sz:min(86vw,420px);min-height:auto;align-items:stretch;justify-content:flex-start;text-align:left;padding-bottom:var(--s4)}
+  .field{display:none}
+  .hb-1{max-width:none}
+  .stage{align-self:center}
+  .stage-cta{align-self:flex-start}
+  .sec-head h2{grid-column:1/13}
+  .bento>*{grid-column:1/-1 !important;grid-row:auto !important}
+  .xpl li{grid-template-columns:1fr}
+  .xpl .d{grid-column:1}
+  .flowers{grid-template-columns:1fr}
+  .flower .fl{width:min(56%,220px)}
+  .cfoot{flex-wrap:wrap}
+  .stat{align-items:flex-start;text-align:left}
+  .meadow{height:760px}
+  .foot .f1,.foot .f2,.foot .f3{grid-column:1/13;text-align:left}
+  .case-top .back{grid-column:1/13}.case-top .crumb{display:none}
+  .case-head .k,.case-head h1,.case-head .sub,.case-head .intro{grid-column:1/13}
+  .brief>div:first-child,.brief>div:nth-child(2),.brief>div:nth-child(3){grid-column:1/13}
+  .case-meta>div,.case-meta>div:first-child{grid-column:span 6}
+  .case-stats>div:first-child,.case-stats>div:nth-child(2),.case-stats>div:nth-child(3){grid-column:1/13}
+  .toc{display:none}
+  .flow{grid-column:1/13}
+  .two,.tri,.res{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){
+  .dot{animation:none}
+  .shot img,.cover img{transition:none}
+}
+</style>
+</head>
+<body>
+<header class="bar" id="bar">
+  <a class="tbtn home" href="#top" data-go="top" id="homeLink"></a>
+  <nav id="nav" aria-label="Разделы"></nav>
+  <div class="ctl">
+    <a class="tbtn cv" id="cvTop" href="#" target="_blank" rel="noopener">CV</a>
+    <span class="sep" aria-hidden="true">/</span>
+    <button class="tbtn" data-lang="ru">Ru</button>
+    <button class="tbtn" data-lang="en">En</button>
+    <button class="ibtn" id="themeBtn"></button>
+    <button class="ibtn burger" id="burger" aria-expanded="false" aria-controls="menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 8h16M4 16h16"/></svg></button>
+  </div>
+</header>
+<div class="menu" id="menu" hidden></div>
+
+<main>
+  <div class="home" id="home">
+    <section class="hero" id="top">
+      <p class="hb hb-2 hb-0" id="hb0"></p>
+      <h1 class="hb hb-1" id="hb1"></h1>
+      <p class="hb hb-2" id="hb2"></p>
+      <div class="stage" id="stage">
+        <p class="sr" id="stageDesc"></p>
+      </div>
+      <div class="stage-cta" id="stageCta"></div>
+    </section>
+    <section class="sec wrap" id="work"></section>
+    <section class="sec wrap" id="projects"></section>
+    <section class="sec wrap about" id="about"></section>
+    <section class="sec wrap contact" id="contact"></section>
+    <footer class="site-foot" id="foot"></footer>
+  </div>
+  <article class="case wrap" id="case" hidden></article>
+</main>
+<div class="tag lbl" id="tag" aria-hidden="true"></div>
+<div class="toast lbl" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+/* Content: edit texts here. Words in *stars* in the headline are split into the big blocks. */
+const CONTENT = {
+ "defaultLang": "ru",
+ "caseOrder": [
+  2,
+  0,
+  1,
+  3
+ ],
+ "email": "olgagamaunova10@gmail.com",
+ "cv": {
+  "ru": "cv/Olga_Gamaiunova_CV_RU.pdf",
+  "en": "cv/Olga_Gamaiunova_CV_EN.pdf"
+ },
+ "links": [
+  {
+   "label": {
+    "ru": "Телеграм",
+    "en": "Telegram"
+   },
+   "url": "https://t.me/weareliars00"
+  },
+  {
+   "label": {
+    "ru": "LinkedIn",
+    "en": "LinkedIn"
+   },
+   "url": "https://www.linkedin.com/in/olga-gamaiunova-uiux"
+  }
+ ],
+ "ru": {
+  "name": "Ольга Гамаюнова",
+  "role": "UX/UI / продуктовый дизайнер",
+  "location": "Белград, Сербия",
+  "status": "Открыта к предложениям",
+  "who": "Продуктовый UX/UI-дизайнер",
+  "headline": "Превращаю *сложную B2B-логику* в понятные интерфейсы",
+  "contactCta": "Ищу продуктовую команду, где сложное нужно сделать простым. Если это про вас, напишите.",
+  "cases": [
+   {
+    "title": "Дизайн-система CORPORTAL",
+    "year": "2025–2026",
+    "tint": "#E4E2FF",
+    "cover": "@dsCover",
+    "noCardMetric": true,
+    "summary": "Своя дизайн-система вместо Naive UI: единый интерфейс для всех разделов, темы под бренд каждого клиента и меньше UI-багов в разработке",
+    "stats": [
+     {
+      "v": "150+",
+      "l": "компонентов для дизайна и разработки"
+     },
+     {
+      "v": "3",
+      "l": "клиентские темы на одних компонентах"
+     },
+     {
+      "v": "4",
+      "l": "раздела на одном блоке комментариев"
+     }
+    ],
+    "tags": [
+     "Дизайн-система",
+     "B2B",
+     "Мультитенантность"
+    ],
+    "subtitle": "Миграция с Naive UI на собственную дизайн-систему",
+    "intro": "150+ компонентов и мультитенантная архитектура токенов. Система строилась рядом с живым продуктом и внедрялась постепенно, вытесняя Naive UI.",
+    "meta": {
+     "role": "Продуктовый дизайнер",
+     "context": "B2B SaaS, 1000+ пользователей",
+     "timeline": "2025–2026",
+     "platform": "Веб + адаптив",
+     "outcome": "Единый интерфейс для всех разделов и клиентов, меньше UI-багов"
+    },
+    "labels": {
+     "research": [
+      "Подход",
+      "Как строили систему"
+     ],
+     "design": [
+      "Решения",
+      "Ключевые решения"
+     ],
+     "testing": [
+      "Результаты",
+      "Что изменилось"
+     ]
+    },
+    "challenge": [
+     "Каждый экран решался заново. Консистентности не было.",
+     "Продукт рос, но без системы. Разные разделы выглядели по-разному, разработчики принимали визуальные решения сами. Naive UI не давал нужной гибкости и под мультитенантность не был рассчитан вовсе."
+    ],
+    "problems": [
+     "Библиотеки компонентов не было, каждый экран проектировался с нуля",
+     "Интерфейс не адаптировался под цвет бренда клиента",
+     "Несоответствия доходили до продакшена незамеченными"
+    ],
+    "beforeImage": "@dsBefore",
+    "beforeCaption": "Так выглядел один из разделов до дизайн-системы",
+    "question": "Как построить систему, которая подстраивается под бренд любого клиента без ручной перекраски?",
+    "given": [
+     "Живой продукт: внедрять систему можно было только постепенно",
+     "Naive UI без поддержки мультитенантности",
+     "Ни библиотеки компонентов, ни общих правил"
+    ],
+    "did": [
+     "Библиотека из 150+ компонентов",
+     "Слой токенов «бренд» для клиентских тем",
+     "Компактные варианты для плотных разделов",
+     "Процесс ревью до разработки"
+    ],
+    "research": {
+     "method": [
+      "Продукт уже жил и работал. Дизайн-система строилась рядом и внедрялась постепенно, вытесняя Naive UI. Отдельный аудит не делали: взяли лучшие практики и начали строить с нуля.",
+      "Начали с самых часто используемых компонентов: иконки, кнопки, инпуты, табы. То, что встречается на каждом экране. Сначала покрываешь общее и максимально захватываешь продукт, потом идёшь в частности, иначе никак."
+     ],
+     "image": "@dsComponents",
+     "caption": "Базовые компоненты и коллекции переменных",
+     "insights": []
+    },
+    "decisions": [
+     {
+      "title": "Темы через слой токенов «бренд»",
+      "text": "Первый вариант был проще: один цвет, который красили вручную под каждого клиента. Но быстро стало понятно, что это не масштабируется. Тем может быть много, каждую нужно проверять на контрастность, а ручная правка убивает всю автономность.",
+      "image": "@dsTokens",
+      "caption": "Одни и те же компоненты в темах GlobalDrive, Oryx и Lunnar",
+      "result": "Основной цвет клиента задаётся один раз, и интерфейс адаптируется везде без изменения компонентов. Между клиентскими темами можно мгновенно переключаться прямо в Figma."
+     },
+     {
+      "title": "Блок комментариев",
+      "text": "Без ТЗ и без договорённостей, но нужен сразу в четырёх контекстах: задачи, заказы, CRM, новости. У менеджера и аналитика были разные представления о том, как он должен работать, и каждое решение приходилось защищать и аргументировать.",
+      "image": "@dsComments",
+      "caption": "Блок комментариев в мобильной и десктопной версии",
+      "result": "Пришли к одному ограничению: у контента внутри блока есть максимальная ширина, чтобы сообщения оставались читаемыми в любом контексте. Блок работает во всех четырёх разделах без изменений."
+     },
+     {
+      "title": "Компактные варианты компонентов",
+      "text": "Появились из стилистического решения команды. В плотных разделах стандартные размеры занимали слишком много места и уменьшали количество полезного контента на экране.",
+      "tradeoff": "Пришлось пересмотреть часть уже готовых компонентов."
+     },
+     {
+      "title": "Ревью до разработки",
+      "text": "До введения ревью разработчики нередко принимали визуальные решения самостоятельно, просто делали как чувствовали.",
+      "result": "Сложные решения стали обсуждаться до того, как попадают в код."
+     },
+     {
+      "title": "Передача в разработку",
+      "text": "С базовыми компонентами передача прошла без трений. Когда перешли к сложным составным компонентам, обратной связи стало больше, но это было продуктивно: разработчики лучше понимали логику и задавали правильные вопросы."
+     }
+    ],
+    "testing": {
+     "setup": "",
+     "findings": [],
+     "results": [
+      {
+       "title": "Экраны из готовых компонентов",
+       "text": "Новые экраны собираются из готовых компонентов, а не рисуются с нуля, и уходят в разработку без расхождений с макетом."
+      },
+      {
+       "title": "Единый источник правды",
+       "text": "У дизайна и разработки одна библиотека, визуальные решения больше не принимаются на глаз."
+      },
+      {
+       "title": "Проверка до разработки",
+       "text": "Сложные решения перестали попадать в продакшен незамеченными."
+      },
+      {
+       "title": "Темы без ручной работы",
+       "text": "Цвет бренда клиента задаётся один раз, интерфейс подстраивается сам."
+      }
+     ],
+     "image": "@dsModals",
+     "caption": "Модальные окна для отчётов, сделок и полей, собранные из готовых компонентов"
+    },
+    "learnings": [
+     {
+      "title": "Ревью стоило ввести с первого дня",
+      "text": "До него визуальные решения уходили в код без обсуждения. Процесс проверки дешевле настроить в начале, чем догонять потом."
+     }
+    ],
+    "reflection": "Больше всего горжусь слоем «бренд»: одно решение сняло ручную работу с каждой новой темой клиента.",
+    "delivered": [
+     "Библиотека из 150+ компонентов",
+     "Мультитенантная архитектура токенов",
+     "Процесс ревью до разработки"
+    ],
+    "shift": "Экраны с нуля → 150+ готовых компонентов"
+   },
+   {
+    "title": "Tasks & Kanban",
+    "year": "2026",
+    "tint": "#DDEBDF",
+    "cover": "@tkCover",
+    "noCardMetric": true,
+    "summary": "Таск-трекер, в котором IT, продажи, HR и магазины ведут каждый свой процесс в одном инструменте",
+    "stats": [
+     {
+      "v": "4",
+      "l": "типа команд работают в одном инструменте"
+     },
+     {
+      "v": "1000+",
+      "l": "пользователей платформы"
+     },
+     {
+      "v": "3",
+      "l": "режима: канбан, список, календарь"
+     }
+    ],
+    "tags": [
+     "B2B",
+     "Управление задачами",
+     "Канбан"
+    ],
+    "subtitle": "Редизайн раздела задач и канбан с нуля",
+    "intro": "Был список задач и календарь. Стал гибкий инструмент для команд с разными процессами: IT, продажи, HR, управление магазинами.",
+    "meta": {
+     "role": "UX/UI-дизайнер",
+     "context": "GlobalDrive, B2B, 1000+ пользователей",
+     "timeline": "2026",
+     "platform": "Веб + адаптив",
+     "outcome": "Один инструмент в трёх режимах: канбан, список, календарь"
+    },
+    "labels": {
+     "design": [
+      "Решения",
+      "Ключевые решения"
+     ],
+     "testing": [
+      "Результаты",
+      "Что изменилось"
+     ]
+    },
+    "challenge": "Старый раздел задач был функционально ограничен.",
+    "problems": [
+     "Центральным элементом было отображение дел на день: оно съедало место и перетягивало на себя внимание",
+     "Из представлений были только список и календарь",
+     "Широкая панель инструментов занимала экран, но давала меньше возможностей, чем обещала визуально"
+    ],
+    "beforeImage": "@tkOldCalendar",
+    "beforeCaption": "Старый раздел: блок дел на сегодня и календарь",
+    "question": "Как сделать один инструмент задач, который подойдёт командам с разными процессами?",
+    "given": [
+     "Существующий раздел: список и календарь",
+     "Команды с разными процессами: IT, продажи, HR, управление магазинами",
+     "Согласование каждого шага с заказчиком"
+    ],
+    "did": [
+     "Редизайн раздела задач",
+     "Канбан с нуля",
+     "Кастомная карточка со своими полями",
+     "Согласование результата по этапам"
+    ],
+    "research": {
+     "method": [
+      "Начала с конкурентов: смотрела, как устроены задачи в похожих инструментах, что работает, а что раздражает. Потом прописала сценарии под конкретные команды и сделала быстрые вайрфреймы для согласования с заказчиком.",
+      "Остановились на трёх представлениях: канбан, список, календарь. Гантт рассматривали, но отвергли сразу: он только усложнил бы и застопорил разработку. Базовый набор закрывает большинство реальных сценариев без лишней нагрузки."
+     ],
+     "insights": []
+    },
+    "decisions": [
+     {
+      "title": "Канбан с настраиваемыми стадиями",
+      "text": [
+       "Раньше движение задач по этапам было скрытым. Теперь каждая команда настраивает стадии под свой процесс: от бэклога до финальной проверки.",
+       "Drag-and-drop разработка делала долго, но без неожиданностей. Сложных дизайнерских решений здесь не было, механика очевидная."
+      ],
+      "image": "@tkBoard",
+      "caption": "Канбан: у каждой команды свои стадии, задачи перетаскиваются между колонками"
+     },
+     {
+      "title": "Кастомная карточка задачи",
+      "text": [
+       "Карточка подстраивается под команду, а не наоборот: каждая команда может создать собственные поля под свои нужды и использовать их в работе. Лишнее скрывается, нужное остаётся на виду.",
+       "Механика пришла из референсов: похожая популярна в Notion и ряде других сервисов. Типы полей взяли базовые и оставили все варианты: текст, выбор, мультивыбор. Чем больше вариативности, тем меньше ограничений для разных команд."
+      ],
+      "image": "@tkFields",
+      "caption": "Создание своего поля для нужд команды: текст, выбор или мультивыбор"
+     },
+     {
+      "title": "Редактирование прямо в карточке",
+      "text": "Поля редактируются прямо в карточке, без открытия модалки. Скрываемые поля и настраиваемый порядок позволяют каждой команде видеть только то, что нужно.",
+      "image": "@tkBeforeAfter",
+      "caption": "Задача до и после редизайна"
+     },
+     {
+      "title": "Согласование результата",
+      "text": "Задача движется от исполнителя к лиду и руководителю. К каждому этапу можно прикрепить результат в виде ссылки, текста или документа. При необходимости задача возвращается в работу."
+     },
+     {
+      "title": "Итерации вместо переделок",
+      "text": [
+       "Каждый фрагмент проектировался итерационно: несколько вариантов, выбор, согласование. Не было момента, когда пришлось бы переделывать кардинально.",
+       "Единственный пересмотр случился после внедрения дизайн-системы: перешли на компактный вид и уменьшили шапку раздела."
+      ]
+     }
+    ],
+    "testing": {
+     "setup": "",
+     "findings": [],
+     "results": [
+      {
+       "title": "Три режима работы",
+       "text": "Канбан для визуального флоу, список для линейного обзора, календарь для контроля дедлайнов. Один инструмент в трёх режимах."
+      },
+      {
+       "title": "Свой процесс у каждой команды",
+       "text": "Стадии настраиваются под процесс команды: от бэклога до финальной проверки."
+      },
+      {
+       "title": "Видно, где задача",
+       "text": "Задача идёт от исполнителя к лиду и руководителю, результат прикрепляется к каждому этапу."
+      },
+      {
+       "title": "Карточка под команду",
+       "text": "Команды создают свои поля, редактируют их прямо в карточке и скрывают лишнее."
+      }
+     ]
+    },
+    "learnings": [
+     {
+      "title": "Компактный вид стоило заложить сразу",
+      "text": "Единственный пересмотр случился после внедрения дизайн-системы: перешли на компактный вид и уменьшили шапку. Плотность интерфейса лучше решать на старте."
+     }
+    ],
+    "reflection": "Горжусь, что один инструмент подошёл командам с совсем разными процессами, от IT до магазинов.",
+    "delivered": [
+     "Редизайн раздела задач",
+     "Канбан с перетаскиванием и настраиваемыми стадиями",
+     "Кастомная карточка со своими полями",
+     "Согласование результата по этапам"
+    ],
+    "shift": "Список задач → инструмент для 4 типов команд"
+   },
+   {
+    "title": "PIM + OMS",
+    "year": "2025",
+    "tint": "#F0E3D6",
+    "cover": "@pmCover",
+    "summary": "Каталог и заказы как одна система: полная картина заказа и загрузка контейнера до отгрузки",
+    "stats": [
+     {
+      "v": "−30%",
+      "l": "времени на задачи"
+     },
+     {
+      "v": "−20%",
+      "l": "ошибок пользователей"
+     },
+     {
+      "v": "2",
+      "l": "модуля с нуля как одна система"
+     }
+    ],
+    "tags": [
+     "B2B",
+     "PIM",
+     "OMS"
+    ],
+    "subtitle": "Два модуля с нуля: каталог товаров и управление заказами",
+    "intro": "Проектировала их последовательно, как единую систему, где каждый предыдущий модуль становится основой для следующего.",
+    "meta": {
+     "role": "Продуктовый дизайнер",
+     "context": "Команда закупок, B2B",
+     "timeline": "2025",
+     "platform": "Веб + адаптив",
+     "outcome": "−30% времени на задачи, −20% ошибок"
+    },
+    "labels": {
+     "design": [
+      "Решения",
+      "Ключевые решения"
+     ],
+     "testing": [
+      "Результаты",
+      "Что изменилось"
+     ]
+    },
+    "challenge": [
+     "Полной картины по заказу не существовало.",
+     "Процесс работы с заказами был громоздким. Менеджер составлял таблицу заказа, отправлял её в Битрикс следующему менеджеру, тот редактировал и передавал дальше. На каждом переходе формировалась слепая зона: никто не видел полную картину. Объём заполненности контейнера выяснялся на позднем этапе, детали согласовывались отдельными сообщениями.",
+     "Не было триггерного момента, когда всё сломалось. Закупки просто доросли до того, что без нормального инструмента работать стало неудобно."
+    ],
+    "problems": [
+     "Каталога товаров внутри портала не было",
+     "Прайслисты вели в отдельных файлах по каждому региону",
+     "Детали заказа согласовывались сообщениями вне системы",
+     "Не было инструмента, чтобы оценить загрузку контейнера до отгрузки"
+    ],
+    "question": "Как собрать заказ так, чтобы все участники видели полную картину от каталога до отгрузки?",
+    "given": [
+     "Процесс в таблицах и Битриксе",
+     "Прайслисты в отдельных файлах по регионам",
+     "Почти нет открытых референсов под такой сценарий"
+    ],
+    "did": [
+     "Каталог товаров с вариантами",
+     "Прайслисты по регионам",
+     "Модуль заказов с двумя режимами экрана",
+     "Калькулятор загрузки контейнера с 3D"
+    ],
+    "research": {
+     "method": [
+      "Референсов было мало: сценарий специфичный, в открытом доступе почти ничего похожего нет. Ориентировалась на один близкий референс и на маркетплейсы как общую логику работы с товарами.",
+      "Проектирование шло последовательно. Сначала каталог товаров с возможностью добавить товар в корзину. Корзина на этом этапе существовала скорее как напоминание о незавершённом заказе. Потом прайслисты, чтобы менеджеры могли удобно работать с ценами по регионам. И только потом полноценный модуль заказов."
+     ],
+     "image": "@pmCatalog",
+     "caption": "Каталог товаров: список и плитка",
+     "insights": []
+    },
+    "decisions": [
+     {
+      "title": "Карточка товара с вариантами",
+      "text": "Самой нетривиальной частью каталога оказалась карточка товара: нужно было уместить и базовую информацию, и варианты одного товара. Варианты вынесли в отдельный список, а внутри карточки переключение между ними сделали через табы.",
+      "image": "@pmProduct",
+      "caption": "Карточка товара: варианты, характеристики и цены в разных валютах",
+      "result": "Структура товаров с вариантами и мультивалютными ценами."
+     },
+     {
+      "title": "Прайслисты по регионам",
+      "text": "Прайслисты появились раньше модуля заказов, чтобы менеджеры могли удобно работать с ценами по регионам, а не в отдельных файлах.",
+      "image": "@pmPrices",
+      "caption": "Прайслисты: цены, наценки и статусы по каждой стране",
+      "result": "Региональные статусы позволяют управлять доступностью товара на каждом рынке отдельно."
+     },
+     {
+      "title": "Приоритет данных на экране заказа",
+      "text": "Приоритизация пришла сразу. Первое, что нужно видеть, это маркеры статуса и сам список заказа. Это главная информация на странице, остальное идёт ниже.",
+      "image": "@pmOrder",
+      "caption": "Блоки заказа: финансы, поставщик, даты, логистика, файлы и комментарии",
+      "result": "Весь жизненный цикл заказа на одном экране: от статуса до финансов, маршрута и складов."
+     },
+     {
+      "title": "Один экран, две роли",
+      "text": "Два вида одного экрана появились из разных ролей внутри процесса. Одни создают заказ, другие работают с ним дальше и отвечают за логистику и оплату.",
+      "result": "Заказчик видит заполненные данные, читаемые и чистые. Менеджер видит те же блоки с инпутами и управляет ими. Один экран, две реальности."
+     },
+     {
+      "title": "Калькулятор загрузки контейнера",
+      "text": "Load Calculator сразу сделали сворачиваемым: на странице много блоков, нужна гибкость. Разворачиваешь, когда нужно проверить загрузку, скрываешь, когда не нужно.",
+      "image": "@pmLoad",
+      "caption": "3D-загрузка контейнера прямо внутри заказа",
+      "result": "3D-визуализация несложная в реализации, но очень заметная для бизнеса, и заказчик её оценил. Менеджер видит, оптимальна ли отгрузка, до того как она случится."
+     }
+    ],
+    "testing": {
+     "setup": "",
+     "findings": [],
+     "results": [
+      {
+       "title": "Каталог внутри портала",
+       "text": "Товары с вариантами и мультивалютными ценами, свои статусы на каждом рынке."
+      },
+      {
+       "title": "Заказ целиком на одном экране",
+       "text": "От статуса до финансов, маршрута и складов, всё по приоритету данных."
+      },
+      {
+       "title": "Одна страница для двух ролей",
+       "text": "Заказчик читает данные, менеджер управляет ими."
+      },
+      {
+       "title": "Нет слепой зоны по контейнеру",
+       "text": "Загрузку видно до отгрузки, а не на позднем этапе."
+      }
+     ]
+    },
+    "learnings": [
+     {
+      "title": "Роли прописывать в самом начале",
+      "text": "Два вида одного экрана выросли именно из ролей: кто создаёт заказ, а кто ведёт логистику и оплату. Чем раньше видны роли, тем меньше переделок в интерфейсе."
+     }
+    ],
+    "reflection": "Горжусь калькулятором загрузки: несложная фича закрыла самую дорогую слепую зону процесса.",
+    "delivered": [
+     "Каталог товаров с вариантами",
+     "Прайслисты по регионам",
+     "Модуль заказов",
+     "Калькулятор загрузки контейнера с 3D-визуализацией"
+    ],
+    "shift": "Два модуля → одна система"
+   },
+   {
+    "title": "Я_HR",
+    "year": "2024",
+    "tint": "#18171D",
+    "cover": "@yhCover",
+    "fit": "contain",
+    "noCardMetric": true,
+    "summary": "Лендинг нового HR-сервиса Яндекса: три аудитории на одной странице. 2 место на хакатоне",
+    "stats": [
+     {
+      "v": "2",
+      "l": "место на хакатоне Яндекса"
+     },
+     {
+      "v": "3",
+      "l": "аудитории на одной странице"
+     },
+     {
+      "v": "5",
+      "l": "человек в команде, я лид"
+     }
+    ],
+    "tags": [
+     "Лендинг",
+     "Хакатон",
+     "Яндекс"
+    ],
+    "subtitle": "Лендинг нового HR-сервиса Яндекса с нуля: от исследования аудитории до адаптива",
+    "intro": "Хакатон Яндекса, команда из 5 человек. Задача: спроектировать и задизайнить лендинг для нового HR-сервиса Я_HR с нуля.",
+    "meta": {
+     "role": "UX/UI-дизайнер, лид команды",
+     "context": "Хакатон Яндекса, команда из 5 человек",
+     "timeline": "2024",
+     "platform": "Веб + адаптив",
+     "outcome": "2 место"
+    },
+    "labels": {
+     "research": [
+      "Исследование",
+      "Аудитория и гипотезы"
+     ],
+     "design": [
+      "Решения",
+      "Ключевые решения"
+     ],
+     "testing": [
+      "Результаты",
+      "Что получилось"
+     ]
+    },
+    "challenge": [
+     "Яндекс выходил с HR-продуктом на перегретый рынок. Сервис закрывает весь цикл управления персоналом: от найма до развития сотрудников.",
+     "Лендинг должен был не просто рассказать о продукте, а вызвать желание попробовать именно Яндекс как HR-партнёра. При этом аудитория неоднородная, и одна страница должна говорить с каждым:"
+    ],
+    "problems": [
+     "HR-директора думают об узнаваемости компании",
+     "Рекрутеры хотят закрывать вакансии быстрее",
+     "C&B-менеджеры ищут инструменты для мотивации сотрудников"
+    ],
+    "question": "Как одним лендингом убедить три разные аудитории выбрать Яндекс как HR-партнёра?",
+    "given": [
+     "Новый продукт на перегретом рынке",
+     "Три аудитории с разными задачами",
+     "Сжатые сроки хакатона и команда из 5 человек"
+    ],
+    "did": [
+     "Участвовала во всех этапах: от исследования до адаптива",
+     "Взяла на себя роль лида команды",
+     "Писала вопросы и проводила ревью",
+     "Координировала работу всех участников"
+    ],
+    "research": {
+     "method": "Провели анализ конкурентов и аудитории, построили гипотезы. Для каждого сегмента сформулировали JTBD, и это определило структуру страницы и приоритет секций.",
+     "image": "@yhMap",
+     "caption": "Структура сайта",
+     "insights": []
+    },
+    "decisions": [
+     {
+      "title": "Концепция: ярко и динамично",
+      "text": "Тёмный фон, крупная типографика, интерактивные элементы. Пользователь не должен скучать, просматривая страницу.",
+      "image": "@yhServices",
+      "caption": "Блок HR-сервисов"
+     },
+     {
+      "title": "Структура по флоу",
+      "text": "Сначала ценность продукта крупным заголовком, затем конкретные преимущества для бизнеса, HR-сервисы с детализацией, кейсы клиентов с цифрами и в конце форма заявки.",
+      "image": "@yhCases",
+      "caption": "Кейсы клиентов и форма заявки"
+     },
+     {
+      "title": "Адаптив",
+      "text": "Финальный этап: та же страница под мобильные экраны.",
+      "image": "@yhMobile",
+      "caption": "Мобильная версия"
+     }
+    ],
+    "testing": {
+     "setup": "",
+     "findings": [],
+     "results": [
+      {
+       "title": "Полный цикл в команде",
+       "text": "Бриф, аналитика, мудборд, вайрфреймы, дизайн, адаптив. Командой из 5 человек от нуля до готового продукта."
+      },
+      {
+       "title": "Цепляет с первого экрана",
+       "text": "Тёмный фон, крупная типографика и интерактив держат внимание до самой формы заявки."
+      },
+      {
+       "title": "Одна страница для трёх аудиторий",
+       "text": "JTBD каждого сегмента задали структуру страницы и порядок секций."
+      },
+      {
+       "title": "2 место на хакатоне",
+       "text": "Второе место на хакатоне Яндекса. Параллельно с дизайном я вела команду: ревью, вопросы, координация."
+      }
+     ]
+    },
+    "learnings": [
+     {
+      "title": "JTBD собирают структуру",
+      "text": "Когда для каждого сегмента сформулированы задачи, порядок секций складывается почти сам, и спорить о структуре приходится меньше."
+     }
+    ],
+    "reflection": "За три недели прошли путь от брифа до адаптива, и в этом темпе я совмещала дизайн с ролью лида.",
+    "delivered": [
+     "Анализ конкурентов и аудитории",
+     "JTBD и структура страницы",
+     "Дизайн лендинга",
+     "Мобильная версия"
+    ],
+    "shift": "Бриф → адаптивный лендинг за 3 недели"
+   }
+  ],
+  "about": {
+   "bio": "Продуктовый дизайнер, 4+ года в сложных B2B-системах: CRM, PIM, OMS, BI. Пришла единственным дизайнером в SaaS-продукт на 1000+ пользователей, построила дизайн-систему с нуля и проверяла решения данными PostHog. Превращаю сложную бизнес-логику в интерфейсы, которые выдерживают масштаб, а AI-инструменты помогают делать это быстрее.",
+   "facts": [
+    {
+     "label": "Опыт",
+     "value": "4+ года"
+    },
+    {
+     "label": "Фокус",
+     "value": "Сложные B2B-системы: CRM, PIM, OMS, BI, дизайн-системы"
+    },
+    {
+     "label": "Ищу",
+     "value": "Продуктовую команду, полная занятость. Если очень интересно, то и проект. Удалённо или офис в Белграде"
+    },
+    {
+     "label": "Навыки",
+     "value": "Продуктовый и UX/UI-дизайн, дизайн-системы, исследования, юзабилити-тестирование, проверка гипотез, дашборды"
+    },
+    {
+     "label": "Инструменты",
+     "value": "Figma, FigJam, Framer, Tilda, Miro, Jira, Asana"
+    },
+    {
+     "label": "Аналитика и AI",
+     "value": "PostHog, Claude Code, ChatGPT, Higgsfield"
+    },
+    {
+     "label": "Языки",
+     "value": "Русский (родной), английский (B2), сербский (A2)"
+    }
+   ],
+   "experience": [
+    {
+     "years": "Окт. 2026 – н. в.",
+     "role": "UX/UI-дизайнер",
+     "company": "мобильное приложение в сфере здоровья (NDA)",
+     "note": "Проектная работа, удалённо. Спроектировала ключевые экраны и сценарии iOS-приложения и собрала для него дизайн-систему. Сейчас готовлю макеты к передаче в разработку."
+    },
+    {
+     "years": "Дек. 2024 – июнь 2026",
+     "role": "Продуктовый дизайнер",
+     "company": "Sharmax Motors",
+     "note": "B2B SaaS-платформа для управления бизнесом, 1000+ пользователей. Пришла единственным дизайнером продукта, потом работала в команде из двух дизайнеров. Спроектировала ключевые модули с нуля и построила дизайн-систему."
+    },
+    {
+     "years": "Авг. 2023 – авг. 2024",
+     "role": "UX/UI-дизайнер",
+     "company": "BI SaaS-платформа (NDA)",
+     "note": "Переработала разделы Admin, Data Source и Editor в рамках существующей дизайн-системы."
+    },
+    {
+     "years": "Июнь 2021 – дек. 2024",
+     "role": "UX/UI-дизайнер",
+     "company": "фриланс",
+     "note": "10+ проектов полного цикла для малого и среднего бизнеса: e-commerce, лендинги, корпоративные сайты. От брифа и интервью с клиентами до передачи в разработку."
+    }
+   ],
+   "education": [
+    {
+     "years": "2025",
+     "title": "Дизайн-системы",
+     "place": "BBE"
+    },
+    {
+     "years": "2023",
+     "title": "UX/UI-дизайнер",
+     "place": "Яндекс Практикум"
+    }
+   ]
+  },
+  "hero": {
+   "role": "Продуктовый дизайнер",
+   "foot": [
+    "{status}"
+   ]
+  },
+  "workNote": "Три модуля B2B-платформы на 1000+ пользователей и хакатон Яндекса.",
+  "projects": {
+   "intro": "Свои продукты: придумываю, проектирую и запускаю сама. Оба приложения работают, их можно открыть.",
+   "items": [
+    {
+     "title": "Сеточка",
+     "short": "Редактор схем для филейного вязания",
+     "kind": "Веб-приложение",
+     "year": "2026",
+     "live": true,
+     "status": "В сети",
+     "host": "olgagamaiunova.github.io/setochka",
+     "video": "img/setochka-demo.mp4",
+     "shots": [
+      "@shSetochkaDemo"
+     ],
+     "alt": "Сеточка: редактор схемы с сердцем в рамке",
+     "text": "Редактор схем для филейного вязания: рисуешь по сетке, делаешь схему из картинки или текста, потом вяжешь по рядам в режиме вязания.",
+     "link": "https://olgagamaiunova.github.io/setochka/"
+    },
+    {
+     "title": "Let’s decide",
+     "short": "Мини-приложение для быстрых решений на каждый день",
+     "kind": "Мини-приложение",
+     "year": "2026",
+     "live": true,
+     "status": "В сети",
+     "host": "olgagamaiunova.github.io/decide",
+     "video": "img/decide-ru.mp4",
+     "shots": [
+      "@shDecideRu"
+     ],
+     "alt": "Let’s decide: три карточки с вариантами ужина",
+     "text": "Игровое мини-приложение для быстрых решений на каждый день: вписываешь варианты и раздаёшь карточки. Три языка.",
+     "link": "https://olgagamaiunova.github.io/decide/"
+    }
+   ]
+  },
+  "soft": [
+   {
+    "flower": "daisy",
+    "title": "Системность",
+    "text": "Сначала договорённости, потом экраны. Токены, компоненты и ревью нужны, чтобы команда не решала одно и то же дважды.",
+    "tag": "Порядок тоже дизайн"
+   },
+   {
+    "flower": "tulip",
+    "title": "Исследование",
+    "text": "По образованию историк: привыкла сверять источники и задавать уточняющие вопросы. В продукте это интервью и разбор процессов.",
+    "tag": "Сначала разобраться, потом рисовать"
+   },
+   {
+    "flower": "cornflower",
+    "title": "Объяснять сложное",
+    "text": "Педагогическое образование помогает говорить с разработкой, менеджерами и клиентами на одном языке.",
+    "tag": "Защищаю решения аргументами"
+   }
+  ]
+ },
+ "en": {
+  "name": "Olga Gamaiunova",
+  "role": "Product / UX-UI Designer",
+  "location": "Belgrade, Serbia",
+  "status": "Open to opportunities",
+  "who": "Product UX/UI Designer",
+  "headline": "I turn *complex B2B logic* into clear interfaces",
+  "contactCta": "I’m looking for a product team where complex things need to feel simple. If that’s you, get in touch.",
+  "cases": [
+   {
+    "title": "CORPORTAL design system",
+    "year": "2025–2026",
+    "tint": "#E4E2FF",
+    "cover": "@dsCover",
+    "noCardMetric": true,
+    "summary": "Our own design system instead of Naive UI: one interface across all sections, themes for every client’s brand and fewer UI bugs in development",
+    "stats": [
+     {
+      "v": "150+",
+      "l": "components for design and development"
+     },
+     {
+      "v": "3",
+      "l": "client themes on the same components"
+     },
+     {
+      "v": "4",
+      "l": "sections share one comments block"
+     }
+    ],
+    "tags": [
+     "Design system",
+     "B2B",
+     "Multi-tenancy"
+    ],
+    "subtitle": "Moving from Naive UI to our own design system",
+    "intro": "150+ components and a multi-tenant token architecture. The system was built next to a live product and rolled out gradually, pushing Naive UI out.",
+    "meta": {
+     "role": "Product Designer",
+     "context": "B2B SaaS, 1,000+ users",
+     "timeline": "2025–2026",
+     "platform": "Web + responsive",
+     "outcome": "One interface across sections and clients, fewer UI bugs"
+    },
+    "labels": {
+     "research": [
+      "Approach",
+      "How we built it"
+     ],
+     "design": [
+      "Decisions",
+      "Key decisions"
+     ],
+     "testing": [
+      "Results",
+      "What changed"
+     ]
+    },
+    "challenge": [
+     "Every screen was solved from scratch. There was no consistency.",
+     "The product grew, but without a system. Sections looked different, and developers made visual decisions on their own. Naive UI wasn’t flexible enough and wasn’t built for multi-tenancy at all."
+    ],
+    "problems": [
+     "No component library: every screen was designed from zero",
+     "The interface didn’t adapt to a client’s brand color",
+     "Inconsistencies reached production unnoticed"
+    ],
+    "beforeImage": "@dsBefore",
+    "beforeCaption": "One of the sections before the design system",
+    "question": "How do we build a system that adapts to any client’s brand without manual recoloring?",
+    "given": [
+     "A live product, so the system could only roll out gradually",
+     "Naive UI with no multi-tenancy support",
+     "No component library and no shared rules"
+    ],
+    "did": [
+     "A library of 150+ components",
+     "A “brand” token layer for client themes",
+     "Compact variants for dense sections",
+     "A review step before development"
+    ],
+    "research": {
+     "method": [
+      "The product was already live. The design system was built next to it and rolled out step by step, pushing Naive UI out. We skipped a formal audit: we took best practices and started from scratch.",
+      "We began with the most used components: icons, buttons, inputs, tabs. The things that show up on every screen. Cover the common ground first and capture as much of the product as you can, then move to the specifics. There’s no other way."
+     ],
+     "image": "@dsComponents",
+     "caption": "Core components and variable collections",
+     "insights": []
+    },
+    "decisions": [
+     {
+      "title": "Themes through a “brand” token layer",
+      "text": "The first version was simpler: one color, repainted by hand for each client. It quickly became clear this doesn’t scale. There can be many themes, each needs a contrast check, and manual edits kill all autonomy.",
+      "image": "@dsTokens",
+      "caption": "The same components in the GlobalDrive, Oryx and Lunnar themes",
+      "result": "A client’s primary color is set once, and the interface adapts everywhere without touching components. Switching between client themes takes a second, right in Figma."
+     },
+     {
+      "title": "Comments block",
+      "text": "No spec and no agreements, yet it was needed in four places at once: tasks, orders, CRM and news. The manager and the analyst had different ideas of how it should work, so every decision had to be argued and defended.",
+      "image": "@dsComments",
+      "caption": "The comments block on mobile and desktop",
+      "result": "We settled on one constraint: content inside the block has a maximum width, so messages stay readable anywhere. The block works in all four sections without changes."
+     },
+     {
+      "title": "Compact component variants",
+      "text": "They came from a team style decision. In dense sections the standard sizes took too much space and left less room for useful content.",
+      "tradeoff": "We had to revisit some components that were already done."
+     },
+     {
+      "title": "Review before development",
+      "text": "Before reviews, developers often made visual decisions on their own and just went with their gut.",
+      "result": "Complex decisions now get discussed before they reach the code."
+     },
+     {
+      "title": "Handoff to development",
+      "text": "Handoff for the core components went smoothly. With complex composite components there was more feedback, but it was productive: developers understood the logic better and asked the right questions."
+     }
+    ],
+    "testing": {
+     "setup": "",
+     "findings": [],
+     "results": [
+      {
+       "title": "Screens from ready components",
+       "text": "New screens are assembled from ready components instead of being drawn from scratch, and reach development without drifting from the mockup."
+      },
+      {
+       "title": "One source of truth",
+       "text": "Design and development share one library, so visual decisions are no longer made by eye."
+      },
+      {
+       "title": "Review before code",
+       "text": "Complex decisions stopped slipping into production unnoticed."
+      },
+      {
+       "title": "Themes without manual work",
+       "text": "A client’s brand color is set once and the interface adapts on its own."
+      }
+     ],
+     "image": "@dsModals",
+     "caption": "Modals for reports, deals and custom fields, built from ready components"
+    },
+    "learnings": [
+     {
+      "title": "Reviews should start on day one",
+      "text": "Before reviews, visual decisions went into code without discussion. A review step is cheaper to set up at the start than to catch up on later."
+     }
+    ],
+    "reflection": "I’m proudest of the “brand” layer: one decision removed manual work from every new client theme.",
+    "delivered": [
+     "A library of 150+ components",
+     "A multi-tenant token architecture",
+     "A review step before development"
+    ],
+    "shift": "Screens from scratch → 150+ ready components"
+   },
+   {
+    "title": "Tasks & Kanban",
+    "year": "2026",
+    "tint": "#DDEBDF",
+    "cover": "@tkCover",
+    "noCardMetric": true,
+    "summary": "A task tracker where IT, sales, HR and stores each run their own process in one tool",
+    "stats": [
+     {
+      "v": "4",
+      "l": "kinds of teams work in one tool"
+     },
+     {
+      "v": "1000+",
+      "l": "platform users"
+     },
+     {
+      "v": "3",
+      "l": "views: kanban, list, calendar"
+     }
+    ],
+    "tags": [
+     "B2B",
+     "Task management",
+     "Kanban"
+    ],
+    "subtitle": "A redesign of the tasks section and a kanban board from scratch",
+    "intro": "It used to be a task list and a calendar. Now it’s a flexible tool for teams with different processes: IT, sales, HR and store management.",
+    "meta": {
+     "role": "UX/UI Designer",
+     "context": "GlobalDrive, B2B, 1,000+ users",
+     "timeline": "2026",
+     "platform": "Web + responsive",
+     "outcome": "One tool, three views: kanban, list, calendar"
+    },
+    "labels": {
+     "design": [
+      "Decisions",
+      "Key decisions"
+     ],
+     "testing": [
+      "Results",
+      "What changed"
+     ]
+    },
+    "challenge": "The old tasks section was functionally limited.",
+    "problems": [
+     "The day’s to-do block sat at the center, eating space and pulling attention",
+     "There were only two views: a list and a calendar",
+     "A wide toolbar took up the screen but offered less than it promised"
+    ],
+    "beforeImage": "@tkOldCalendar",
+    "beforeCaption": "The old section: today’s tasks and a calendar",
+    "question": "How do we make one task tool that works for teams with different processes?",
+    "given": [
+     "An existing section: a list and a calendar",
+     "Teams with different processes: IT, sales, HR, store management",
+     "Every step agreed with the client"
+    ],
+    "did": [
+     "A redesign of the tasks section",
+     "A kanban board from scratch",
+     "A custom card with team-made fields",
+     "Step-by-step result approval"
+    ],
+    "research": {
+     "method": [
+      "I started with competitors: how tasks work in similar tools, what works and what annoys people. Then I wrote scenarios for specific teams and made quick wireframes to align with the client.",
+      "We settled on three views: kanban, list and calendar. We considered a Gantt chart but dropped it right away: it would only add complexity and stall development. The basic set covers most real scenarios without extra load."
+     ],
+     "insights": []
+    },
+    "decisions": [
+     {
+      "title": "Kanban with custom stages",
+      "text": [
+       "Task progress used to be hidden. Now each team sets up stages for its own process, from backlog to final review.",
+       "Drag-and-drop took the developers a while, but with no surprises. There were no hard design calls here, the mechanics are obvious."
+      ],
+      "image": "@tkBoard",
+      "caption": "Kanban: each team has its own stages, tasks are dragged between columns"
+     },
+     {
+      "title": "A custom task card",
+      "text": [
+       "The card adapts to the team, not the other way round: each team can create its own fields for its needs and use them in daily work. What isn’t needed stays hidden, what matters stays in sight.",
+       "The idea came from references: similar mechanics are popular in Notion and other tools. We kept the basic field types and all their options: text, select, multi-select. More flexibility means fewer limits for different teams."
+      ],
+      "image": "@tkFields",
+      "caption": "Creating a custom field for the team’s needs: text, select or multi-select"
+     },
+     {
+      "title": "Editing right in the card",
+      "text": "Fields are edited right in the card, without opening a modal. Hideable fields and a custom order let each team see only what it needs.",
+      "image": "@tkBeforeAfter",
+      "caption": "A task before and after the redesign"
+     },
+     {
+      "title": "Result approval",
+      "text": "A task moves from the assignee to the lead and then the manager. A result can be attached to each step as a link, text or document. If needed, the task goes back into work."
+     },
+     {
+      "title": "Iterations instead of rework",
+      "text": [
+       "Every piece was designed in iterations: a few options, a pick, sign-off. There was never a moment that called for a major redo.",
+       "The only revision came after the design system rolled out: we switched to a compact view and made the section header smaller."
+      ]
+     }
+    ],
+    "testing": {
+     "setup": "",
+     "findings": [],
+     "results": [
+      {
+       "title": "Three ways to work",
+       "text": "Kanban for visual flow, a list for a linear overview, a calendar for deadlines. One tool in three modes."
+      },
+      {
+       "title": "A process for every team",
+       "text": "Stages follow each team’s own process, from backlog to final review."
+      },
+      {
+       "title": "Progress you can see",
+       "text": "A task moves from the assignee to the lead and the manager, with a result attached at each step."
+      },
+      {
+       "title": "A card for each team",
+       "text": "Teams create their own fields, edit them right in the card and hide the rest."
+      }
+     ]
+    },
+    "learnings": [
+     {
+      "title": "Plan for a compact view from the start",
+      "text": "The only revision came after the design system rolled out: we switched to a compact view and a smaller header. Interface density is better settled early."
+     }
+    ],
+    "reflection": "I’m proud that one tool fit teams with very different processes, from IT to stores.",
+    "delivered": [
+     "A redesigned tasks section",
+     "A kanban board with drag-and-drop and custom stages",
+     "A custom card with team-made fields",
+     "Step-by-step result approval"
+    ],
+    "shift": "A task list → a tool for 4 kinds of teams"
+   },
+   {
+    "title": "PIM + OMS",
+    "year": "2025",
+    "tint": "#F0E3D6",
+    "cover": "@pmCover",
+    "summary": "Catalogue and orders as one system: the full order picture and container load before shipping",
+    "stats": [
+     {
+      "v": "−30%",
+      "l": "task time"
+     },
+     {
+      "v": "−20%",
+      "l": "user errors"
+     },
+     {
+      "v": "2",
+      "l": "modules built as one system"
+     }
+    ],
+    "tags": [
+     "B2B",
+     "PIM",
+     "OMS"
+    ],
+    "subtitle": "Two modules from scratch: a product catalogue and order management",
+    "intro": "I designed them one after another as a single system, where each module becomes the base for the next one.",
+    "meta": {
+     "role": "Product Designer",
+     "context": "Purchasing team, B2B",
+     "timeline": "2025",
+     "platform": "Web + responsive",
+     "outcome": "−30% task time, −20% user errors"
+    },
+    "labels": {
+     "design": [
+      "Decisions",
+      "Key decisions"
+     ],
+     "testing": [
+      "Results",
+      "What changed"
+     ]
+    },
+    "challenge": [
+     "Nobody had the full picture of an order.",
+     "Working with orders was clunky. One manager built an order spreadsheet and sent it through Bitrix to the next manager, who edited it and passed it on. Every handoff created a blind spot: no one saw the whole picture. How full the container was came out late, and details were agreed in separate messages.",
+     "There was no single moment when everything broke. Purchasing simply grew to the point where working without a proper tool got painful."
+    ],
+    "problems": [
+     "No product catalogue inside the portal",
+     "Price lists lived in separate files for each region",
+     "Order details were agreed in messages outside the system",
+     "No way to check container load before shipping"
+    ],
+    "question": "How do we build an order so everyone sees the full picture, from catalogue to shipping?",
+    "given": [
+     "A process in spreadsheets and Bitrix",
+     "Price lists in separate files per region",
+     "Almost no public references for this scenario"
+    ],
+    "did": [
+     "A product catalogue with variants",
+     "Regional price lists",
+     "An order module with two screen modes",
+     "A container load calculator with 3D"
+    ],
+    "research": {
+     "method": [
+      "There were few references: the scenario is niche, and almost nothing similar is public. I leaned on one close reference and on marketplaces for the general logic of working with products.",
+      "The design went step by step. First the catalogue, with a way to add products to a cart. At that stage the cart was more of a reminder of an unfinished order. Then price lists, so managers could work with regional prices. Only after that, the full order module."
+     ],
+     "image": "@pmCatalog",
+     "caption": "The product catalogue: list and grid",
+     "insights": []
+    },
+    "decisions": [
+     {
+      "title": "A product card with variants",
+      "text": "The trickiest part of the catalogue was the product card: it had to hold the basic info and the variants of one product. We moved variants into a separate list and used tabs to switch between them inside the card.",
+      "image": "@pmProduct",
+      "caption": "A product card: variants, specs and prices in several currencies",
+      "result": "A product structure with variants and multi-currency prices."
+     },
+     {
+      "title": "Regional price lists",
+      "text": "Price lists came before the order module, so managers could work with regional prices in the portal instead of separate files.",
+      "image": "@pmPrices",
+      "caption": "Price lists: prices, markups and statuses for each country",
+      "result": "Regional statuses control product availability in each market separately."
+     },
+     {
+      "title": "Data priority on the order screen",
+      "text": "The priority was clear from the start. The first things you need to see are the status markers and the order list itself. That’s the main information on the page, everything else goes below.",
+      "image": "@pmOrder",
+      "caption": "Order blocks: finances, supplier, dates, logistics, files and comments",
+      "result": "The whole order lifecycle on one screen, from status to finances, route and warehouses."
+     },
+     {
+      "title": "One screen, two roles",
+      "text": "Two versions of one screen came from different roles in the process. Some people create the order, others take it from there and handle logistics and payment.",
+      "result": "The client sees filled-in data, clean and readable. The manager sees the same blocks with inputs and controls them. One screen, two realities."
+     },
+     {
+      "title": "Container load calculator",
+      "text": "We made the Load Calculator collapsible from the start: the page has many blocks and needs flexibility. Expand it when you need to check the load, hide it when you don’t.",
+      "image": "@pmLoad",
+      "caption": "3D container loading right inside the order",
+      "result": "The 3D view wasn’t hard to build but was very visible to the business, and the client loved it. Managers see whether a shipment is optimal before it happens."
+     }
+    ],
+    "testing": {
+     "setup": "",
+     "findings": [],
+     "results": [
+      {
+       "title": "A catalogue inside the portal",
+       "text": "Products with variants and multi-currency prices, with their own status in each market."
+      },
+      {
+       "title": "The whole order on one screen",
+       "text": "From status to finances, route and warehouses, all ordered by data priority."
+      },
+      {
+       "title": "One page for two roles",
+       "text": "The client reads the data, the manager controls it."
+      },
+      {
+       "title": "No blind spot on the container",
+       "text": "Load is visible before shipping, not at a late stage."
+      }
+     ]
+    },
+    "learnings": [
+     {
+      "title": "Map the roles first",
+      "text": "Two versions of one screen grew straight out of the roles: who creates the order and who handles logistics and payment. The earlier the roles are clear, the less rework in the interface."
+     }
+    ],
+    "reflection": "I’m proud of the load calculator: a simple feature closed the most expensive blind spot in the process.",
+    "delivered": [
+     "A product catalogue with variants",
+     "Regional price lists",
+     "An order module",
+     "A container load calculator with 3D view"
+    ],
+    "shift": "Two modules → one system"
+   },
+   {
+    "title": "Я_HR",
+    "year": "2024",
+    "tint": "#18171D",
+    "cover": "@yhCover",
+    "fit": "contain",
+    "noCardMetric": true,
+    "summary": "A landing page for Yandex’s new HR service: three audiences on one page. 2nd place at a hackathon",
+    "stats": [
+     {
+      "v": "2nd",
+      "l": "place at the Yandex hackathon"
+     },
+     {
+      "v": "3",
+      "l": "audiences on one page"
+     },
+     {
+      "v": "5",
+      "l": "people on the team, I led it"
+     }
+    ],
+    "tags": [
+     "Landing page",
+     "Hackathon",
+     "Yandex"
+    ],
+    "subtitle": "A landing page for a new Yandex HR service, from audience research to mobile",
+    "intro": "A Yandex hackathon, a team of 5. The task: research, structure and design a landing page for the new HR service Я_HR from scratch.",
+    "meta": {
+     "role": "UX/UI Designer, team lead",
+     "context": "Yandex hackathon, team of 5",
+     "timeline": "2024",
+     "platform": "Web + responsive",
+     "outcome": "2nd place"
+    },
+    "labels": {
+     "research": [
+      "Research",
+      "Audience and hypotheses"
+     ],
+     "design": [
+      "Decisions",
+      "Key decisions"
+     ],
+     "testing": [
+      "Results",
+      "What we shipped"
+     ]
+    },
+    "challenge": [
+     "Yandex was entering an overheated market with an HR product. The service covers the whole people cycle, from hiring to growth.",
+     "The page had to do more than describe the product: it had to make people want to try Yandex as an HR partner. And the audience was mixed, so one page had to speak to each of them:"
+    ],
+    "problems": [
+     "HR directors care about employer brand",
+     "Recruiters want to fill roles faster",
+     "C&B managers look for ways to motivate people"
+    ],
+    "question": "How can one landing page convince three different audiences to choose Yandex as an HR partner?",
+    "given": [
+     "A new product in an overheated market",
+     "Three audiences with different goals",
+     "A tight hackathon timeline and a team of 5"
+    ],
+    "did": [
+     "Took part in every stage, from research to mobile",
+     "Took on the team lead role",
+     "Wrote the questions and ran reviews",
+     "Coordinated the work of the whole team"
+    ],
+    "research": {
+     "method": "We analysed competitors and the audience and built hypotheses. For each segment we wrote JTBD, and that set the page structure and section priority.",
+     "image": "@yhMap",
+     "caption": "Site structure",
+     "insights": []
+    },
+    "decisions": [
+     {
+      "title": "Concept: bright and dynamic",
+      "text": "A dark background, large type and interactive elements. Nobody should get bored scrolling the page.",
+      "image": "@yhServices",
+      "caption": "The HR services block"
+     },
+     {
+      "title": "Structure that follows the flow",
+      "text": "First the product’s value in a big headline, then concrete business benefits, HR services in detail, client cases with numbers and, finally, the request form.",
+      "image": "@yhCases",
+      "caption": "Client cases and the request form"
+     },
+     {
+      "title": "Mobile",
+      "text": "The final step: the same page adapted for mobile screens.",
+      "image": "@yhMobile",
+      "caption": "Mobile version"
+     }
+    ],
+    "testing": {
+     "setup": "",
+     "findings": [],
+     "results": [
+      {
+       "title": "Full cycle as a team",
+       "text": "Brief, research, moodboard, wireframes, design, mobile. A team of 5, from zero to a finished product."
+      },
+      {
+       "title": "Hooks from the first screen",
+       "text": "Dark background, large type and interaction keep attention all the way to the form."
+      },
+      {
+       "title": "One page, three audiences",
+       "text": "Each segment’s JTBD shaped the page structure and section order."
+      },
+      {
+       "title": "2nd place at the hackathon",
+       "text": "Second place at the Yandex hackathon. Alongside design, I led the team: reviews, questions, coordination."
+      }
+     ]
+    },
+    "learnings": [
+     {
+      "title": "JTBD builds the structure",
+      "text": "Once each segment’s jobs are written down, the section order almost falls into place, and there’s less arguing about structure."
+     }
+    ],
+    "reflection": "In three weeks we went from brief to mobile, and I combined design with leading the team.",
+    "delivered": [
+     "Competitor and audience research",
+     "JTBD and page structure",
+     "Landing page design",
+     "Mobile version"
+    ],
+    "shift": "A brief → a responsive landing page in 3 weeks"
+   }
+  ],
+  "about": {
+   "bio": "Product designer with 4+ years in complex B2B systems: CRM, PIM, OMS, BI. I joined a SaaS product with 1,000+ users as its only designer, built the design system from scratch and checked decisions against PostHog data. I turn complicated business logic into interfaces that hold up at scale, and AI tools help me get there faster.",
+   "facts": [
+    {
+     "label": "Experience",
+     "value": "4+ years"
+    },
+    {
+     "label": "Focus",
+     "value": "Complex B2B systems: CRM, PIM, OMS, BI, design systems"
+    },
+    {
+     "label": "Looking for",
+     "value": "A product team, full-time. A project too, if it’s really interesting. Remote or office in Belgrade"
+    },
+    {
+     "label": "Skills",
+     "value": "Product and UX/UI design, design systems, user research, usability testing, hypothesis validation, dashboards"
+    },
+    {
+     "label": "Tools",
+     "value": "Figma, FigJam, Framer, Tilda, Miro, Jira, Asana"
+    },
+    {
+     "label": "Analytics & AI",
+     "value": "PostHog, Claude Code, ChatGPT, Higgsfield"
+    },
+    {
+     "label": "Languages",
+     "value": "Russian (native), English (B2), Serbian (A2)"
+    }
+   ],
+   "experience": [
+    {
+     "years": "Oct 2026 – now",
+     "role": "UX/UI Designer",
+     "company": "health mobile app (NDA)",
+     "note": "Project-based, remote. Designed key screens and flows for an iOS app and built its design system. Now preparing the handoff to development."
+    },
+    {
+     "years": "Dec 2024 – Jun 2026",
+     "role": "Product / UX-UI Designer",
+     "company": "Sharmax Motors",
+     "note": "B2B SaaS business management platform, 1,000+ users. Joined as the sole designer on the product, later worked in a two-person design team. Designed key modules from scratch and built the company’s design system."
+    },
+    {
+     "years": "Aug 2023 – Aug 2024",
+     "role": "UX/UI Designer",
+     "company": "BI SaaS platform (NDA)",
+     "note": "Redesigned the Admin, Data Source and Editor sections within an existing design system."
+    },
+    {
+     "years": "Jun 2021 – Dec 2024",
+     "role": "UX/UI Designer",
+     "company": "Freelance",
+     "note": "10+ full-cycle projects for small and mid-sized businesses: e-commerce, landing pages, corporate websites. From brief and client interviews to developer handoff."
+    }
+   ],
+   "education": [
+    {
+     "years": "2025",
+     "title": "Design Systems",
+     "place": "BBE"
+    },
+    {
+     "years": "2023",
+     "title": "UX/UI Designer",
+     "place": "Yandex Practicum"
+    }
+   ]
+  },
+  "hero": {
+   "role": "Product designer",
+   "foot": [
+    "{status}"
+   ]
+  },
+  "workNote": "Three modules of a B2B platform with 1,000+ users, and a Yandex hackathon.",
+  "projects": {
+   "intro": "My own products: I come up with them, design them and ship them myself. Both apps are live, you can open them.",
+   "items": [
+    {
+     "title": "Setochka",
+     "short": "A chart editor for filet crochet",
+     "kind": "Web app",
+     "year": "2026",
+     "live": true,
+     "status": "Live",
+     "host": "olgagamaiunova.github.io/setochka",
+     "video": "img/setochka-demo.mp4",
+     "shots": [
+      "@shSetochkaDemo"
+     ],
+     "alt": "Setochka: a chart editor with a heart in a frame",
+     "text": "A chart editor for filet crochet: draw on the grid, make a chart from an image or text, then knit row by row in knitting mode.",
+     "link": "https://olgagamaiunova.github.io/setochka/"
+    },
+    {
+     "title": "Let’s decide",
+     "short": "A mini app for quick everyday decisions",
+     "kind": "Mini app",
+     "year": "2026",
+     "live": true,
+     "status": "Live",
+     "host": "olgagamaiunova.github.io/decide",
+     "video": "img/decide-en.mp4",
+     "shots": [
+      "@shDecideEn"
+     ],
+     "alt": "Let’s decide: three cards with dinner options",
+     "text": "A playful mini app for quick everyday decisions: type the options and deal the cards. Three languages.",
+     "link": "https://olgagamaiunova.github.io/decide/"
+    }
+   ]
+  },
+  "soft": [
+   {
+    "flower": "daisy",
+    "title": "Systems thinking",
+    "text": "Agreements first, screens second. Tokens, components and reviews exist so the team never solves the same thing twice.",
+    "tag": "Order is design too"
+   },
+   {
+    "flower": "tulip",
+    "title": "Research",
+    "text": "A historian by training: I’m used to checking sources and asking follow-up questions. In product work that means interviews and process mapping.",
+    "tag": "Understand first, then draw"
+   },
+   {
+    "flower": "cornflower",
+    "title": "Explaining the complex",
+    "text": "A teaching degree helps me speak the same language with developers, managers and clients.",
+    "tag": "I defend decisions with arguments"
+   }
+  ]
+ },
+ "heroPortrait": "@heroPortrait"
+};
+const DEFAULT_CASE = {
+ "ru": {
+  "title": "[Проект]",
+  "summary": "[Одна строка для карточки]",
+  "year": "[Год]",
+  "tags": [],
+  "stats": [],
+  "tint": "#E4E2FF",
+  "cover": "",
+  "subtitle": "[Одна строка: что ты спроектировала и для кого]",
+  "intro": "[2–3 предложения: что за продукт, зачем он был нужен и что именно делала ты]",
+  "meta": {
+   "role": "[Твоя роль]",
+   "context": "[Компания, клиент или курс]",
+   "timeline": "[Сроки]",
+   "platform": "[Платформа]",
+   "outcome": "[Что получилось в итоге]"
+  },
+  "challenge": "[Что было сложно или сломано, и для кого]",
+  "problems": [],
+  "question": "[Как мы могли бы ...?]",
+  "given": [
+   "[Требование или ограничение, которое тебе дали]",
+   "[Ещё одно]"
+  ],
+  "did": [
+   "[Что ты спроектировала сама]",
+   "[Ещё одна часть]"
+  ],
+  "research": {
+   "method": "[С кем говорила, сколько человек, как их нашла. Честно напиши, что такая выборка может показать, а что нет]",
+   "insights": [
+    {
+     "heard": "[Что люди говорили или делали]",
+     "help": "[Что могло бы им помочь]",
+     "tried": "[Что ты решила попробовать]",
+     "feature": "[Как это выглядит в интерфейсе]"
+    }
+   ]
+  },
+  "decisions": [
+   {
+    "title": "[Дизайн-решение]",
+    "why": "[Почему выбрала именно его]",
+    "tradeoff": "[Чего это стоило или что не успела проверить]",
+    "image": ""
+   }
+  ],
+  "testing": {
+   "setup": "[Как тестировала: сессии, задачи, кто участвовал]",
+   "findings": [
+    {
+     "before": "[Как было]",
+     "saw": "[Что увидела]",
+     "change": "[Что изменила или изменила бы]",
+     "status": "[Исправлено и перепроверено / Предложено, не проверено]"
+    }
+   ],
+   "results": []
+  },
+  "learnings": [
+   {
+    "title": "[Вывод]",
+    "text": "[Что сделала бы иначе и почему]"
+   }
+  ],
+  "reflection": "[Чем гордишься и с чего начала бы, если бы продолжила проект]",
+  "delivered": [
+   "[Что передала на выходе]"
+  ],
+  "files": []
+ },
+ "en": {
+  "title": "[Project]",
+  "summary": "[One line for the card]",
+  "year": "[Year]",
+  "tags": [],
+  "stats": [],
+  "tint": "#E4E2FF",
+  "cover": "",
+  "subtitle": "[One line: what you designed and for whom]",
+  "intro": "[2 to 3 sentences: what the product is, why it existed and what exactly you did on it]",
+  "meta": {
+   "role": "[Your role]",
+   "context": "[Company, client or course]",
+   "timeline": "[Timeline]",
+   "platform": "[Platform]",
+   "outcome": "[What came out]"
+  },
+  "challenge": "[What was hard or broken, and for whom]",
+  "problems": [],
+  "question": "[How might we ...?]",
+  "given": [
+   "[A requirement or constraint you got]",
+   "[Another one]"
+  ],
+  "did": [
+   "[A part you designed yourself]",
+   "[Another part]"
+  ],
+  "research": {
+   "method": "[Who you talked to, how many people, how you found them. Say honestly what this sample can and can’t tell]",
+   "insights": [
+    {
+     "heard": "[What people said or did]",
+     "help": "[What might help them]",
+     "tried": "[What you decided to try]",
+     "feature": "[How it shows up in the design]"
+    }
+   ]
+  },
+  "decisions": [
+   {
+    "title": "[Design decision]",
+    "why": "[Why you chose this]",
+    "tradeoff": "[What it cost, or what you didn’t get to verify]",
+    "image": ""
+   }
+  ],
+  "testing": {
+   "setup": "[How you tested: sessions, tasks, who took part]",
+   "findings": [
+    {
+     "before": "[How it worked]",
+     "saw": "[What you observed]",
+     "change": "[What you changed or would change]",
+     "status": "[Fixed and retested / Proposed, not tested]"
+    }
+   ],
+   "results": []
+  },
+  "learnings": [
+   {
+    "title": "[Lesson]",
+    "text": "[What you’d do differently, and why]"
+   }
+  ],
+  "reflection": "[What you’re proud of, and what you’d tackle first if you continued]",
+  "delivered": [
+   "[What you handed over]"
+  ],
+  "files": []
+ }
+};
+const UI2 = {
+  ru: {
+    title: "Ольга Гамаюнова, продуктовый дизайнер",
+    navAria: "Разделы", menu: "Меню", cv: "Открыть CV", dark: "Тёмная тема", light: "Светлая тема",
+    nav: { work: "Кейсы", projects: "Пет-проекты", about: "Обо мне", contact: "Контакты" },
+    cases: (n) => `${n} ${n % 10 === 1 && n % 100 !== 11 ? "кейс" : n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 10 || n % 100 >= 20) ? "кейса" : "кейсов"}`,
+    projectsN: (n) => `${n} ${n % 10 === 1 && n % 100 !== 11 ? "проект" : n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 10 || n % 100 >= 20) ? "проекта" : "проектов"}`,
+    stageAria: (name) => `Портрет: ${name}, собранный из символов. Курсор проявляет цвет, клик пускает волну.`,
+    toWork: "К кейсам", toContact: "Контакты",
+    render: "Рендер", glyphs: "Символы", dither: "Дизер", mode: "Режим", charset: "Набор",
+    shuffle: "Перемешать", shuffleAria: "Перемешать набор символов и раскладку",
+    sets: ["Символы", "Точки", "Блоки", "Крестики"],
+    hint1: "Курсор проявляет цвет", hint2: "клик пускает волну", hint1t: "Проведи по портрету", hint2t: "тап пускает волну",
+    openCase: "Открыть кейс", prev: "Предыдущий кейс", carousel: "карусель", slide: (t, i, n) => `${t}, ${i} из ${n}`, shiftLbl: "Было → стало",
+    gridAria: "Сетка для филейного вязания: можно рисовать", drawHint: "Нарисуй по сетке",
+    decideQ: "Что на ужин?", decideHint: "Крутить", reset: "Очистить", open: "Открыть",
+    xp: "Опыт", edu: "Образование",
+    copy: "Скопировать почту", copied: "Почта скопирована", copyFail: (e) => `Не получилось скопировать. Почта: ${e}`,
+    clock: (me, you, ov) => you === me ? `Белград ${me}, мы в одном часовом поясе` : `Белград ${me}, у вас ${you}, общих рабочих часов: ${ov}`,
+    portraitNote: "Портрет из символов. Дизайн мой, код вместе с ИИ",
+    w: { result: "Результат", about: "Обо мне", seek: "Ищу", work: "Где работала", langs: "Языки", skills: "Навыки", tools: "Инструменты", ai: "Аналитика и AI", write: "Написать", city: "Белград", years: "Опыт", status: "Статус" },
+    clockSame: "Мы в одном часовом поясе", clockDiff: (you, ov) => `У вас ${you}, общих рабочих часов: ${ov}`,
+    takes: ["Превращает хаос из таблиц в понятный интерфейс", "Собирает дизайн-системы, а не папки с кнопками", "Сначала спросит «зачем», потом нарисует", "Историк по образованию: проверит каждый источник", "Даже вязание превратила в продукт", "И просто хорошенькая"],
+    meadow: "Цветочное поле с короткими тейками обо мне",
+    plant: "Нажми на поле, чтобы посадить цветок",
+    top: "Наверх",
+    soft: "Софт-скиллы", softNote: "Выросли сами, поливаю регулярно",
+    back: "Ко всем кейсам", next: "Следующий кейс", toc: "Разделы кейса",
+    brief: ["Проблема", "Задача", "Было → стало"],
+    meta: ["Роль", "Контекст", "Сроки", "Платформа", "Результат"],
+    labels: { overview: ["Обзор", "Задача"], research: ["Исследование", "Как я исследовала"], design: ["Дизайн", "Ключевые решения"], testing: ["Тесты", "Что показали тесты"], learnings: ["Выводы", "Что я вынесла"] },
+    question: "Главный вопрос", given: "Что было дано", did: "Что сделала я", finding: "Находка",
+    chain: ["Что услышала", "Что могло бы помочь", "Что попробовала", "Как это в интерфейсе"],
+    why: "Почему", result: "Результат", trade: "Компромисс", tri: ["Как было", "Что увидела", "Что изменила"],
+    reflection: "Итог", delivered: "Что передала", files: "Файлы"
+  },
+  en: {
+    title: "Olga Gamaiunova, product designer",
+    navAria: "Sections", menu: "Menu", cv: "Open CV", dark: "Dark theme", light: "Light theme",
+    nav: { work: "Work", projects: "Side projects", about: "About", contact: "Contact" },
+    cases: (n) => `${n} case ${n === 1 ? "study" : "studies"}`,
+    projectsN: (n) => `${n} project${n === 1 ? "" : "s"}`,
+    stageAria: (name) => `Portrait of ${name} made of characters. The cursor brings out colour, a click sends a wave.`,
+    toWork: "See the work", toContact: "Contact",
+    render: "Render", glyphs: "Glyphs", dither: "Dither", mode: "Mode", charset: "Charset",
+    shuffle: "Shuffle", shuffleAria: "Shuffle the character set and layout",
+    sets: ["Glyphs", "Dots", "Blocks", "Crosses"],
+    hint1: "The cursor brings out colour", hint2: "a click sends a wave", hint1t: "Swipe across the portrait", hint2t: "a tap sends a wave",
+    openCase: "Open case", prev: "Previous case", carousel: "carousel", slide: (t, i, n) => `${t}, ${i} of ${n}`, shiftLbl: "Before → after",
+    gridAria: "Filet crochet grid you can draw on", drawHint: "Draw on the grid",
+    decideQ: "What’s for dinner?", decideHint: "Spin", reset: "Clear", open: "Open",
+    xp: "Experience", edu: "Education",
+    copy: "Copy email", copied: "Email copied", copyFail: (e) => `Couldn’t copy. The email is ${e}`,
+    clock: (me, you, ov) => you === me ? `Belgrade ${me}, same time zone as you` : `Belgrade ${me}, you ${you}, shared working hours: ${ov}`,
+    portraitNote: "Portrait made of characters. My design, code written with AI",
+    w: { result: "Result", about: "About", seek: "Looking for", work: "Experience", langs: "Languages", skills: "Skills", tools: "Tools", ai: "Analytics & AI", write: "Write to me", city: "Belgrade", years: "Experience", status: "Status" },
+    clockSame: "Same time zone as you", clockDiff: (you, ov) => `You ${you}, shared working hours: ${ov}`,
+    takes: ["Turns spreadsheet chaos into clear interfaces", "Builds design systems, not folders of buttons", "Asks “why” before drawing anything", "A historian by training: checks every source", "Turned even crochet into a product", "And simply lovely"],
+    meadow: "A flower field with short takes about me",
+    plant: "Tap the field to plant a flower",
+    top: "Top",
+    soft: "Soft skills", softNote: "They grew on their own, I water them often",
+    back: "Back to all work", next: "Next case", toc: "Case sections",
+    brief: ["Problem", "Task", "Before → after"],
+    meta: ["Role", "Context", "Timeline", "Platform", "Outcome"],
+    labels: { overview: ["Overview", "The challenge"], research: ["Research", "How I researched it"], design: ["Design", "Key decisions"], testing: ["Testing", "What testing showed"], learnings: ["Learnings", "What I took away"] },
+    question: "Design question", given: "What I was given", did: "What I designed", finding: "Finding",
+    chain: ["What I heard", "What might help", "What I tried", "In the design"],
+    why: "Why", result: "Result", trade: "Trade-off", tri: ["How it worked", "What I saw", "What I changed"],
+    reflection: "Final reflection", delivered: "Delivered", files: "Files"
+  }
+};
+
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  "use strict";
+  const C = CONTENT, UI = UI2;
+  const $ = (s, r = document) => r.querySelector(s);
+  const $$ = (s, r = document) => Array.from(r.querySelectorAll(s));
+  const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+  const t = (s) => esc(s).replace(/\[([^\]]+)\]/g, '<span class="ph">[$1]</span>');
+  const plain = (s) => String(s ?? "").replace(/[\[\]*]/g, "");
+  const merge = (d, u) => {
+    if (Array.isArray(d)) return Array.isArray(u) ? u : d;
+    if (d && typeof d === "object") { const o = { ...d }; for (const k in (u || {})) o[k] = merge(d[k], u[k]); return o; }
+    return u === undefined ? d : u;
+  };
+  const calm = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const fine = matchMedia("(hover: hover) and (pointer: fine)");
+  const store = {
+    get: (k) => { try { return localStorage.getItem(k); } catch (e) { return null; } },
+    set: (k, v) => { try { localStorage.setItem(k, v); } catch (e) {} }
+  };
+
+  let lang = store.get("pf2-lang");
+  if (!C[lang]) lang = C.defaultLang || "ru";
+  const U = () => UI[lang];
+  const D = () => C[lang];
+  const src = (v) => (typeof v === "string" && v.startsWith("@") ? (window.IMG || {})[v.slice(1)] || "" : v || "");
+  const tr = (v) => (v && typeof v === "object" && !Array.isArray(v) ? (v[lang] ?? v.ru ?? "") : v);
+  const inViewer = !!(window.claude && typeof window.claude.use === "function");
+  const cvUrl = () => (inViewer && C.cvPreview ? C.cvPreview[lang] : C.cv[lang]);
+  const casesCache = {};
+  const CASES = () => casesCache[lang] || (casesCache[lang] = (() => {
+    const all = D().cases.map((c) => merge(DEFAULT_CASE[lang], c));
+    const ord = (C.caseOrder || []).filter((k) => all[k]);
+    return ord.length ? [...ord.map((k) => all[k]), ...all.filter((_, k) => !ord.includes(k))] : all;
+  })());
+
+  /* ---------- colours ---------- */
+  const root = document.documentElement;
+  const PAL = { light: { paper: "#FFFFFF", ink: "#120F17" }, dark: { paper: "#131116", ink: "#ECE8E0" } };
+  const isDark = () => root.dataset.theme !== "light";
+  const pal = () => PAL[isDark() ? "dark" : "light"];
+  const rgb = (hex) => { const n = parseInt(hex.slice(1), 16); return [(n >> 16) & 255, (n >> 8) & 255, n & 255]; };
+  /* character sets from light to dense; "Shuffle" cycles through them */
+  const GLYPHS = " .,:;-=+*o#%@";
+  /* dark theme: 0 draws the photo as a positive (light where the face is light), 1 keeps the light theme's drawing in light ink */
+  const CHALK = /[?&]chalk=1/.test(location.search) ? 1 : 0;
+  const MONO = (px, w = 600) => `${w} ${px}px ui-monospace, "SFMono-Regular", Menlo, Monaco, Consolas, monospace`;
+
+  /* draw glyphs into a small atlas: one row, glyph i at x = i * w */
+  function atlas(w, h, color) {
+    const c = document.createElement("canvas");
+    c.width = w * GLYPHS.length; c.height = h;
+    const g = c.getContext("2d");
+    g.fillStyle = color; g.textAlign = "center"; g.textBaseline = "middle";
+    g.font = MONO(Math.round(h * 0.9));
+    [...GLYPHS].forEach((ch, i) => g.fillText(ch, (i + 0.5) * w, h * 0.54));
+    return c;
+  }
+  const lumOf = (r, g, b) => (0.2126 * r + 0.7152 * g + 0.0722 * b) / 255;
+
+  const ICON = {
+    down: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" aria-hidden="true"><path d="M12 4v15M6 13l6 6 6-6"/></svg>',
+    ext: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg>',
+    left: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" aria-hidden="true"><path d="M20 12H5M11 6l-6 6 6 6"/></svg>',
+    sun: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.5M12 19v2.5M2.5 12H5M19 12h2.5M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8M16.9 7.1l1.8-1.8"/></svg>',
+    moon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg>'
+  };
+  const linkBtn = (label, url, cls = "btn ghost", icon = ICON.ext) => url
+    ? `<a class="${cls}" href="${esc(url)}" target="_blank" rel="noopener">${esc(label)}${icon}</a>` : "";
+
+  /* ---------- toast ---------- */
+  const toastEl = $("#toast"); let toastT = 0;
+  function toast(msg) { toastEl.textContent = msg; toastEl.classList.add("show"); clearTimeout(toastT); toastT = setTimeout(() => toastEl.classList.remove("show"), 2600); }
+
+  /* ---------- overlay canvas for symbol effects ---------- */
+  function overlay() {
+    const cv = document.createElement("canvas"); cv.className = "fx"; cv.setAttribute("aria-hidden", "true");
+    const dpr = Math.min(devicePixelRatio || 1, 2), W = innerWidth, H = innerHeight;
+    cv.width = Math.round(W * dpr); cv.height = Math.round(H * dpr);
+    document.body.appendChild(cv);
+    const g = cv.getContext("2d");
+    return { cv, g, dpr, W, H };
+  }
+
+  /* =====================================================================
+     PORTRAIT: a soft symbol portrait. Glyph density follows brightness,
+     strong contours switch to | \ — / along their direction, a dim blurred
+     copy of the photo glows under the glyphs, and the edges melt into a
+     soft blur instead of being cut. The cursor brings out the photo's own
+     colour, a click sends a wave, and a rain of symbols reveals or erases it.
+     Plain WebGL2.
+     ===================================================================== */
+  const EDGES = "|\\—/";
+  function makePortrait(stage, url) {
+    const canvas = document.createElement("canvas");
+    canvas.setAttribute("aria-hidden", "true");
+    stage.prepend(canvas);
+    const img = new Image(); img.decoding = "async";
+    const api = { img, wiped: false, mode: 0, onMove: null, burst() {}, rain() {}, wipe() {}, reassemble() {}, setColors() {}, setMode() {}, setCharset() {} };
+    const M = { x: 0, y: 0, inside: false, fresh: true, placed: false };
+    const P = (e) => { const r = stage.getBoundingClientRect(); M.x = e.clientX - r.left; M.y = e.clientY - r.top; M.placed = true; api.onMove && api.onMove(M.x, M.y); };
+    const enter = (e) => { P(e); if (!M.inside) { M.inside = true; M.fresh = true; } };
+    const leave = () => { M.inside = false; };
+    stage.addEventListener("pointermove", enter, { passive: true });
+    stage.addEventListener("pointerenter", enter, { passive: true });
+    stage.addEventListener("pointerleave", leave, { passive: true });
+    stage.addEventListener("pointercancel", leave, { passive: true });
+    stage.addEventListener("pointerup", (e) => { if (e.pointerType !== "mouse") leave(); }, { passive: true });
+    stage.addEventListener("pointerdown", (e) => { if (e.target.closest("button, a")) return; enter(e); if (!(e.pointerType === "mouse" && e.button !== 0)) api.burst(M.x, M.y); }, { passive: true });
+
+    /* the photo, placed with air around it and faded at the edges */
+    function prepare() {
+      const S = 1024, c = document.createElement("canvas"); c.width = c.height = S;
+      const g = c.getContext("2d", { willReadFrequently: true });
+      const s0 = Math.min(img.naturalWidth, img.naturalHeight);
+      g.drawImage(img, (img.naturalWidth - s0) / 2, (img.naturalHeight - s0) / 2, s0, s0, 0, 0, S, S);
+      /* where the photo itself is cut (top of the hair, shoulders, bottom) fade it out
+         instead of ending on a straight line; the silhouette elsewhere is untouched */
+      const d = g.getImageData(0, 0, S, S), p = d.data;
+      const sm = (a, b, x) => { const t = Math.min(1, Math.max(0, (x - a) / (b - a))); return t * t * (3 - 2 * t); };
+      for (let y = 0; y < S; y++) {
+        const fy = sm(0, S * 0.04, y) * (1 - sm(S * 0.84, S * 0.998, y));
+        for (let x = 0; x < S; x++) {
+          const i = (y * S + x) * 4; if (!p[i + 3]) continue;
+          const fx = sm(0, S * 0.07, x) * sm(0, S * 0.07, S - 1 - x);
+          p[i + 3] = Math.round(p[i + 3] * fy * fx);
+        }
+      }
+      g.putImageData(d, 0, 0);
+      return c;
+    }
+
+    const gl = canvas.getContext("webgl2", { antialias: false, alpha: true, depth: false, stencil: false, premultipliedAlpha: true });
+    if (!gl) return fallback();
+
+    const VS = `#version 300 es
+in vec2 aPos; out vec2 vUv;
+void main(){ vUv = aPos*.5+.5; gl_Position = vec4(aPos,0.,1.); }`;
+    const TRAIL = `#version 300 es
+precision highp float;
+uniform sampler2D tPrev; uniform vec2 uSize, uFrom, uTo; uniform float uRadius, uStrength, uFade;
+in vec2 vUv; out vec4 o;
+float seg(vec2 p, vec2 a, vec2 b){ vec2 ab=b-a; float h=clamp(dot(p-a,ab)/max(dot(ab,ab),1e-4),0.,1.); return length(p-a-ab*h); }
+void main(){
+  vec2 p = vec2(vUv.x, 1.-vUv.y)*uSize;
+  float trail = max(texture(tPrev, vUv).r - uFade, 0.);
+  float band = max(uRadius*.9, 1.)*1.6;
+  trail = max(trail, clamp((uRadius - seg(p,uFrom,uTo))/band, 0., 1.)*uStrength);
+  o = vec4(trail,0.,0.,1.);
+}`;
+    const MAIN = `#version 300 es
+precision highp float; precision highp int;
+uniform sampler2D tImage, tMask, tAtlas;
+uniform vec2 uRes, uCell, uSize; uniform float uN, uNR, uMode, uTime, uLod, uBurstW, uDot, uInvert, uChalk;
+uniform vec3 uInk, uPaper; uniform vec4 uBursts[4], uRain;
+in vec2 vUv; out vec4 o;
+float bayer(vec2 c){ ivec2 p=ivec2(mod(c,8.)); int v=p.x^p.y;
+  int m=((v&1)<<5)|((p.y&1)<<4)|((v&2)<<2)|((p.y&2)<<1)|((v&4)>>1)|((p.y&4)>>2); return (float(m)+.5)/64.; }
+float h21(vec2 p){ return fract(sin(dot(p,vec2(127.1,311.7)))*43758.5453); }
+float vn(vec2 p){ vec2 i=floor(p),f=fract(p); f=f*f*(3.-2.*f); return mix(mix(h21(i),h21(i+vec2(1,0)),f.x),mix(h21(i+vec2(0,1)),h21(i+vec2(1,1)),f.x),f.y); }
+float fbm(vec2 p){ float a=.5, s=0.; for(int i=0;i<3;i++){ s+=a*vn(p); p=p*2.03+vec2(17.1,9.4); a*=.5; } return s/.875; }
+float lum(vec3 c){ return dot(c, vec3(.2126,.7152,.0722)); }
+float tone(float l){ return pow(clamp((l-.5)*1.18+.5+.02,0.,1.),1.25); }
+float shock(vec2 p){ float v=0.; for(int i=0;i<4;i++){ vec4 b=uBursts[i]; if(b.w<=0.) continue;
+  float off=distance(p,b.xy)-b.z; float e= off>0.? off/(uBurstW*.35) : -off/uBurstW; v=max(v,clamp(1.-e,0.,1.)*b.w);} return v; }
+/* a flowing gradient: deep blue, cyan, white, orange, folded by a warped noise field */
+vec3 flow(vec2 p, float t){
+  vec2 q = vec2(fbm(p*.9 + vec2(t*.05, -t*.04)), fbm(p*.9 + vec2(5.2, 1.3) - t*.03));
+  vec2 r = vec2(fbm(p + q*1.8 + vec2(1.7, 9.2) + t*.02), fbm(p + q*1.8 + vec2(8.3, 2.8) - t*.02));
+  float f = fbm(p*.8 + r*2.4);
+  f = clamp((f - .43)*2.5, 0., 1.);
+  vec3 c = mix(vec3(.04,.22,.66), vec3(.11,.42,.86), smoothstep(.0,.3,f));
+  c = mix(c, vec3(.66,.86,.98), smoothstep(.3,.5,f));
+  c = mix(c, vec3(.97,.97,.98), smoothstep(.5,.6,f));
+  c = mix(c, vec3(.94,.48,.2), smoothstep(.6,.74,f));
+  c = mix(c, vec3(.84,.3,.14), smoothstep(.8,.95,f));
+  float ridge = exp(-pow((f-.62)*28., 2.));
+  return mix(c, vec3(1.), ridge*.5);
+}
+void main(){
+  vec2 px = vec2(gl_FragCoord.x, uRes.y-gl_FragCoord.y);
+  vec2 cell = floor(px/uCell), gv = (px - cell*uCell)/uCell;
+  vec2 cUv = vec2((cell.x+.5)*uCell.x/uRes.x, 1.-(cell.y+.5)*uCell.y/uRes.y);
+  vec2 pt = vec2(cUv.x, 1.-cUv.y)*uSize;
+  float m = smoothstep(0., 1., max(clamp(texture(tMask, cUv).r*1.6,0.,1.), shock(pt)));
+  vec2 wob = vec2(sin(uTime*2.4 + cell.y*.33 + cell.x*.05), cos(uTime*2.1 + cell.x*.29 - cell.y*.04)) * m * .016;
+  vec4 cs = textureLod(tImage, cUv + wob, uLod); vec3 cc = cs.rgb;
+  /* the silhouette as in the original; where the photo is cut the glyphs thin out at random */
+  float body = smoothstep(.35, .7, cs.a);
+  body *= step(h21(cell*1.37 + 4.1), smoothstep(.02, .75, cs.a)*1.04);
+  vec3 col; float cov = 0.;
+  bool chalk = uInvert > .5 && uChalk > .5;
+  /* dissolve: each glyph steps down (or up) the density ramp, in a soft wave from a point */
+  float rv = 1.;
+  if(abs(uRain.y) > .5){
+    float dd = distance(px, uRain.zw)/length(uRes);
+    float v = clamp((uRain.x - dd*.75 - vn(cell*.11)*.22 - h21(cell)*.05)/.34, 0., 1.);
+    v = v*v*(3.-2.*v);
+    rv = uRain.y > 0. ? v : 1. - v;
+  }
+  if(uMode < .5){
+    float L = tone(lum(cc));
+    float dens = uInvert > .5 && !chalk ? pow(lum(cc), .4545) : 1.-L;
+    float j = (vn(cell*vec2(.09,.16) + vec2(uTime*(.35 + m*1.6), -uTime*(.22 + m*1.1))) - .5)*(.07 + m*.62);
+    float gi = clamp(floor((dens+j)*uNR), 0., uNR-1.);
+    gi = floor(gi*rv + .5*step(.999, rv));
+    float ink = texture(tAtlas, vec2((gi+gv.x)/uN, gv.y)).r;
+    vec3 glyph = uInvert > .5 ? mix(uInk, pow(cc, vec3(.4545))*1.08, .5) : mix(uInk, cc*.8, .55);
+    cov = ink*body;
+    col = mix(uPaper, glyph, cov);
+  } else {
+    vec2 dc = floor(px/uDot);
+    vec2 dUv = vec2((dc.x+.5)*uDot/uRes.x, 1.-(dc.y+.5)*uDot/uRes.y);
+    vec4 ds = textureLod(tImage, dUv + wob, max(uLod-2.,0.));
+    float v = uInvert > .5 && !chalk ? 1. - pow(lum(ds.rgb), .4545) : tone(lum(ds.rgb));
+    float on = 1. - step(bayer(dc), v);
+    cov = on * step(bayer(dc+vec2(5.,2.)), rv) * step(.5, ds.a) * step(h21(dc*1.37 + 4.1), smoothstep(.02, .75, ds.a)*1.04);
+    col = mix(uPaper, uInk, cov);
+  }
+  /* transparent where there is no glyph, so the page shows through */
+  o = vec4(col - uPaper*(1. - cov), cov);
+}`;
+    let T, MN;
+    try {
+      const sh = (type, s) => { const o = gl.createShader(type); gl.shaderSource(o, s); gl.compileShader(o); if (!gl.getShaderParameter(o, gl.COMPILE_STATUS)) throw new Error(gl.getShaderInfoLog(o)); return o; };
+      const prog = (fs) => {
+        const p = gl.createProgram();
+        gl.attachShader(p, sh(gl.VERTEX_SHADER, VS)); gl.attachShader(p, sh(gl.FRAGMENT_SHADER, fs));
+        gl.bindAttribLocation(p, 0, "aPos"); gl.linkProgram(p);
+        if (!gl.getProgramParameter(p, gl.LINK_STATUS)) throw new Error(gl.getProgramInfoLog(p));
+        const u = {}; const n = gl.getProgramParameter(p, gl.ACTIVE_UNIFORMS);
+        for (let i = 0; i < n; i++) { const info = gl.getActiveUniform(p, i); u[info.name.replace(/\[0\]$/, "")] = gl.getUniformLocation(p, info.name); }
+        return { p, u };
+      };
+      T = prog(TRAIL); MN = prog(MAIN);
+    } catch (err) { console.warn(err); canvas.remove(); const c2 = document.createElement("canvas"); c2.setAttribute("aria-hidden", "true"); stage.prepend(c2); return fallback(c2); }
+
+    const vao = gl.createVertexArray(); gl.bindVertexArray(vao);
+    const buf = gl.createBuffer(); gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+    gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1, -1, 3, -1, -1, 3]), gl.STATIC_DRAW);
+    gl.enableVertexAttribArray(0); gl.vertexAttribPointer(0, 2, gl.FLOAT, false, 0, 0);
+
+    const mk = (min, mag) => { const tx = gl.createTexture(); gl.bindTexture(gl.TEXTURE_2D, tx);
+      gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, min); gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, mag || gl.LINEAR);
+      gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE); gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE); return tx; };
+    const imgTex = mk(gl.LINEAR);
+    gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, 1, 1, 0, gl.RGBA, gl.UNSIGNED_BYTE, new Uint8Array(4));
+    const atlasTex = mk(gl.NEAREST, gl.NEAREST);
+    let ftex = [], fbo = [], fw = 2, fh = 2;
+
+    let rain = { dir: calm ? 0 : 1, t0: 0, x: 0, y: 0 }, bursts = [], presence = 0, last = performance.now(), raf = 0, visible = true;
+    let sk = 1, xn = 1, vn = 1, dpr = 1, cellW = 6, cellH = 10, lod = 0, uDot = 2;
+    let ink = [0, 0, 0], paper = [1, 1, 1], invert = 0;
+    api.setColors = () => { const p = pal(); ink = rgb(p.ink).map((v) => v / 255); paper = rgb(p.paper).map((v) => v / 255); invert = isDark() ? 1 : 0; kick(); };
+    api.setColors();
+    api.setMode = (m) => { api.mode = m; kick(); };
+
+    function makeTargets() {
+      ftex.forEach((x) => gl.deleteTexture(x)); fbo.forEach((x) => gl.deleteFramebuffer(x));
+      fw = Math.max(2, xn >> 1); fh = Math.max(2, vn >> 1); ftex = []; fbo = [];
+      for (let i = 0; i < 2; i++) {
+        const tx = mk(gl.LINEAR); gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA8, fw, fh, 0, gl.RGBA, gl.UNSIGNED_BYTE, null);
+        const fb = gl.createFramebuffer(); gl.bindFramebuffer(gl.FRAMEBUFFER, fb);
+        gl.framebufferTexture2D(gl.FRAMEBUFFER, gl.COLOR_ATTACHMENT0, gl.TEXTURE_2D, tx, 0);
+        gl.clearColor(0, 0, 0, 1); gl.clear(gl.COLOR_BUFFER_BIT);
+        ftex.push(tx); fbo.push(fb);
+      }
+      gl.bindFramebuffer(gl.FRAMEBUFFER, null);
+    }
+    const nR = () => GLYPHS.length;
+    function buildAtlas() {
+      const all = GLYPHS + EDGES, a = document.createElement("canvas"); a.width = cellW * all.length; a.height = cellH;
+      const g = a.getContext("2d"); g.fillStyle = "#000"; g.fillRect(0, 0, a.width, a.height);
+      g.fillStyle = "#fff"; g.textAlign = "center"; g.textBaseline = "middle"; g.font = MONO(Math.round(cellH * 0.92), 600);
+      [...all].forEach((ch, i) => { if (ch === "—") g.fillRect(i * cellW, Math.round(cellH * 0.47), cellW, Math.max(1, Math.round(cellH * 0.08))); else g.fillText(ch, (i + 0.5) * cellW, cellH * 0.54); });
+      gl.bindTexture(gl.TEXTURE_2D, atlasTex); gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, false);
+      gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, a);
+    }
+    api.setCharset = () => { buildAtlas(); kick(); };
+    function resize() {
+      xn = Math.max(1, stage.clientWidth); vn = Math.max(1, stage.clientHeight); dpr = Math.min(devicePixelRatio || 1, 2);
+      canvas.width = Math.round(xn * dpr); canvas.height = Math.round(vn * dpr);
+      /* the original draws 6×11 px cells on a ~760 px stage; keep that cell count at any size */
+      sk = Math.min(1, Math.max(0.62, xn / 760));
+      cellW = Math.max(3, Math.round(6 * sk * dpr)); cellH = Math.max(5, Math.round(11 * sk * dpr)); uDot = Math.max(1, Math.round(2 * sk * dpr));
+      buildAtlas();
+      lod = Math.log2(Math.max(1, cellH * 1024 / canvas.height));
+      makeTargets();
+      if (!M.placed) { M.x = xn / 2; M.y = vn / 2; }
+      kick();
+    }
+
+    const R = { x: 0, y: 0, px: 0, py: 0 };
+    const BURST = 1.3, RAIN = 1.5;
+    api.burst = (x, y) => { bursts.push({ x, y, start: performance.now() }); if (bursts.length > 4) bursts.shift(); kick(); };
+    api.rain = (dir, x, y) => { if (calm) return; rain = { dir, t0: performance.now(), x: (x ?? xn / 2) * dpr, y: (y ?? vn / 2) * dpr }; kick(); };
+    api.wipe = (x, y) => { if (calm) return; api.rain(-1, x, y); api.wiped = true; };
+    api.reassemble = () => { if (!api.wiped) return; api.wiped = false; api.rain(1, xn / 2, vn * 0.4); };
+
+    const MS = 96; let mask = null;
+    img.onload = () => {
+      const c = prepare();
+      try { const m = document.createElement("canvas"); m.width = m.height = MS; const mg = m.getContext("2d", { willReadFrequently: true }); mg.drawImage(c, 0, 0, MS, MS);
+        const d = mg.getImageData(0, 0, MS, MS).data; mask = new Uint8Array(MS * MS); for (let i = 0; i < mask.length; i++) mask[i] = d[i * 4 + 3]; } catch (e) {}
+      gl.bindTexture(gl.TEXTURE_2D, imgTex);
+      gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, true); gl.pixelStorei(gl.UNPACK_PREMULTIPLY_ALPHA_WEBGL, false);
+      gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA8, gl.RGBA, gl.UNSIGNED_BYTE, c);
+      gl.generateMipmap(gl.TEXTURE_2D);
+      gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR_MIPMAP_LINEAR);
+      gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, false);
+      api.rain(1, xn / 2, vn * 0.4);
+      kick();
+    };
+    img.src = url;
+
+    function frame(now) {
+      raf = 0;
+      const dt = Math.min(0.05, Math.max(0, (now - last) / 1000)); last = now;
+      presence += ((M.inside ? 1 : 0) - presence) * (1 - Math.exp(-dt / 0.16));
+      if (M.fresh) { R.x = R.px = M.x; R.y = R.py = M.y; M.fresh = false; }
+      else { const k = 1 - Math.exp(-dt / 0.035); R.x += (M.x - R.x) * k; R.y += (M.y - R.y) * k; }
+
+      gl.bindVertexArray(vao);
+      gl.bindFramebuffer(gl.FRAMEBUFFER, fbo[1]); gl.viewport(0, 0, fw, fh);
+      gl.useProgram(T.p);
+      gl.activeTexture(gl.TEXTURE0); gl.bindTexture(gl.TEXTURE_2D, ftex[0]); gl.uniform1i(T.u.tPrev, 0);
+      gl.uniform2f(T.u.uSize, xn, vn); gl.uniform2f(T.u.uFrom, R.px, R.py); gl.uniform2f(T.u.uTo, R.x, R.y);
+      gl.uniform1f(T.u.uRadius, 70 * sk * (0.45 + 0.55 * presence)); gl.uniform1f(T.u.uStrength, presence);
+      gl.uniform1f(T.u.uFade, Math.max(dt / 1.6, 1.5 / 255));
+      gl.drawArrays(gl.TRIANGLES, 0, 3);
+      ftex.reverse(); fbo.reverse(); R.px = R.x; R.py = R.y;
+
+      bursts = bursts.filter((b) => (now - b.start) / 1000 < BURST);
+      const B = new Float32Array(16);
+      bursts.forEach((b, i) => { const h = (now - b.start) / 1000 / BURST, m = Math.hypot(Math.max(b.x, xn - b.x), Math.max(b.y, vn - b.y)) + 140 * sk;
+        B.set([b.x, b.y, m * Math.sin(h * Math.PI / 2), 1 - h * h * h], i * 4); });
+
+      /* glyph pass, straight to the screen */
+      gl.bindFramebuffer(gl.FRAMEBUFFER, null); gl.viewport(0, 0, canvas.width, canvas.height);
+      gl.useProgram(MN.p);
+      gl.activeTexture(gl.TEXTURE0); gl.bindTexture(gl.TEXTURE_2D, imgTex); gl.uniform1i(MN.u.tImage, 0);
+      gl.activeTexture(gl.TEXTURE1); gl.bindTexture(gl.TEXTURE_2D, ftex[0]); gl.uniform1i(MN.u.tMask, 1);
+      gl.activeTexture(gl.TEXTURE2); gl.bindTexture(gl.TEXTURE_2D, atlasTex); gl.uniform1i(MN.u.tAtlas, 2);
+      const u = MN.u;
+      gl.uniform2f(u.uRes, canvas.width, canvas.height); gl.uniform2f(u.uCell, cellW, cellH); gl.uniform2f(u.uSize, xn, vn);
+      gl.uniform1f(u.uN, nR() + EDGES.length); gl.uniform1f(u.uNR, nR()); gl.uniform1f(u.uChalk, CHALK);
+      gl.uniform1f(u.uMode, api.mode); gl.uniform1f(u.uTime, calm ? 0 : now / 1000);
+      gl.uniform1f(u.uLod, lod); gl.uniform1f(u.uBurstW, 140 * sk); gl.uniform1f(u.uDot, uDot);
+      gl.uniform1f(u.uInvert, invert); gl.uniform3fv(u.uInk, ink); gl.uniform3fv(u.uPaper, paper);
+      const rt = rain.t0 ? (now - rain.t0) / 1000 : 0, rOn = rain.dir && (rt < RAIN || rain.dir < 0);
+      gl.uniform4f(u.uRain, rOn ? rt : 99, rOn ? rain.dir : 0, rain.x || 0, rain.y || 0);
+      gl.uniform4fv(u.uBursts, B);
+      gl.drawArrays(gl.TRIANGLES, 0, 3);
+
+      const busy = presence > 0.002 || bursts.length || (rain.t0 && rt < RAIN);
+      if (visible && !document.hidden && (!calm || busy)) raf = requestAnimationFrame(frame);
+    }
+    function kick() { if (!raf && visible && !document.hidden) { last = performance.now(); raf = requestAnimationFrame(frame); } }
+    document.addEventListener("visibilitychange", () => { if (document.hidden) { cancelAnimationFrame(raf); raf = 0; } else kick(); });
+    new IntersectionObserver((es) => { visible = es[0].isIntersecting; if (visible) kick(); else { cancelAnimationFrame(raf); raf = 0; } }).observe(stage);
+    new ResizeObserver(resize).observe(stage);
+    stage.addEventListener("pointermove", kick, { passive: true });
+    resize();
+    return api;
+
+    /* no WebGL2: a still symbol portrait drawn once */
+    function fallback(c2) {
+      const cv = c2 || canvas;
+      const draw = () => {
+        if (!img.naturalWidth) return;
+        const W = stage.clientWidth, H = stage.clientHeight, d = Math.min(devicePixelRatio || 1, 2);
+        cv.width = Math.round(W * d); cv.height = Math.round(H * d);
+        const g = cv.getContext("2d"); g.setTransform(d, 0, 0, d, 0, 0);
+        const p = pal(); g.clearRect(0, 0, W, H);
+        const cw = 6, ch = 10, cols = Math.ceil(W / cw), rows = Math.ceil(H / ch);
+        const s = document.createElement("canvas"); s.width = cols; s.height = rows;
+        const sg = s.getContext("2d", { willReadFrequently: true }); sg.drawImage(prepare(), 0, 0, cols, rows);
+        let px; try { px = sg.getImageData(0, 0, cols, rows).data; } catch (e) { return; }
+        g.font = MONO(9, 500); g.textAlign = "center"; g.textBaseline = "middle"; g.fillStyle = p.ink;
+        for (let y = 0; y < rows; y++) for (let x = 0; x < cols; x++) {
+          const i = (y * cols + x) * 4; if (px[i + 3] < 40) continue;
+          const L = lumOf(px[i], px[i + 1], px[i + 2]), dens = (isDark() ? L : 1 - L) * 0.86 * px[i + 3] / 255;
+          const gi = Math.min(GLYPHS.length - 1, Math.floor(dens * GLYPHS.length)); if (gi) { g.globalAlpha = 0.5 + 0.5 * dens; g.fillText(GLYPHS[gi], x * cw + cw / 2, y * ch + ch / 2); }
+        }
+        g.globalAlpha = 1;
+      };
+      img.onload = draw; img.src = url;
+      new ResizeObserver(draw).observe(stage);
+      api.setColors = draw; api.setCharset = draw;
+      return api;
+    }
+  }
+
+  /* =====================================================================
+     THEME AND PAGE SWAP: no blank frame. The old page stays on screen while
+     the new one spreads from the click through a soft round front (a View
+     Transition with a growing radial mask). Along the front runs a band of
+     characters in the gradient colours; behind it they thin out to nothing.
+     Browsers without View Transitions simply switch.
+     ===================================================================== */
+  const RING_RAMP = " .·:-=+*o#%@";
+  const RING_PAL = ["#1E3FD8", "#2D63EA", "#38BDF8", "#A5D8FF", "#F6B48C", "#F08A55", "#E0703A"];
+  let wiping = false, ringCv = null;
+  const SLOW = Math.max(1, +(new URLSearchParams(location.search).get("slow")) || 1);
+  function ringCanvas() {
+    if (!ringCv) { ringCv = document.createElement("canvas"); ringCv.className = "ring"; ringCv.setAttribute("aria-hidden", "true"); ringCv.width = ringCv.height = 1; document.body.appendChild(ringCv); }
+    return ringCv;
+  }
+  function glyphSwap(mid, opt = {}) {
+    if (calm || wiping || typeof document.startViewTransition !== "function") { mid(); return; }
+    wiping = true;
+    const W = innerWidth, H = innerHeight, ox = opt.x ?? W / 2, oy = opt.y ?? H / 2;
+    const BAND = opt.band || Math.round(Math.max(120, Math.min(W, H) * 0.2));
+    const maxD = Math.hypot(Math.max(ox, W - ox), Math.max(oy, H - oy));
+    const R = maxD + BAND * 1.6 + 20, DUR = (opt.dur || 760) * SLOW;
+    const ease = (k) => (k < 0.5 ? 4 * k * k * k : 1 - Math.pow(-2 * k + 2, 3) / 2) * 0.35 + (1 - Math.pow(1 - k, 2.4)) * 0.65;
+    root.style.setProperty("--vx", ox + "px"); root.style.setProperty("--vy", oy + "px"); root.style.setProperty("--vw", BAND + "px");
+    /* the character band */
+    const cv = ringCanvas(), g = cv.getContext("2d"), dpr = Math.min(devicePixelRatio || 1, 2);
+    cv.width = Math.round(W * dpr); cv.height = Math.round(H * dpr);
+    const cw = W > 760 ? 9 : 8, ch = Math.round(cw * 1.75), cols = Math.ceil(W / cw), rows = Math.ceil(H / ch), n = cols * rows;
+    const gw = Math.round(cw * dpr), gh = Math.round(ch * dpr);
+    const ats = RING_PAL.map((col) => { const a = document.createElement("canvas"); a.width = gw * RING_RAMP.length; a.height = gh;
+      const x = a.getContext("2d"); x.fillStyle = col; x.textAlign = "center"; x.textBaseline = "middle"; x.font = MONO(Math.round(gh * 0.82), 500);
+      [...RING_RAMP].forEach((c, k) => x.fillText(c, (k + 0.5) * gw, gh * 0.55)); return a; });
+    const nz = (() => { const gx = Math.ceil(cols / 12) + 2, gy = Math.ceil(rows / 12) + 2, v = new Float32Array(gx * gy).map(() => Math.random());
+      return (x, y) => { const fx = x / 12, fy = y / 12, ix = fx | 0, iy = fy | 0, tx = fx - ix, ty = fy - iy, sx = tx * tx * (3 - 2 * tx), sy = ty * ty * (3 - 2 * ty);
+        const a = v[iy * gx + ix], b = v[iy * gx + ix + 1], c = v[(iy + 1) * gx + ix], d = v[(iy + 1) * gx + ix + 1];
+        return a + (b - a) * sx + (c - a) * sy + (a - b - c + d) * sx * sy; }; })();
+    const dist = new Float32Array(n), thr = new Float32Array(n), hue = new Float32Array(n);
+    for (let i = 0; i < n; i++) { const x = i % cols, y = i / cols | 0, q = nz(x, y);
+      dist[i] = Math.hypot((x + 0.5) * cw - ox, (y + 0.5) * ch - oy) + (q - 0.5) * BAND * 0.9;
+      thr[i] = Math.random(); hue[i] = nz(cols - 1 - x, rows - 1 - y); }
+    let t0 = 0, raf = 0;
+    const tick = (now) => {
+      if (!t0) t0 = now;
+      const k = Math.min(1, (now - t0) / DUR), r = R * ease(k);
+      g.clearRect(0, 0, cv.width, cv.height);
+      const NR = RING_RAMP.length, NP = ats.length;
+      for (let i = 0; i < n; i++) {
+        const u = (r - dist[i]) / BAND; if (u <= -0.1 || u >= 1.15) continue;
+        /* strongest a little inside the front, gone well behind it */
+        const I = Math.max(0, u < 0.3 ? (u + 0.1) / 0.4 : 1 - (u - 0.3) / 0.85);
+        if (I * I < thr[i] * 0.85) continue;
+        const gi = Math.max(1, Math.min(NR - 1, Math.round(I * (NR - 1))));
+        const pi = Math.max(0, Math.min(NP - 1, Math.floor((hue[i] * 0.75 + (1 - u) * 0.35) * NP)));
+        g.globalAlpha = 0.35 + 0.65 * I;
+        g.drawImage(ats[pi], gi * gw, 0, gw, gh, Math.floor((i % cols) * cw * dpr), Math.floor((i / cols | 0) * ch * dpr), gw, gh);
+      }
+      g.globalAlpha = 1;
+      if (k < 1) raf = requestAnimationFrame(tick);
+    };
+    const done = () => { cancelAnimationFrame(raf); g.clearRect(0, 0, cv.width, cv.height); cv.width = cv.height = 1; wiping = false; };
+    let vt;
+    try { vt = document.startViewTransition(() => { mid(); }); } catch (e) { done(); mid(); return; }
+    vt.ready.then(() => {
+      const K = 24, frames = Array.from({ length: K + 1 }, (_, j) => ({ "--vr": `${(R * ease(j / K)).toFixed(1)}px`, offset: j / K }));
+      root.animate(frames, { duration: DUR, easing: "linear", fill: "forwards", pseudoElement: "::view-transition-new(root)" });
+      raf = requestAnimationFrame(tick);
+    }).catch(done);
+    vt.finished.then(done, done);
+  }
+
+  /* ---------- text decode: symbols resolve into the words ---------- */
+  const scr = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { scramble(e.target); scr.unobserve(e.target); } }), { threshold: 0.6 });
+  function scramble(el, dur = 650) {
+    if (calm || el.dataset.busy) return;
+    const final = el.textContent, chars = [...final]; el.dataset.busy = "1";
+    const pool = "@#%*+=-:;o.";
+    const t0 = performance.now();
+    const tick = (now) => {
+      const k = Math.min(1, (now - t0) / dur), n = Math.floor(k * chars.length * 1.15);
+      el.textContent = chars.map((c, i) => (i < n - 3 || c === " " ? c : i < n ? pool[(Math.random() * pool.length) | 0] : c === " " ? " " : pool[(Math.random() * pool.length) | 0])).join("");
+      if (k < 1) requestAnimationFrame(tick); else { el.textContent = final; delete el.dataset.busy; }
+    };
+    requestAnimationFrame(tick);
+  }
+  const watchScr = (scope) => $$("[data-scr]", scope).forEach((el) => scr.observe(el));
+
+  /* =====================================================================
+     CURSOR FIELD around the portrait: wherever the cursor passes, the
+     empty paper turns into a trail of characters. Density follows the
+     heat of the trail, colour comes from the slow gradient bands of the
+     reference (blue, cyan, white, orange); it all fades back to paper.
+     ===================================================================== */
+  /* hero: a few specks of pollen drift toward the cursor and rise from its trail */
+  function mountField(host) {
+    if (calm) return;
+    const cv = document.createElement("canvas"); cv.className = "field"; cv.setAttribute("aria-hidden", "true"); host.prepend(cv);
+    const g = cv.getContext("2d");
+    let W = 0, H = 0, dpr = 1, raf = 0, prev = 0, last = null, inside = false, parts = [];
+    const t0 = performance.now();
+    function resize() { W = host.clientWidth; H = host.clientHeight; dpr = Math.min(devicePixelRatio || 1, 2); cv.width = Math.round(W * dpr); cv.height = Math.round(H * dpr); }
+    host.addEventListener("pointermove", (e) => {
+      if (e.pointerType !== "mouse") return;
+      const rc = host.getBoundingClientRect(), x = e.clientX - rc.left, y = e.clientY - rc.top;
+      if (last && Math.hypot(x - last.x, y - last.y) > 5 && parts.length < 70 && Math.random() < 0.55) parts.push({ x, y, vx: (Math.random() - 0.5) * 10, vy: -Math.random() * 7, life: 1.4 + Math.random() * 1.1 });
+      if (!inside) { inside = true; for (let i = 0; i < 14; i++) parts.push({ x: x + (Math.random() - 0.5) * 520, y: y + (Math.random() - 0.5) * 320, vx: 0, vy: 0, life: 99, amb: true }); }
+      last = { x, y }; go();
+    }, { passive: true });
+    host.addEventListener("pointerleave", () => { last = null; inside = false; parts.forEach((p) => { if (p.amb) { p.amb = false; p.life = 1.2; } }); }, { passive: true });
+    function step(now) {
+      raf = 0;
+      const dt = prev ? Math.min(0.05, (now - prev) / 1000) : 0.016, t = (now - t0) / 1000; prev = now;
+      g.setTransform(dpr, 0, 0, dpr, 0, 0); g.clearRect(0, 0, W, H); g.fillStyle = isDark() ? "#F09A78" : "#E0795A";
+      parts = parts.filter((p) => { p.life -= dt; if (p.life <= 0) return false;
+        p.vx += (Math.sin(t * 0.8 + p.y * 0.01) * 6 - p.vx * 0.5) * dt; p.vy += (-4 - p.vy * 0.5 + Math.cos(t * 0.7 + p.x * 0.01) * 5) * dt;
+        if (p.amb && last) { const dx = last.x - p.x, dy = last.y - p.y, r2 = dx * dx + dy * dy; if (r2 < 200 * 200 && r2 > 100) { p.vx += dx * 0.5 * dt; p.vy += dy * 0.5 * dt; } }
+        p.x += p.vx * dt * 4; p.y += p.vy * dt * 4;
+        g.globalAlpha = Math.min(1, p.life) * 0.85; g.beginPath(); g.arc(p.x, p.y, p.amb ? 1.7 : 1.4, 0, 6.2832); g.fill(); return true; });
+      g.globalAlpha = 1;
+      if (parts.length) raf = requestAnimationFrame(step); else prev = 0;
+    }
+    function go() { if (!raf) raf = requestAnimationFrame(step); }
+    new ResizeObserver(resize).observe(host); resize();
+  }
+
+  /* =====================================================================
+     RENDER
+     ===================================================================== */
+  const home = $("#home"), caseEl = $("#case"), stage = $("#stage");
+  const DOT = '<span class="dot" aria-hidden="true"></span>';
+  /* section head: the title on the left, one small grouped block on the right (side is HTML) */
+  const head = (title) => `<header class="sec-head grid"><h2 class="pt" data-scr>${esc(title)}</h2></header>`;
+  const NAV = ["work", "projects", "about", "contact"];
+
+  function renderChrome() {
+    const u = U(), d = D();
+    root.lang = lang;
+    document.title = u.title;
+    $("#homeLink").textContent = d.name;
+    $("#nav").setAttribute("aria-label", u.navAria);
+    $("#nav").innerHTML = NAV.map((k) => `<a class="tbtn" href="#${k}" data-go="${k}" data-nav="${k}">${esc(u.nav[k])}</a>`).join("");
+    $("#menu").innerHTML = NAV.map((k) => `<a href="#${k}" data-go="${k}">${esc(u.nav[k])}</a>`).join("") + `<a href="${esc(cvUrl())}" target="_blank" rel="noopener">${esc(u.cv)}</a>`;
+    $("#cvTop").href = cvUrl(); $("#cvTop").textContent = "CV";
+    $$("[data-lang]").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.lang === lang)));
+    $("#burger").setAttribute("aria-label", u.menu);
+    syncThemeBtn();
+  }
+  function syncThemeBtn() {
+    const b = $("#themeBtn"), u = U(), dk = isDark();
+    b.innerHTML = dk ? ICON.sun : ICON.moon;
+    b.setAttribute("aria-label", dk ? u.light : u.dark); b.title = b.getAttribute("aria-label");
+    const m = $('meta[name="theme-color"]'); m && m.setAttribute("content", pal().paper);
+  }
+
+  function renderHero() {
+    const u = U(), d = D(), h = d.hero || {};
+    const fill = (v) => esc(v).replace("{status}", DOT + esc(d.status));
+    $("#hb0").textContent = h.role || "";
+    $("#hb1").textContent = plain(d.headline).replace(/B2B-/g, "B2B\u2011");
+    $("#hb2").innerHTML = (h.foot || []).map((l) => `<span>${fill(l)}</span>`).join("");
+    $("#stageDesc").textContent = u.stageAria(d.name);
+    $("#stageCta").innerHTML = `<button class="btn" data-act="work">${esc(u.toWork)}${ICON.down}</button><button class="btn ghost" data-act="contact">${esc(u.toContact)}</button>`;
+  }
+
+  /* =====================================================================
+     WIDGETS. Every block is a card: a mono header row, then the content.
+     ===================================================================== */
+  const wh = (l, r = "") => `<span class="wh lbl"><span>${l}</span><span>${r}</span></span>`;
+  const GO = '<span class="go" aria-hidden="true">↗</span>';
+
+  /* cases: four equal cards, wide and narrow in turn; each carries its own main number */
+  function renderWork() {
+    const u = U(), cs = CASES();
+    $("#work").innerHTML = head(u.nav.work) + `
+      <div class="bento cases">${cs.map((c, i) => { const st = c.stats && c.stats[0]; return `
+        <button class="card ccase ${[0, 3].includes(i % 4) ? "w-a" : "w-b"}" data-case="${i}" aria-label="${esc(u.openCase)}: ${esc(plain(c.title))}">
+          ${wh(t(c.year))}
+          <span class="cover${c.fit === "contain" ? " contain" : ""}" style="--tint:${esc(c.tint)}">${src(c.cover) ? `<img src="${esc(src(c.cover))}" alt="" loading="lazy">` : ""}</span>
+          <span class="cfoot">
+            <span class="cbot"><span class="pt">${esc(plain(c.title))}</span></span>
+            ${st ? `<span class="stat"><b>${esc(st.v)}</b><span class="lbl">${t(st.l)}</span></span>` : ""}
+          </span>
+        </button>`; }).join("")}
+      </div>`;
+    watchScr($("#work"));
+  }
+
+  function renderProjects() {
+    const u = U(), d = D(), p = d.projects; if (!p) { $("#projects").innerHTML = ""; return; }
+    $("#projects").innerHTML = head(u.nav.projects) + `
+      <div class="bento">${p.items.map((x) => `
+        <a class="card w-proj" href="${esc(x.link)}" target="_blank" rel="noopener" aria-label="${esc(u.open)}: ${esc(plain(x.title))}">
+          ${wh(t(x.year), `${x.live ? DOT : ""}${t(x.status)} ${GO}`)}
+          <span class="cover shot${x.video ? " vid" : ""}">${(x.shots || []).map((sh, j) => `<img src="${esc(src(sh))}" alt="${j ? "" : esc(x.alt || "")}" loading="lazy">`).join("")}</span>
+          <span class="cbot"><span class="pt">${t(x.title)}</span><span class="t2 muted">${t(x.short || x.text)}</span></span>
+        </a>`).join("")}
+      </div>`;
+    $$("#projects .w-proj").forEach((a, i) => mountVideo(a, p.items[i]));
+    watchScr($("#projects"));
+  }
+
+  /* =====================================================================
+     SIDE PROJECT PREVIEWS: poster first; a muted looping video plays on
+     hover (desktop) or while the card is in view (touch).
+     ===================================================================== */
+  function mountVideo(card, x) {
+    const cover = $(".shot", card), poster = $("img", cover);
+    const v = document.createElement("video"); v.src = x.video; v.muted = true; v.loop = true; v.playsInline = true; v.preload = "none"; v.setAttribute("aria-hidden", "true");
+    cover.appendChild(v);
+    const go = () => { v.play().then(() => v.classList.add("on")).catch(() => {}); }, stop = () => { v.classList.remove("on"); setTimeout(() => { if (!v.classList.contains("on")) { v.pause(); v.currentTime = 0; } }, 360); };
+    if (calm) return;
+    if (matchMedia("(hover:hover)").matches) { card.addEventListener("mouseenter", go); card.addEventListener("mouseleave", stop); card.addEventListener("focus", go); card.addEventListener("blur", stop); }
+    else if ("IntersectionObserver" in window) new IntersectionObserver((es) => es.forEach((e) => (e.intersectionRatio > 0.6 ? go() : stop())), { threshold: [0, 0.6, 1] }).observe(cover);
+  }
+
+  function renderAbout() {
+    const u = U(), d = D(), a = d.about, w = u.w, F = a.facts || [];
+    const f = (k) => F[k] || { label: "", value: "" };
+    const langs = String(f(6).value).split(/,\s*/).map((s) => { const m = s.match(/^(.*?)\s*\((.*)\)\s*$/); return m ? [m[1], m[2]] : [s, ""]; });
+    const list = (v) => String(v).split(/,\s*/).map((x) => `<li>${t(x)}</li>`).join("");
+    $("#about").innerHTML = head(u.nav.about) + `
+      <div class="bento">
+        <div class="card w-bio"><p class="t4">${t(a.bio)}</p></div>
+        <div class="card w-seek">${wh(t(f(2).label))}<p class="t2">${t(f(2).value)}</p></div>
+        <div class="card w-xp">${wh(esc(w.work))}<ul class="xpl">${a.experience.map((x) => `<li><span class="y lbl">${t(x.years)}</span><span class="r t2">${t(x.role)}<span>, ${t(x.company)}</span></span><span class="d t2">${t(x.note || "")}</span></li>`).join("")}</ul></div>
+        <div class="card w-lang">${wh(t(f(6).label))}<ul class="langs">${langs.map(([nm, lv]) => `<li><span class="t2">${t(nm.charAt(0).toUpperCase() + nm.slice(1))}</span><span class="lv lbl">${t(lv)}</span></li>`).join("")}</ul></div>
+        ${a.education && a.education.length ? `<div class="card w-edu">${wh(esc(u.edu))}<ul class="edl">${a.education.map((x) => `<li><span class="r t2">${t(x.title)}<span>${t(x.place)}</span></span><span class="lbl muted">${t(x.years)}</span></li>`).join("")}</ul></div>` : ""}
+        <div class="card w-sk">${wh(t(f(3).label))}<ul class="tags t2">${list(f(3).value)}</ul></div>
+        <div class="card w-tools">${wh(t(f(4).label))}<ul class="tags t2">${list(f(4).value)}</ul></div>
+        <div class="card w-ai">${wh(t(f(5).label))}<ul class="tags t2">${list(f(5).value)}</ul></div>
+      </div>`;
+    watchScr($("#about"));
+  }
+
+  function renderContact() {
+    const u = U(), d = D(), w = u.w;
+    $("#contact").innerHTML = head(u.nav.contact) + `
+      <div class="bento">
+        <div class="card w-mail">
+          ${wh(esc(w.write), DOT + esc(d.status))}
+          <button class="mail t5" data-copy aria-label="${esc(u.copy)}: ${esc(C.email)}">${esc(C.email).replace("@", "<wbr>@")}</button>
+          <p class="cta t2">${t(d.contactCta)}</p>
+          <div class="acts">
+            <button class="btn" data-copy>${esc(u.copy)}</button>
+            ${C.links.map((l) => linkBtn(tr(l.label), l.url)).join("")}
+            ${linkBtn(u.cv, cvUrl())}
+          </div>
+        </div>
+        <div class="card w-clock">${wh(esc(w.city), '<span id="clkZ"></span>')}<span class="mtop"><b class="num clock" id="clkT"></b><span class="t2 muted" id="clkS"></span></span></div>
+      </div>`;
+    tickClock();
+    watchScr($("#contact"));
+  }
+
+  function renderFoot() {
+    const u = U(), d = D();
+    $("#foot").innerHTML = `
+      <div class="meadow" id="meadow"><ul class="takes" aria-hidden="true"></ul></div>
+      <div class="foot wrap grid lbl">
+        <span class="f1">© ${new Date().getFullYear()} ${esc(d.name)}</span>
+        <span class="f2 lbl muted">${esc(u.plant || "")}</span>
+        <span class="f3"><button class="tbtn" data-go="top" style="margin-right:calc(-1 * var(--s1))">${esc(u.top)} ↑</button></span>
+      </div>`;
+    mountMeadow($("#meadow"), []);
+    watchScr($("#foot"));
+  }
+
+  /* ---------- Belgrade time vs the visitor's, with shared working hours ---------- */
+  function tickClock() {
+    const tEl = $("#clkT"); if (!tEl) return;
+    const now = new Date(), f = (o) => new Intl.DateTimeFormat("en-GB", { hour: "2-digit", minute: "2-digit", hour12: false, ...o }).format(now);
+    let me, diff = 0, off = 1;
+    try {
+      me = f({ timeZone: "Europe/Belgrade" });
+      const at = (tz) => new Date(now.toLocaleString("en-US", tz ? { timeZone: tz } : {}));
+      const bel = at("Europe/Belgrade");
+      diff = Math.round((at() - bel) / 1800000) / 2;
+      off = Math.round((bel - at("UTC")) / 3600000);
+    } catch (e) { tEl.textContent = ""; return; }
+    const ov = Math.max(0, 9 - Math.abs(diff)), u = U();
+    tEl.textContent = me;
+    $("#clkZ").textContent = `UTC${off >= 0 ? "+" : "−"}${Math.abs(off)}`;
+    $("#clkS").textContent = diff ? u.clockDiff(f({}), String(ov).replace(".", lang === "ru" ? "," : ".")) : u.clockSame;
+  }
+  setInterval(tickClock, 30000);
+
+  /* flower art is painted at 400x500 with the root at (200, 500) */
+  const FW = 400, FH = 500;
+  const rngOf = (s) => () => { s |= 0; s = (s + 0x6D2B79F5) | 0; let t = Math.imul(s ^ (s >>> 15), 1 | s); t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t; return ((t ^ (t >>> 14)) >>> 0) / 4294967296; };
+  const gray = (v, a = 1) => { const c = Math.round(Math.min(1, Math.max(0, v)) * 255); return `rgba(${c},${c},${c},${a})`; };
+
+  /* =====================================================================
+     FOOTER MEADOW: delicate halftone flowers (lilies, buds, grass sprays)
+     painted once as light/shade drawings, then read back as a grid of
+     fine dots whose size follows the light, like a printed halftone.
+     Texts stand near them as plain lines. The flowers lean away from the
+     cursor and settle back.
+     ===================================================================== */
+  const hexRgb = (h) => [parseInt(h.slice(1, 3), 16), parseInt(h.slice(3, 5), 16), parseInt(h.slice(5, 7), 16)];
+  const MPAINT = {
+    blade(g, x, y, ang, len, wid, bow, v) {
+      g.save(); g.translate(x, y); g.rotate(ang);
+      const gr = g.createLinearGradient(0, 0, len, 0); gr.addColorStop(0, gray(v * 0.7)); gr.addColorStop(0.5, gray(v)); gr.addColorStop(1, gray(v * 0.8));
+      g.fillStyle = gr; g.beginPath(); g.moveTo(0, 0);
+      g.quadraticCurveTo(len * 0.5, -bow - wid, len, -bow * 0.2); g.quadraticCurveTo(len * 0.5, -bow + wid * 0.2, 0, 0); g.fill();
+      g.strokeStyle = gray(v * 0.35, 0.8); g.lineWidth = 1.1; g.beginPath(); g.moveTo(2, 0); g.quadraticCurveTo(len * 0.5, -bow - wid * 0.4, len * 0.96, -bow * 0.2); g.stroke();
+      g.restore();
+    },
+    stem(g, p, w) { g.save(); g.lineCap = "round"; g.strokeStyle = gray(0.72); g.lineWidth = w; g.beginPath(); g.moveTo(p[0][0], p[0][1]); g.bezierCurveTo(p[1][0], p[1][1], p[2][0], p[2][1], p[3][0], p[3][1]); g.stroke(); g.restore(); },
+    lily(g) {
+      const r = rngOf(41), cx = 214, cy = 150, S = [[200, 500], [196, 400], [226, 270], [cx, cy + 10]];
+      this.stem(g, S, 6.5);
+      this.blade(g, 200, 480, -1.95, 230, 30, -70, 0.85); this.blade(g, 202, 450, -1.15, 190, 26, 50, 0.8); this.blade(g, 198, 495, -2.5, 190, 22, -40, 0.72);
+      const N = 6;
+      for (let i = 0; i < N; i++) {
+        const a = (i / N) * Math.PI * 2 + 0.3, L = 130 + r() * 24, W = 30 + r() * 6, back = Math.sin(a) < -0.2;
+        g.save(); g.translate(cx, cy); g.scale(1, 0.62); g.rotate(a);
+        const gr = g.createLinearGradient(8, 0, L, 0); gr.addColorStop(0, gray(back ? 0.4 : 0.5)); gr.addColorStop(0.35, gray(back ? 0.72 : 0.95)); gr.addColorStop(1, gray(back ? 0.62 : 0.85));
+        g.fillStyle = gr; g.beginPath(); g.moveTo(8, 0);
+        g.bezierCurveTo(L * 0.3, -W * 1.1, L * 0.78, -W * 0.95, L, -W * 0.15 - 14);
+        g.bezierCurveTo(L * 0.9, W * 0.3, L * 0.6, W * 1.15, 8, 0); g.fill();
+        g.strokeStyle = gray(0.3, 0.9); g.lineWidth = 1.2; g.beginPath(); g.moveTo(10, 0); g.quadraticCurveTo(L * 0.5, -W * 0.2, L * 0.94, -W * 0.3); g.stroke();
+        g.strokeStyle = gray(0.38, 0.55); g.lineWidth = 0.9;
+        for (const k of [-0.5, 0.5]) { g.beginPath(); g.moveTo(16, 0); g.quadraticCurveTo(L * 0.5, k * W * 0.9, L * 0.9, k * W * 0.35 - 8); g.stroke(); }
+        g.restore();
+      }
+      for (let k = 0; k < 7; k++) { const a = -2.7 + k * 0.42; g.strokeStyle = gray(0.85); g.lineWidth = 1.6; g.beginPath(); g.moveTo(cx, cy); g.lineTo(cx + Math.cos(a) * 34, cy + Math.sin(a) * 20); g.stroke(); g.fillStyle = gray(1); g.beginPath(); g.arc(cx + Math.cos(a) * 36, cy + Math.sin(a) * 21, 3, 0, 7); g.fill(); }
+    },
+    bud(g) {
+      const hx = 232, hy = 120, S = [[200, 500], [186, 380], [236, 250], [hx - 4, hy + 40]];
+      this.stem(g, S, 6);
+      this.blade(g, 198, 450, -2.2, 160, 20, -34, 0.78); this.blade(g, 202, 410, -0.95, 130, 18, 30, 0.74);
+      g.save(); g.translate(hx, hy); g.rotate(0.16);
+      for (let i = -1; i <= 1; i++) {
+        const gr = g.createLinearGradient(0, 40, 0, -70); gr.addColorStop(0, gray(0.55)); gr.addColorStop(1, gray(i ? 0.8 : 1));
+        g.fillStyle = gr; g.beginPath(); g.moveTo(i * 4, 44); g.bezierCurveTo(i * 4 - 24 + i * 6, 6, i * 4 - 10 + i * 8, -42, i * 5, -76); g.bezierCurveTo(i * 4 + 12 + i * 8, -42, i * 4 + 26 + i * 6, 6, i * 4, 44); g.fill();
+        g.strokeStyle = gray(0.3, 0.85); g.lineWidth = 1.2; g.stroke();
+      }
+      g.restore();
+    },
+    blades(g) {
+      const r = rngOf(53);
+      for (let i = 0; i < 7; i++) { const t = i / 6; this.blade(g, 200 + (r() - 0.5) * 14, 500, -Math.PI / 2 + (t - 0.5) * 1.5 + (r() - 0.5) * 0.12, 260 + r() * 140, 16 + r() * 10, (t - 0.5) * 150 + (r() - 0.5) * 24, 0.85); }
+    }
+  };
+  Object.assign(MPAINT, {
+    daisy(g) {
+      const hx = 212, hy = 175, S = [[200, 500], [192, 400], [222, 290], [hx, hy + 22]];
+      this.stem(g, S, 5.5); this.blade(g, 199, 470, -2.1, 150, 18, -30, 0.8); this.blade(g, 201, 420, -1.0, 120, 16, 26, 0.76);
+      const N = 14;
+      for (let i = 0; i < N; i++) { const a = (i / N) * 6.2832 + 0.1; g.save(); g.translate(hx, hy); g.scale(1, 0.78); g.rotate(a);
+        const gr = g.createLinearGradient(14, 0, 78, 0); gr.addColorStop(0, gray(0.55)); gr.addColorStop(0.4, gray(1)); gr.addColorStop(1, gray(0.85));
+        g.fillStyle = gr; g.beginPath(); g.moveTo(14, 0); g.bezierCurveTo(30, -15, 66, -13, 80, 0); g.bezierCurveTo(66, 13, 30, 15, 14, 0); g.fill();
+        g.strokeStyle = gray(0.4, 0.7); g.lineWidth = 1; g.beginPath(); g.moveTo(18, 0); g.lineTo(72, 0); g.stroke(); g.restore(); }
+      g.fillStyle = gray(0.38); g.beginPath(); g.arc(hx, hy, 21, 0, 7); g.fill();
+      g.fillStyle = gray(0.7); for (let k = 0; k < 26; k++) { const a = k * 2.4, rr = 3 + (k % 5) * 3.3; g.beginPath(); g.arc(hx + Math.cos(a) * rr, hy + Math.sin(a) * rr * 0.9, 1.5, 0, 7); g.fill(); }
+    },
+    wheat(g) {
+      const P = (t) => { const u = 1 - t; return [u * u * u * 200 + 3 * u * u * t * 190 + 3 * u * t * t * 230 + t * t * t * 222, u * u * u * 500 + 3 * u * u * t * 380 + 3 * u * t * t * 260 + t * t * t * 120]; };
+      this.stem(g, [[200, 500], [190, 380], [230, 260], [222, 120]], 4.5); this.blade(g, 199, 480, -2.0, 190, 14, -40, 0.8); this.blade(g, 201, 440, -1.1, 150, 12, 30, 0.74);
+      for (let k = 0; k < 8; k++) { const t = 0.52 + k * 0.058, [x, y] = P(t), [x2, y2] = P(t + 0.02), ang = Math.atan2(y2 - y, x2 - x);
+        for (const sd of [-1, 1]) { g.save(); g.translate(x, y); g.rotate(ang + sd * 0.42); const gr = g.createLinearGradient(0, 0, 30, 0); gr.addColorStop(0, gray(0.6)); gr.addColorStop(1, gray(1));
+          g.fillStyle = gr; g.beginPath(); g.moveTo(0, 0); g.bezierCurveTo(8, -6, 22, -5, 32, 0); g.bezierCurveTo(22, 5, 8, 6, 0, 0); g.fill(); g.strokeStyle = gray(0.3, 0.9); g.lineWidth = 1.2; g.beginPath(); g.moveTo(3, 0); g.lineTo(30, 0); g.stroke(); g.restore(); }
+      }
+      g.strokeStyle = gray(0.85); g.lineWidth = 1.6; for (let k = -3; k <= 3; k++) { g.beginPath(); g.moveTo(222, 126); g.lineTo(222 + k * 5, 70 - Math.abs(k) * 4); g.stroke(); }
+    },
+    puff(g) {
+      const hx = 208, hy = 170, S = [[200, 500], [188, 400], [222, 290], [hx, hy + 8]];
+      this.stem(g, S, 4.5); this.blade(g, 199, 480, -2.2, 140, 16, -20, 0.8); this.blade(g, 201, 470, -0.9, 120, 14, 24, 0.75);
+      for (let i = 0; i < 44; i++) { const a = (i / 44) * 6.2832, L = 52 + ((i * 7) % 5) * 3; g.strokeStyle = gray(0.7, 0.9); g.lineWidth = 1.1; g.beginPath(); g.moveTo(hx, hy); g.lineTo(hx + Math.cos(a) * L, hy + Math.sin(a) * L); g.stroke();
+        g.fillStyle = gray(1); g.beginPath(); g.arc(hx + Math.cos(a) * (L + 5), hy + Math.sin(a) * (L + 5), 3.3, 0, 7); g.fill();
+        g.strokeStyle = gray(0.9, 0.9); g.beginPath(); g.moveTo(hx + Math.cos(a) * (L + 3), hy + Math.sin(a) * (L + 3)); g.lineTo(hx + Math.cos(a + 0.18) * (L + 17), hy + Math.sin(a + 0.18) * (L + 17)); g.stroke(); }
+      g.fillStyle = gray(0.55); g.beginPath(); g.arc(hx, hy, 9, 0, 7); g.fill();
+    },
+    fern(g) {
+      const P = (t) => { const u = 1 - t; return [u * u * u * 170 + 3 * u * u * t * 180 + 3 * u * t * t * 250 + t * t * t * 330, u * u * u * 500 + 3 * u * u * t * 330 + 3 * u * t * t * 220 + t * t * t * 190]; };
+      this.stem(g, [[170, 500], [180, 330], [250, 220], [330, 190]], 4.5);
+      for (let t = 0.12; t < 0.99; t += 0.05) { const [x, y] = P(t), [x2, y2] = P(t + 0.01), ang = Math.atan2(y2 - y, x2 - x), L = 14 + 92 * Math.pow(1 - t, 0.75);
+        this.blade(g, x, y, ang - 1.05, L, 7 + L * 0.07, -L * 0.1, 0.88); this.blade(g, x, y, ang + 1.05, L, 7 + L * 0.07, L * 0.1, 0.84); }
+    }
+  });
+  const MEAD_PAL = (() => {
+    const L = { blue: "#2A47C7", lilac: "#8A7BD8", coral: "#E0795A", sage: "#6F9C7F", ochre: "#C9A24A", rose: "#D98BA3", sky: "#5F7FE0" };
+    const D = { blue: "#7F9CF0", lilac: "#B7A6F0", coral: "#F09A78", sage: "#86C2A0", ochre: "#E6C879", rose: "#EDA9BF", sky: "#9DB6F5", cream: "#F3E9D2" };
+    const mk = (c) => ({ lily: [c.blue, c.blue, c.lilac, c.rose], daisy: [c.lilac, c.blue, c.ochre], wheat: [c.ochre, c.sage], puff: [c.lilac, c.sky], fern: [c.sage, c.sage], blades: [c.sky, c.sage, c.sky], bud: [c.coral, c.coral, c.rose] });
+    return { light: mk(L), dark: Object.assign(mk(D), { lily: [D.cream, D.cream, D.lilac, D.rose], daisy: [D.cream, D.lilac, D.ochre] }) };
+  })();
+  const SCENE_COL = { light: { sky: "#1E3FD8", sun: "#E0703A", hill: "#3F62EA" }, dark: { sky: "#6F97FF", sun: "#F3E9D2", hill: "#6F97FF" } };
+  const hash2 = (x, y) => { const v = Math.sin(x * 12.9898 + y * 78.233) * 43758.5453; return v - Math.floor(v); };
+  function mountMeadow(host, takes) {
+    const bg = document.createElement("canvas"), cv = document.createElement("canvas");
+    for (const c of [bg, cv]) c.setAttribute("aria-hidden", "true");
+    host.prepend(cv); host.prepend(bg);
+    const bgx = bg.getContext("2d"), g = cv.getContext("2d"), list = $(".takes", host);
+    const samp = document.createElement("canvas"), sg = samp.getContext("2d", { willReadFrequently: true });
+    const art = {}, tinted = {};
+    let W = 0, H = 0, d = 1, pitch = 4, cols = 0, rows = 0, flowers = [], signs = [], parts = [], ptr = null, raf = 0, prev = 0, lastDraw = 0, vis = true, horizon = 0, planted = 0;
+    const LAY = [{ a: 0.55, sc: 0.36, amp: 0.6 }, { a: 0.8, sc: 0.62, amp: 0.85 }, { a: 1, sc: 0.92, amp: 1 }];
+    for (const k of ["lily", "bud", "blades", "daisy", "wheat", "puff", "fern"]) { const c = document.createElement("canvas"); c.width = FW; c.height = FH; MPAINT[k](c.getContext("2d")); art[k] = c; }
+    function tint() {
+      const pal = MEAD_PAL[isDark() ? "dark" : "light"];
+      for (const k in art) { tinted[k] = pal[k].map((hex) => { const sc = document.createElement("canvas"); sc.width = FW; sc.height = FH; const x = sc.getContext("2d", { willReadFrequently: true });
+        x.drawImage(art[k], 0, 0); const im = x.getImageData(0, 0, FW, FH), p = im.data, [r, gg, b] = hexRgb(hex);
+        for (let i = 0; i < p.length; i += 4) { const a = (p[i + 3] / 255) * Math.pow(p[i] / 255, 1.1); p[i] = r; p[i + 1] = gg; p[i + 2] = b; p[i + 3] = Math.round(a * 255); }
+        x.putImageData(im, 0, 0); return sc; }); }
+    }
+    const kindH = { lily: 1, bud: 0.85, blades: 0.6, daisy: 0.82, wheat: 0.95, puff: 0.85, fern: 0.62 }, kindW = { lily: 150, bud: 70, blades: 120, daisy: 100, wheat: 60, puff: 90, fern: 150 };
+    function mk(x, by, kind, layer, want, grown) {
+      return { x, by, kind, layer, s: want / 500, a0: (Math.random() - 0.5) * 0.12, a: 0, v: 0, flip: Math.random() < 0.5 ? -1 : 1, ph: Math.random() * 6.28, g: grown ? 1 : 0, ci: Math.floor(Math.random() * 99), w: 0.85 + Math.random() * 0.35 };
+    }
+    function paintBg() {
+      const col = SCENE_COL[isDark() ? "dark" : "light"]; bgx.setTransform(d, 0, 0, d, 0, 0); bgx.clearRect(0, 0, W, H);
+      const narrow = W < 700, P = narrow ? 5 : 6, sx = narrow ? W * 0.8 : W * 0.66, sy = narrow ? H * 0.58 : H * 0.3, R = narrow ? W * 0.13 : H * 0.12;
+      const hill = (x, k) => horizon - (k ? 6 : 34) - (k ? 10 : 20) * Math.sin(x * 0.0042 + (k ? 2 : 1)) - (k ? 6 : 12) * Math.sin(x * 0.0113 + k * 3);
+      for (let r = 0, y = 2; y < H; r++, y += P * 0.87) for (let x = (r % 2) * P / 2; x < W; x += P) {
+        let rad = 0, c = col.sky, al = narrow ? 0.18 : 0.34;
+        const dx = x - sx, dy = y - sy, dist = Math.hypot(dx, dy);
+        if (y < horizon) {
+          const t = y / horizon; rad = (0.12 + 1.9 * Math.pow(t, 2.3)) * (hash2(x, y) < 0.5 * (1 - t) + 0.06 ? 0 : 1);
+        }
+        const h1 = hill(x, 0), h2 = hill(x, 1) + 40;
+        if (y > h2) { rad = 0.5 + 1.1 * Math.min(1, (y - h2) / (H - h2)); c = col.hill; al = 0.3 + 0.1 * Math.min(1, (y - h2) / 120); }
+        else if (y > h1) { rad = 0.6 + 1.0 * Math.min(1, (y - h1) / 80); c = col.hill; al = 0.22; }
+        if (rad < 0.2) continue;
+        bgx.globalAlpha = al; bgx.fillStyle = c; bgx.beginPath(); bgx.arc(x, y, rad, 0, 6.2832); bgx.fill();
+      }
+      bgx.globalAlpha = 1;
+    }
+    function layout() {
+      W = host.clientWidth; H = host.clientHeight; d = Math.min(devicePixelRatio || 1, 2); if (!W || !H) return false;
+      cv.width = bg.width = Math.round(W * d); cv.height = bg.height = Math.round(H * d);
+      pitch = W < 700 ? 3.2 : 3.5; cols = Math.floor(W / pitch); rows = Math.floor(H / (pitch * 0.87)); samp.width = cols; samp.height = rows;
+      horizon = H * (W < 700 ? 0.66 : 0.6);
+      const TOPS = [0.06, 0.16, 0.06], narrow = W < 700, m = takes.length;
+      list.innerHTML = takes.map((tx) => `<li class="take sk">${tx}</li>`).join("");
+      const els = $$(".take", list);
+      if (narrow) els.forEach((el) => { el.style.maxWidth = Math.round(Math.min(220, W * 0.46)) + "px"; });
+      signs = els.map((el, i) => { const x = narrow ? W * (i % 2 ? 0.7 : 0.3) : W * (i + 0.5) / m, y = narrow ? 6 : H * TOPS[i % TOPS.length]; el.style.left = x + "px"; el.style.top = y + "px"; return { x, y, b: y + el.offsetHeight, w: el.offsetWidth }; });
+      if (narrow) signs.forEach((s, i) => { if (i) { const y = signs[i - 1].b + 14; s.b += y - s.y; s.y = y; els[i].style.top = y + "px"; } });
+      signs.forEach((s, i) => { const half = s.w / 2 + 8, x = Math.min(W - half, Math.max(half, s.x)); s.x = x; els[i].style.left = x + "px"; });
+      const keep = flowers.filter((f) => f.own);
+      const rf = rngOf(23), KS = narrow ? ["lily", "daisy", "wheat", "fern", "puff", "bud", "blades"] : ["lily", "daisy", "blades", "wheat", "bud", "puff", "fern", "lily", "daisy", "bud", "wheat", "blades", "puff"];
+      flowers = [];
+      const rows3 = [{ by: H * 0.74, n: W / (narrow ? 60 : 110), L: 0 }, { by: H * 0.87, n: W / (narrow ? 80 : 150), L: 1 }, { by: H + 4, n: W / (narrow ? 100 : 230), L: 2 }];
+      rows3.forEach((rw, ri) => {
+        const cnt = Math.max(3, Math.round(rw.n));
+        for (let q = 0; q < cnt; q++) {
+          const kind = KS[(q + ri * 2) % KS.length], x = W * (q + 0.5 + (ri % 2 ? 0.25 : 0)) / cnt + (rf() - 0.5) * 30, hw = kindW[kind] * 0.35;
+          const top = Math.max(0, ...signs.filter((sg) => Math.abs(sg.x - x) < sg.w / 2 + hw).map((sg) => sg.b));
+          let want = H * 0.66 * LAY[rw.L].sc * kindH[kind] * (0.8 + rf() * 0.3); if (narrow) want = Math.min(want, 250 * LAY[rw.L].sc + 30);
+          want = Math.min(want, (rw.by - top - 12) * 1.04);
+          if (want < 40) continue;
+          flowers.push(mk(Math.min(W - hw, Math.max(hw, x)), rw.by, kind, rw.L, want, true));
+        }
+      });
+      for (let q = 0, n = Math.round(W / (narrow ? 26 : 38)); q < n; q++) flowers.push(mk(W * (q + rf()) / n, H + 4, "blades", 2, (70 + rf() * 60) * (narrow ? 0.8 : 1), true));
+      flowers.push(...keep); flowers.sort((p, q2) => p.by - q2.by || p.layer - q2.layer);
+      tint(); paintBg(); return true;
+    }
+    function frame(now) {
+      raf = 0;
+      const dt = prev ? Math.min(0.05, (now - prev) / 1000) : 0.016; prev = now; const t = now / 1000;
+      if (!cols && !layout()) return;
+      for (const f of flowers) {
+        const L = LAY[f.layer];
+        let target = calm ? 0 : (0.045 * Math.sin(t * 1.25 + f.x * 0.0045 + f.ph) + 0.018 * Math.sin(t * 2.9 + f.ph * 3)) * L.amp * (f.kind === "blades" ? 1.4 : 1);
+        if (ptr) { const dx = f.x - ptr.x, top = f.by - f.s * 500 * f.g; const near = Math.max(0, 1 - Math.abs(dx) / 150); if (near && ptr.y > top - 30 && ptr.y < f.by + 20) target += Math.sign(dx || 1) * near * 0.2 + ptr.vx * 0.0003 * near; }
+        f.v += ((target - f.a) * 30 - f.v * 6) * dt; f.a += f.v * dt;
+        if (f.g < 1) f.g = Math.min(1, f.g + dt * 1.3);
+      }
+      if (ptr) ptr.vx *= Math.exp(-dt / 0.12);
+      sg.setTransform(1, 0, 0, 1, 0, 0); sg.clearRect(0, 0, cols, rows); sg.setTransform(cols / W, 0, 0, rows / H, 0, 0);
+      for (const f of flowers) {
+        const e = f.g >= 1 ? 1 : 1 + 1.6 * Math.pow(f.g - 1, 3) + 0.6 * Math.pow(f.g - 1, 2), k = f.s * Math.max(0.01, e);
+        sg.save(); sg.globalAlpha = LAY[f.layer].a; sg.translate(f.x, f.by); sg.rotate(f.a0 * (f.kind === "blades" ? 1 : 0.6) + f.a); sg.scale(k * f.flip * f.w, k); sg.translate(-200, -500); sg.drawImage(tinted[f.kind][f.ci % tinted[f.kind].length], 0, 0); sg.restore();
+      }
+      let px; try { px = sg.getImageData(0, 0, cols, rows).data; } catch (e) { return; }
+      g.setTransform(1, 0, 0, 1, 0, 0); g.clearRect(0, 0, cv.width, cv.height);
+      const sx = (W / cols) * d, sy = (H / rows) * d; let last = "";
+      for (let y = 0; y < rows; y++) for (let x = 0; x < cols; x++) {
+        const i = (y * cols + x) * 4, A = px[i + 3] / 255; if (A < 0.1) continue;
+        const key = px[i] + "," + px[i + 1] + "," + px[i + 2]; if (key !== last) { g.fillStyle = `rgb(${key})`; last = key; }
+        const rad = Math.min(0.62, 0.16 + 0.5 * Math.sqrt(A)) * pitch * d;
+        g.beginPath(); g.arc((x + 0.5 + (y % 2 ? 0.5 : 0)) * sx, (y + 0.5) * sy, rad, 0, 6.2832); g.fill();
+      }
+      /* pollen and a couple of butterflies */
+      const pc = MEAD_PAL[isDark() ? "dark" : "light"].bud[0]; g.setTransform(d, 0, 0, d, 0, 0); g.fillStyle = pc;
+      while (parts.length < (calm ? 0 : 16)) parts.push({ x: Math.random() * W, y: H * (0.3 + Math.random() * 0.6), vx: 0, vy: 0, life: 99, amb: true });
+      parts = parts.filter((p) => { p.life -= dt; if (p.life <= 0) return false;
+        p.vx += (Math.sin(t * 0.8 + p.y * 0.01) * 6 - p.vx * 0.5) * dt; p.vy += (-4 - p.vy * 0.5 + Math.cos(t * 0.7 + p.x * 0.01) * 5) * dt;
+        if (ptr && p.amb) { const dx = ptr.x - p.x, dy = ptr.y - p.y, r2 = dx * dx + dy * dy; if (r2 < 160 * 160 && r2 > 100) { p.vx += dx * 0.5 * dt; p.vy += dy * 0.5 * dt; } }
+        p.x += p.vx * dt * 4; p.y += p.vy * dt * 4;
+        if (p.amb) { if (p.x < -10) p.x = W + 10; if (p.x > W + 10) p.x = -10; if (p.y < H * 0.15) p.y = H * 0.95; if (p.y > H) p.y = H * 0.3; }
+        g.globalAlpha = Math.min(1, p.life) * 0.85; g.beginPath(); g.arc(p.x, p.y, p.amb ? 1.6 : 1.3, 0, 6.2832); g.fill(); return true; });
+      g.globalAlpha = 1;
+    }
+    function loop(now) { raf = 0; if (!vis) { prev = 0; return; } if (now - lastDraw >= 32) { lastDraw = now; frame(now); } if (!calm) raf = requestAnimationFrame(loop); }
+    const kick = () => { if (!raf && vis) raf = requestAnimationFrame(calm ? frame : loop); };
+    host.addEventListener("pointermove", (e) => { const r = host.getBoundingClientRect(), x = e.clientX - r.left, y = e.clientY - r.top; const sp = ptr ? Math.hypot(x - ptr.x, y - ptr.y) : 0;
+      ptr = { x, y, vx: ptr ? (x - ptr.x) * 60 : 0 };
+      if (!calm && sp > 6 && parts.length < 60 && Math.random() < 0.5) parts.push({ x, y, vx: (Math.random() - 0.5) * 8, vy: -Math.random() * 6, life: 1.4 + Math.random() });
+      kick(); }, { passive: true });
+    host.addEventListener("pointerleave", () => { ptr = null; kick(); });
+    host.addEventListener("pointerdown", (e) => {
+      const r = host.getBoundingClientRect(), x = e.clientX - r.left, y = e.clientY - r.top; if (y < Math.max(horizon + 10, ...signs.map((sg) => sg.b + 80)) || e.target.closest("a,button")) return;
+      const kind = ["lily", "daisy", "bud", "puff", "wheat", "lily", "fern", "daisy"][planted++ % 8], L = y > H * 0.8 ? 2 : 1, own = flowers.filter((f) => f.own);
+      if (own.length >= 24) flowers.splice(flowers.indexOf(own[0]), 1);
+      const top = Math.max(0, ...signs.filter((sg) => Math.abs(sg.x - x) < sg.w / 2 + kindW[kind] * 0.35).map((sg) => sg.b)), f = mk(x, y, kind, L, Math.min(y - top - 14, H * (0.28 + Math.random() * 0.14)) * kindH[kind], false); f.own = true; flowers.push(f); flowers.sort((p, q2) => p.by - q2.by || p.layer - q2.layer);
+      for (let i = 0; i < 8; i++) parts.push({ x, y: y - 10, vx: (Math.random() - 0.5) * 14, vy: -Math.random() * 10, life: 1 + Math.random() });
+      if (calm) { f.g = 1; kick(); } else kick();
+    });
+    new ResizeObserver(() => { cols = 0; layout(); kick(); }).observe(host);
+    if ("IntersectionObserver" in window) new IntersectionObserver((es) => { vis = es[0].isIntersecting; if (vis) { prev = 0; kick(); } }).observe(host);
+    themeHooks.push(() => { tint(); paintBg(); kick(); });
+    kick();
+  }
+
+  /* =====================================================================
+     CASE PAGE
+     ===================================================================== */
+  const KEYS = ["overview", "research", "design", "testing", "learnings"];
+  function renderCase(i) {
+    const cs = CASES(), c = cs[i], nx = cs[(i + 1) % cs.length], u = U();
+    const L = { ...u.labels, ...(c.labels || {}) };
+    const r = c.research || {}, te = c.testing || {};
+    const paras = (v) => (Array.isArray(v) ? v : [v]).filter((x) => x).map((x) => `<p>${t(x)}</p>`).join("");
+    const list = (a) => (a && a.length ? `<ul class="dash">${a.map((x) => `<li>${t(x)}</li>`).join("")}</ul>` : "");
+    const fig = (img, cap) => { const s = src(img); return s ? `<figure class="fig"><img src="${esc(s)}" alt="${esc(plain(cap || ""))}" loading="lazy">${cap ? `<figcaption class="lbl">${t(cap)}</figcaption>` : ""}</figure>` : ""; };
+    const body = {
+      overview: `${paras(c.challenge)}${list(c.problems)}${fig(c.beforeImage, c.beforeCaption)}
+        ${c.question ? `<blockquote class="quote"><span class="lbl muted">${esc(u.question)}</span><p class="t4">${t(c.question)}</p></blockquote>` : ""}
+        ${(c.given && c.given.length) || (c.did && c.did.length) ? `<div class="two"><div><h4 class="lbl muted">${esc(u.given)}</h4>${list(c.given)}</div><div><h4 class="lbl muted">${esc(u.did)}</h4>${list(c.did)}</div></div>` : ""}`,
+      research: `${paras(r.method)}${fig(r.image, r.caption)}
+        ${(r.insights || []).map((x) => `<p class="find lbl">${esc(u.finding)}</p>
+          <ol class="steps">${["heard", "help", "tried", "feature"].map((f, j) => `<li class="t2"><span class="lbl">${esc(u.chain[j])}</span>${t(x[f])}</li>`).join("")}</ol>`).join("")}`,
+      design: (c.decisions || []).map((x) => `<div class="decision"><h3>${t(x.title)}</h3>${paras(x.text)}${fig(x.image, x.caption)}
+          ${x.why ? `<p class="note t2"><span class="lbl">${esc(u.why)}</span>${t(x.why)}</p>` : ""}
+          ${x.result ? `<p class="note t2"><span class="lbl">${esc(u.result)}</span>${t(x.result)}</p>` : ""}
+          ${x.tradeoff ? `<p class="note t2"><span class="lbl">${esc(u.trade)}</span>${t(x.tradeoff)}</p>` : ""}</div>`).join(""),
+      testing: `${paras(te.setup)}
+        ${(te.findings || []).map((f) => `<ol class="tri">${["before", "saw", "change"].map((k, j) => `<li class="t2"><span class="lbl">${esc(u.tri[j])}</span>${t(f[k])}</li>`).join("")}</ol>${f.status ? `<span class="state lbl">${t(f.status)}</span>` : ""}`).join("")}
+        ${te.results && te.results.length ? `<ul class="res">${te.results.map((x) => `<li><h4>${t(x.title)}</h4><p class="t2">${t(x.text)}</p></li>`).join("")}</ul>` : ""}
+        ${fig(te.image, te.caption)}`,
+      learnings: `${c.learnings && c.learnings.length ? `<ul class="lessons">${c.learnings.map((l) => `<li><h4>${t(l.title)}</h4><p class="t2">${t(l.text)}</p></li>`).join("")}</ul>` : ""}
+        ${c.reflection ? `<blockquote class="quote"><span class="lbl muted">${esc(u.reflection)}</span><p class="t4">${t(c.reflection)}</p></blockquote>` : ""}
+        ${c.delivered && c.delivered.length ? `<h3 class="lbl muted">${esc(u.delivered)}</h3>${list(c.delivered)}` : ""}
+        ${c.files && c.files.length ? `<h3 class="lbl muted">${esc(u.files)}</h3><div class="files">${c.files.map((f) => linkBtn(tr(f.label), f.url)).join("")}</div>` : ""}`
+    };
+    const keys = KEYS.filter((k) => body[k].replace(/\s+/g, ""));
+    const brief = [[u.brief[0], Array.isArray(c.challenge) ? c.challenge[0] : c.challenge], [u.brief[1], c.question], [u.brief[2], c.shift]].filter((x) => x[1] && !/^\[/.test(x[1]));
+    caseEl.innerHTML = `
+      <div class="case-top grid">
+        <button class="btn ghost back" data-back>${ICON.left}${esc(u.back)}</button>
+        <p class="crumb lbl">${esc(u.nav.work)} / ${esc(plain(c.title))}</p>
+      </div>
+      <header class="case-head grid">
+        <p class="k lbl">${t(c.year)}</p>
+        <h1 class="t5" tabindex="-1">${t(c.title)}</h1>
+        <p class="sub t4">${t(c.subtitle)}</p>
+        <p class="intro">${t(c.intro)}</p>
+      </header>
+      ${brief.length ? `<dl class="brief grid">${brief.map(([k, v]) => `<div><dt class="lbl">${esc(k)}</dt><dd class="t2">${t(v)}</dd></div>`).join("")}</dl>` : ""}
+      <dl class="case-meta grid">${["role", "context", "timeline", "platform", "outcome"].map((k, j) => `<div><dt class="lbl">${esc(u.meta[j])}</dt><dd class="t2">${t(c.meta[k])}</dd></div>`).join("")}</dl>
+      ${c.stats && c.stats.length ? `<div class="case-stats grid">${c.stats.slice(0, 3).map((x) => `<div><b class="t5">${esc(x.v)}</b><span class="t2">${t(x.l)}</span></div>`).join("")}</div>` : ""}
+      ${src(c.cover) ? `<div class="cover case-cover${c.fit === "contain" ? " contain" : ""}" style="--tint:${esc(c.tint)}"><img src="${esc(src(c.cover))}" alt=""></div>` : ""}
+      <div class="case-body grid">
+        <nav class="toc" aria-label="${esc(u.toc)}">${keys.map((k) => `<a class="tbtn" href="#cs-${k}" data-sec="cs-${k}">${esc(L[k][0])}</a>`).join("")}</nav>
+        <div class="flow">${keys.map((k) => `<section class="cs" id="cs-${k}"><h2 class="t4" data-scr>${esc(L[k][1])}</h2>${body[k]}</section>`).join("")}</div>
+      </div>
+      <button class="next" data-case="${(i + 1) % cs.length}"><span class="lbl muted">${esc(u.next)}</span><span class="t5">${esc(plain(nx.title))}</span></button>
+      <footer class="foot grid lbl"><span class="f1">© ${new Date().getFullYear()} ${esc(D().name)}</span><span class="f2"></span><span class="f3"><button class="tbtn" data-back style="margin-right:-8px">${esc(u.back)}</button></span></footer>`;
+    watchScr(caseEl);
+  }
+  let tocIO = null;
+  function watchToc() {
+    if (tocIO) tocIO.disconnect();
+    tocIO = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) $$(".toc a", caseEl).forEach((a) => a.classList.toggle("on", a.dataset.sec === e.target.id)); }), { rootMargin: "-30% 0px -60% 0px" });
+    $$(".cs", caseEl).forEach((s) => tocIO.observe(s));
+  }
+
+  /* =====================================================================
+     ROUTING (plain #case-1 hashes)
+     ===================================================================== */
+  let view = "home", homeY = 0;
+  const viewFromHash = () => { const h = decodeURIComponent(location.hash.slice(1)); const m = /^case-(\d+)$/.exec(h); return m && CASES()[+m[1] - 1] ? h : "home"; };
+  function show(v, opts = {}) {
+    if (v.startsWith("case-")) {
+      if (view === "home") homeY = scrollY;
+      view = v; renderCase(+v.slice(5) - 1);
+      home.hidden = true; caseEl.hidden = false; scrollTo(0, 0);
+      const h1 = $("h1", caseEl); h1 && h1.focus({ preventScroll: true });
+      watchToc();
+    } else {
+      view = "home"; caseEl.hidden = true; home.hidden = false;
+      const to = opts.to && document.getElementById(opts.to);
+      scrollTo(0, to ? to.getBoundingClientRect().top + scrollY - barH() : homeY);
+    }
+    syncNav();
+  }
+  function navigate(v, opts = {}) {
+    if (v !== view) { const url = v === "home" ? location.pathname + location.search : "#" + v; try { history.pushState({ v }, "", url); } catch (e) { if (v !== "home") location.hash = v; } }
+    glyphSwap(() => show(v, opts), { x: opts.x, y: opts.y, dur: 680, band: 64 });
+  }
+  addEventListener("popstate", () => { const v = viewFromHash(); if (v !== view) glyphSwap(() => show(v, { to: "work" }), { dur: 680, band: 64 }); });
+  addEventListener("hashchange", () => {
+    const h = location.hash.slice(1), v = viewFromHash();
+    if (v !== view) glyphSwap(() => show(v, { to: document.getElementById(h) ? h : "work" }), { dur: 680, band: 64 });
+  });
+
+  const barH = () => $("#bar").offsetHeight + 8;
+  let scrollAnim = 0;
+  function scrollToEl(el, dur = 900, delay = 0) {
+    if (!el) return;
+    const y1 = Math.max(0, el.getBoundingClientRect().top + scrollY - barH());
+    if (calm) { scrollTo(0, y1); return; }
+    const y0 = scrollY, t0 = performance.now() + delay, id = ++scrollAnim;
+    const ease = (x) => (x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2);
+    const step = (now) => { if (id !== scrollAnim) return; const k = Math.min(1, Math.max(0, (now - t0) / dur)); scrollTo(0, y0 + (y1 - y0) * ease(k)); if (k < 1) requestAnimationFrame(step); };
+    requestAnimationFrame(step);
+  }
+  ["wheel", "touchstart", "keydown"].forEach((ev) => addEventListener(ev, () => { scrollAnim++; }, { passive: true }));
+  const pointOf = (e, el) => { if (e && e.clientX) return { x: e.clientX, y: e.clientY }; const r = el.getBoundingClientRect(); return { x: r.left + r.width / 2, y: r.top + r.height / 2 }; };
+
+  /* ---------- active section in the bar ---------- */
+  const NAVIDS = ["top", "work", "projects", "about", "contact"];
+  let navRaf = 0;
+  function pickNav() { navRaf = 0; if (view !== "home") return; const y = innerHeight * 0.4; let cur = "top"; NAVIDS.forEach((id) => { const el = document.getElementById(id); if (el && el.getBoundingClientRect().top <= y) cur = id; }); $$("[data-nav]").forEach((a) => a.classList.toggle("on", a.dataset.nav === cur)); }
+  addEventListener("scroll", () => { if (!navRaf) navRaf = requestAnimationFrame(pickNav); }, { passive: true }); addEventListener("resize", pickNav);
+  function syncNav() { if (view !== "home") $$("[data-nav]").forEach((a) => a.classList.toggle("on", a.dataset.nav === "work")); }
+
+  /* =====================================================================
+     EVENTS
+     ===================================================================== */
+  const menu = $("#menu"), burger = $("#burger");
+  const setMenu = (open) => { menu.hidden = !open; burger.setAttribute("aria-expanded", String(open)); };
+  document.addEventListener("click", (e) => {
+    const tgt = e.target;
+    if (!tgt.closest("#menu") && !tgt.closest("#burger")) setMenu(false);
+    if (tgt.closest("#burger")) { setMenu(menu.hidden); return; }
+
+    const act = tgt.closest("[data-act]");
+    if (act) {
+      const r = stage.getBoundingClientRect(), pt = pointOf(e, act);
+      portrait.burst(pt.x - r.left, pt.y - r.top);
+      if (act.dataset.act === "work") { portrait.wipe(pt.x - r.left, pt.y - r.top); scrollToEl($("#work"), 1100, calm ? 0 : 380); }
+      else scrollToEl($("#contact"), 1100, 120);
+      return;
+    }
+    const cs = tgt.closest("[data-case]");
+    if (cs) { e.preventDefault(); hideTag(); const p = pointOf(e, cs); navigate("case-" + (+cs.dataset.case + 1), { x: p.x, y: p.y }); return; }
+    const back = tgt.closest("[data-back]");
+    if (back) { const p = pointOf(e, back); navigate("home", { to: "work", x: p.x, y: p.y }); return; }
+    const go = tgt.closest("[data-go]");
+    if (go) {
+      e.preventDefault(); setMenu(false);
+      const id = go.dataset.go;
+      if (view !== "home") { const p = pointOf(e, go); navigate("home", { to: id, x: p.x, y: p.y }); }
+      else scrollToEl(document.getElementById(id));
+      return;
+    }
+    const sec = tgt.closest("[data-sec]");
+    if (sec) { e.preventDefault(); const el = document.getElementById(sec.dataset.sec); el && el.scrollIntoView({ behavior: calm ? "auto" : "smooth" }); return; }
+    const lb = tgt.closest("[data-lang]");
+    if (lb) { if (lb.dataset.lang !== lang) { lang = lb.dataset.lang; store.set("pf2-lang", lang); renderAll(true); } return; }
+    if (tgt.closest("#themeBtn")) {
+      const next = isDark() ? "light" : "dark", p = pointOf(e, tgt.closest("#themeBtn"));
+      glyphSwap(() => { root.dataset.theme = next; store.set("pf2-theme", next); syncThemeBtn(); themeChanged(); }, { x: p.x, y: p.y });
+      return;
+    }
+    const cp = tgt.closest("[data-copy]");
+    if (cp) {
+      const done = () => toast(U().copied), fail = () => toast(U().copyFail(C.email));
+      try { navigator.clipboard.writeText(C.email).then(done, fail); } catch (err) { fail(); }
+    }
+  });
+  document.addEventListener("keydown", (e) => { if (e.key === "Escape") setMenu(false); });
+
+  /* cursor label over the work list */
+  const tag = $("#tag");
+  function hideTag() { tag.classList.remove("show"); }
+  addEventListener("scroll", hideTag, { passive: true });
+  document.addEventListener("pointermove", (e) => {
+    if (e.pointerType !== "mouse" || !fine.matches) return;
+    const over = e.target.closest && e.target.closest(".ccase, .metric, .next");
+    if (over) { tag.textContent = U().openCase; tag.style.transform = `translate(${e.clientX + 16}px, ${e.clientY + 14}px)`; tag.classList.add("show"); }
+    else hideTag();
+  }, { passive: true });
+
+  /* =====================================================================
+     START
+     ===================================================================== */
+  const themeHooks = [];
+  function themeChanged() { portrait.setColors(); themeHooks.forEach((f) => f()); }
+
+  let portrait = null;
+  function renderAll(keepScroll) {
+    const y = scrollY;
+    themeHooks.length = 0;
+    renderChrome(); renderHero(); renderWork(); renderProjects(); renderAbout(); renderContact(); renderFoot();
+    if (view !== "home") { renderCase(+view.slice(5) - 1); watchToc(); }
+    if (keepScroll) scrollTo(0, y);
+  }
+  portrait = makePortrait(stage, src(C.heroPortrait));
+  mountField($("#top"));
+  renderAll();
+  new IntersectionObserver((es) => { if (es[0].intersectionRatio > 0.5 && portrait.wiped) portrait.reassemble(); }, { threshold: [0, 0.5, 1] }).observe(stage);
+
+  const first = viewFromHash();
+  if (first !== "home") show(first);
+  else if (location.hash.length > 1 && document.getElementById(location.hash.slice(1))) setTimeout(() => scrollTo(0, document.getElementById(location.hash.slice(1)).getBoundingClientRect().top + scrollY - barH()), 60);
+});
+
+</script>
+<script>
+window.IMG = {"dsCover":"img/dsCover.avif","dsBefore":"img/dsBefore.avif","dsComponents":"img/dsComponents.avif","dsTokens":"img/dsTokens.avif","dsComments":"img/dsComments.avif","dsModals":"img/dsModals.avif","tkCover":"img/tkCover.avif","tkOldCalendar":"img/tkOldCalendar.webp","tkBoard":"img/tkBoard.webp","tkFields":"img/tkFields.webp","tkBeforeAfter":"img/tkBeforeAfter.avif","pmCover":"img/pmCover.avif","pmCatalog":"img/pmCatalog.avif","pmProduct":"img/pmProduct.avif","pmPrices":"img/pmPrices.avif","pmOrder":"img/pmOrder.avif","pmLoad":"img/pmLoad.avif","yhCover":"img/yhCover.avif","yhMap":"img/yhMap.avif","yhServices":"img/yhServices.avif","yhCases":"img/yhCases.avif","yhMobile":"img/yhMobile.avif","shSetochkaDemo":"img/setochka-demo-poster.webp","shDecideRu":"img/decide-ru-poster.webp","shDecideEn":"img/decide-en-poster.webp","heroPortrait":"img/portrait.webp"};
+</script>
+</body>
+</html>
